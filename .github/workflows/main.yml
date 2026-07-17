@@ -45,6 +45,31 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Auto-remove unused imports
+        continue-on-error: true
+        run: |
+          if [ -f ".eslintrc.cjs" ]; then
+            CONFIG=".eslintrc.cjs"
+          elif [ -f "eslintrc.cjs" ]; then
+            CONFIG="eslintrc.cjs"
+          else
+            echo "No eslintrc.cjs config file found in repo root!" >&2
+            exit 1
+          fi
+          # eslint-plugin-unused-imports has a real auto-fixer for "X is
+          # defined but never used" when X is an import — something the
+          # core @typescript-eslint/no-unused-vars rule can't fix on its own.
+          # Installed with --no-save so it never touches package.json/lock —
+          # it's only needed for this one command.
+          npm install --no-save eslint-plugin-unused-imports
+          # --rule here only affects THIS run, not your .eslintrc.cjs:
+          # it turns off the core rule (which would just report, not fix)
+          # and turns on the plugin's fixable version instead.
+          npx eslint . --ext ts,tsx --config "$CONFIG" --fix \
+            --plugin unused-imports \
+            --rule '{"@typescript-eslint/no-unused-vars": "off", "unused-imports/no-unused-imports": "error"}' \
+            || true
+
       - name: Run ESLint with auto-fix
         id: eslint
         continue-on-error: true
@@ -59,11 +84,11 @@ jobs:
           fi
           echo "Using ESLint config: $CONFIG"
           # --fix rewrites every issue ESLint is able to safely auto-fix
-          # (mostly formatting-style rules). Rules like no-explicit-any and
-          # no-unused-vars are semantic — ESLint can't guess the correct type
-          # or know if you meant to use a variable, so those still need a
-          # human to edit the code. This step still reports failure via
-          # $? below if anything is left over, but does not stop the job.
+          # (mostly formatting-style rules, plus the unused imports removed
+          # by the step above). Rules like no-explicit-any and no-unused-vars
+          # on local variables are semantic — ESLint can't guess the correct
+          # type or know if you meant to use a variable, so those still need
+          # a human to edit the code.
           npx eslint . --ext ts,tsx --config "$CONFIG" --fix --report-unused-disable-directives --max-warnings 0
 
       - name: Commit auto-fixed files
@@ -233,7 +258,16 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          # Using GHCR_PAT (a personal access token with the write:packages
+          # scope) instead of the default GITHUB_TOKEN. GITHUB_TOKEN's
+          # package-write access depends on the repo's default workflow
+          # permissions (Settings > Actions > General > Workflow permissions)
+          # — if that's set to "Read repository contents permission" the
+          # push fails with "denied: permission_denied: write_package" even
+          # though this job already requests `packages: write` above. A PAT
+          # sidesteps that setting entirely. You already have GHCR_PAT saved
+          # as a secret for the deploy job, so it's reused here.
+          password: ${{ secrets.GHCR_PAT }}
 
       # Docker image names must be all lowercase — GitHub repo names can have
       # capital letters (e.g. "vatsav466/Pipeline-2"), so we normalize it here
