@@ -1,6 +1,6 @@
 
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/@/components/ui/card';
 import { Badge } from '@/@/components/ui/badge';
 import { TicketCard } from './TicketCard';
 import { Ticket, TicketStatus } from './types/ticket';

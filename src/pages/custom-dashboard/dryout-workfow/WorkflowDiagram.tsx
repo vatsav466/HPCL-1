@@ -1,4 +1,4 @@
-import { workflowData, groupWorkflowSteps } from '@/types/workflowData';
+import { groupWorkflowSteps } from '@/types/workflowData';
 import { WorkflowSection } from './WorkflowSection';
 import { cn } from '@/@/lib/utils';
 import { useGlobalVisibility } from '@/store/VisibilityProvider';

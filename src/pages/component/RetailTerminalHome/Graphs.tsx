@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Card, CardContent } from "../../../@/components/ui/card";
 import { Button } from '../../../@/components/ui/button';
 import { ROAlertsTable } from '../alertsTable/ROAlertsTable';
-import { AlertActionTable } from '../alertsTable/AlertActionTable';
 import { useNavigate } from 'react-router-dom';
 
 interface Location {

@@ -1,7 +1,5 @@
-import { Card } from "@/@/components/ui/card";
 import { Badge } from "@/@/components/ui/badge";
 import { Button } from "@/@/components/ui/button";
-import { TicketCard } from "./ticket-card";
 import { Ticket } from "../types/ticket";
 import { motion } from "framer-motion";
 import { ReactNode } from "react";

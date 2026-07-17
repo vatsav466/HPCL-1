@@ -1,6 +1,5 @@
-import { useState } from "react";
 import { Outlet, Link, useLocation, useNavigate } from "react-router-dom";
-import { Box, Flex, IconButton, Text, Stack, Avatar, Button,HStack, Spacer } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { Sidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import {
   IconHome,
@@ -11,7 +10,6 @@ import {
   IconAsset,
   IconBrandDrops,
   IconCylinder,
-  IconCurrentLocation,
   IconBuildingFactory2,
   IconTrain,
   IconAdjustmentsHorizontal,
@@ -29,8 +27,6 @@ import {
   IconAdjustments,
   IconChecklist,
   IconLogs,
-  IconUser,
-  IconLogout,
   IconLayoutSidebarRightExpand,
   IconLayoutSidebarLeftExpand,
   IconBrandCodesandbox,
@@ -38,21 +34,15 @@ import {
   IconMap2,
   IconUsers,
   IconAssembly,
-  IconSearch,
   IconVersions,
   IconTir,
-  IconHeartRateMonitor,
   IconCirclesRelation,
-  IconScreenshot,
   IconDeviceDesktop,
   IconScreenShare,
   IconShield
 } from "@tabler/icons-react";
-import assets from "../../assets";
 import colorConfigs from "../../configs/colorConfigs";
 import sizeConfigs from "../../configs/sizeConfigs";
-import { borderRadius, height } from "@mui/system";
-import { TooltipProvider } from "@/@/components/ui/tooltip";
 import TopBarComponent from "./TopBar";
 import { toggleSidebar } from '@/redux/features/sidebarSlice';
 import { useDispatch, useSelector } from "react-redux";

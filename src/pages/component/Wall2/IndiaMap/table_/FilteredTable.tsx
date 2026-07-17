@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { Search, X, Maximize2, Minimize2, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface FilteredTableProps {

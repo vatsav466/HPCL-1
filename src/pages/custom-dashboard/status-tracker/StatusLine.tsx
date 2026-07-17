@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Stage } from './types';
 import { calculateDotPosition, getMaxStage, getStagesWithCount } from './utils';
-import { TooltipContent, TooltipProvider, TooltipTrigger } from '@/@/components/ui/tooltip';
 import { Tooltip } from '@mui/material';
 import ModalDialogBox from '../charts/ModalDialogBox';
 

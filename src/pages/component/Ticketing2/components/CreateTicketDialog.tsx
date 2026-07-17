@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@/@/components/ui/button";
 import { TicketFormCore } from "./create-ticket-dialog";
 import { Ticket } from "../types/ticket";
 import {
@@ -8,9 +7,7 @@ import {
 } from "../types/ticket";
 import { useTickets } from "../hooks/useTickets";
 import { toast } from "sonner";
-import { Minimize2, X, PlusCircle, Loader2, ArrowLeft } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
-import { ReusableCombobox } from "./reusable-combobox";
 import { ComboboxOption } from "./reusable-combobox";
 import { apiClient } from "@/services/apiClient";
 import { encryptPayload } from "@/configs/encryptFernet";

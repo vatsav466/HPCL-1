@@ -9,7 +9,6 @@ import {
   Legend,
   ResponsiveContainer,
   LabelList,
-  Brush,
 } from "recharts";
 import {
   Card,
@@ -19,7 +18,6 @@ import {
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
-import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -30,12 +28,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
 import { fetchChartData, fetchDistinctValues } from "../api";
 import TablePerformancesales from "../TablePerformancesales";

@@ -7,19 +7,16 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartTooltip,
-  Legend,
   ResponsiveContainer,
   LabelList,
-  Brush,
 } from "recharts";
 import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { IconArrowLeft, IconMaximize, IconMinimize, IconRestore } from "@tabler/icons-react";
+import { IconArrowLeft, IconMinimize, IconRestore } from "@tabler/icons-react";
 import {
   Tooltip,
   TooltipContent,
@@ -31,14 +28,10 @@ import { Stepper, Step, StepLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 import dayjs, { Dayjs } from "dayjs";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/@/components/ui/tabs";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { RetailSalesDropdowns, SalesDropdowns } from "../SalesDropdowns";
+
+
+import convertToFilters from "@/utils/dynamicFilter";
+import { RetailSalesDropdowns } from "../SalesDropdowns";
 import TablePerformancesales from "../TablePerformancesales";
 import { fetchChartData, fetchDistinctValues } from "../api";
 import { format, startOfMonth, subDays } from "date-fns";
@@ -51,7 +44,7 @@ import RegionIndividualData from "./region/regionIndividualData";
 import RegionIndividualDataPercentage from "./region/regionPercentage";
 import SalesAreaPerformanceTable from "./salesarea/salesareaTable";
 import { CustomMultiSelect } from "@/@/components/ui/custom-multiselect";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/@/components/ui/breadcrumb";
+import { Breadcrumb, BreadcrumbList } from "@/@/components/ui/breadcrumb";
 import SalesAreaIndividualDataPercentage from "./salesarea/salesareaPercentage";
 import SalesAreaIndividualData from "./salesarea/salesareaIndividual";
 import {

@@ -6,8 +6,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { MoreHorizontal } from "lucide-react";
 import { Button } from "../../../@/components/ui/button";
 import { Textarea } from "../../../@/components/ui/textarea";
-import { Badge } from "../../../@/components/ui/badge";
-import axios from 'axios';
 import { AlertHistoryDialog } from './AlertHistoryDialog';
 import { apiClient } from '@/services/apiClient';
 

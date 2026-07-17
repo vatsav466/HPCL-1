@@ -2,7 +2,6 @@ import React, { useState, useMemo, useLayoutEffect, useRef, useCallback, useEffe
 import {
     Loader2,
     X,
-    AlertCircle,
     ChevronRight,
     Search,
     RefreshCw,

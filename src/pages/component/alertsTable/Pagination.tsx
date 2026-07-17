@@ -1,14 +1,8 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from "lucide-react";
-  import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuTrigger,
-  } from "../../../@/components/ui/dropdown-menu";
-  import { Button } from "../../../@/components/ui/button";
-  import { Input } from "../../../@/components/ui/input";
+  
+
+import { Button } from "../../../@/components/ui/button";
   import {
     Select,
     SelectContent,

@@ -2,7 +2,7 @@
 import React, { useState, useCallback, useEffect, useMemo, useRef } from "react";
 import { flushSync } from "react-dom";
 import DataGrid from "../../../../components/common/DataGrid";
-import { Download, Pencil, Trash2, UserPlus, RefreshCw, X } from "lucide-react";
+import { Download, UserPlus, RefreshCw, X } from "lucide-react";
 import {
   Dialog,
   DialogContent,

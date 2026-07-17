@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Grid } from '@mui/material';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/@/components/ui/tabs';
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import { useNavigate } from 'react-router-dom';
 
 import SalesAnalytics from './DryOut Analytics/SalesAnalytics';

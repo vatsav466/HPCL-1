@@ -7,7 +7,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartTooltip,
-  Legend,
   ResponsiveContainer,
   LabelList,
   Brush,
@@ -16,7 +15,6 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import {
@@ -25,37 +23,26 @@ import {
   IconMinimize,
   IconRestore,
 } from "@tabler/icons-react";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/@/components/ui/tabs";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
+import dayjs from "dayjs";
+
+
+import convertToFilters from "@/utils/dynamicFilter";
 import { fetchChartData, fetchDistinctValues } from "../../api";
 import { format, startOfMonth, subDays } from "date-fns";
 
-import { Separator } from "@/@/components/ui/separator";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/@/components/ui/breadcrumb";
+
+
 import {
   Popover,
   PopoverContent,
@@ -64,14 +51,10 @@ import {
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { Calendar, RefreshCcw } from "lucide-react";
-import ReactECharts from "echarts-for-react";
+import { Calendar } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/@/components/ui/toggle-group";
-import { ReloadIcon } from "@radix-ui/react-icons";
 import TablePerformancesales from "../../TablePerformancesales";
-import { Switch } from "@/@/components/ui/switch";
 import { CustomMultiSelect } from "@/@/components/ui/custom-multiselect";
-import { Label } from "@/@/components/ui/label";
 import {
   Select as ShadcnSelect,
   SelectContent,

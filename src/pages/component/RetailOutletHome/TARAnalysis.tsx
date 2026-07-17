@@ -11,7 +11,6 @@ import {
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import { ArrowLeft, RotateCcw, Loader2 } from "lucide-react";
-import { FilterDropdown } from "../LPG/Sales/FilterDropdown";
 import { apiClient } from "@/services/apiClient";
 
 interface ChartDataItem {

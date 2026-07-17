@@ -678,8 +678,6 @@ import ChartSource from './ChartsSource/ChartsSource';
 import ChartTabs from './ChartsTabs/ChartsTabs';
 import AskAITab from './ChartsTabs/AskAITab';
 import ChartPreview from './ChartsPreview/ChartsPreview';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../redux/store';
 
 interface ChartCreateProps {
   dataset: string;

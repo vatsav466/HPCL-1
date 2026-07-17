@@ -284,7 +284,6 @@
 // export default GrowthRings
 
 import type React from "react"
-import { PieChart, Pie, Cell, ResponsiveContainer, Label } from "recharts"
 import { Card } from "@/@/components/ui/card"
 
 interface GrowthIndicator {

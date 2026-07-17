@@ -14,7 +14,6 @@ import {
   SelectValue,
 } from "../../../@/components/ui/select";
 import { Switch } from "../../../@/components/ui/switch";
-import axios from "axios";
 import { Skeleton } from "../../../@/components/ui/skeleton";
 import MultipleSelector, {
   Option,

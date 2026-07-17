@@ -3,44 +3,17 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dialog,
   DialogContent,
-  DialogHeader,
-  DialogTitle,
 } from "@/@/components/ui/dialog";
-import { Input } from "@/@/components/ui/input";
 import { Button } from "@/@/components/ui/button";
-import { Textarea } from "@/@/components/ui/textarea";
 import {
-  Ban,
-  Download,
   Loader2,
-  Paperclip,
   PlusCircle,
-    Plus,
   Save,
-  Trash,
-  Trash2,
-  Truck,
   Upload,
-  X,
-    ChevronDown,
-    ChevronRight,
-  ArrowLeft,
   Send,
-  Moon,
-  Bold,
-  Italic,
-  Underline,
-  List,
-  ListOrdered,
-  Link as LinkIcon,
-  Image as ImageIcon,
-  CloudUpload,
-  AlertTriangle,
-  Plus as AddIcon,
-  Lock,
 } from "lucide-react";
 import { AlertTypeData } from "./types/location";
-import { ComboboxOption, ReusableCombobox } from "./reusable-combobox";
+import { ComboboxOption } from "./reusable-combobox";
 import { useLocations } from "../hooks/useLocations";
 import { useTickets } from "../hooks/useTickets";
 import { useDebounce } from "../hooks/useDebounce";
@@ -52,35 +25,20 @@ import {
 } from "../types/ticket";
 import React from "react";
 import { apiClient } from "@/services/apiClient";
-import { AlertsTable } from "./AlertsTable";
-import ReactQuill from "react-quill-new";
 import "quill/dist/quill.snow.css";
-import { MultiSelectCombobox } from "@/@/components/ui/multiselect-combobox";
-import { Card, CardContent, CardFooter } from "@/@/components/ui/card";
 import AlertHistoryDialogV2 from "../../alertsTable/AlertHistoryDialogV2";
 import useAuthStore from "@/store/authStore";
-import TicketHistoryDialog from "./TicketHistory";
-import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // import { InlineAlertHistory } from "./AlertHistoryInlineView";
 import { TicketDetailsSection } from "./TicketDetailsSection";
-import { TruckNumbersSection } from "./TruckNumbersSection";
-import { LinkedAlertsSection } from "./LinkedAlertsSection";
-import { TicketContentSection } from "./TicketContentSection";
-import { TicketCommentsSection } from "./TicketCommentsSection";
-import { SectionWrapper, FormField, FieldRow, resolveLocationId } from "./ticket-form-components";
+import { resolveLocationId } from "./ticket-form-components";
 import { encryptPayload } from "@/configs/encryptFernet";
-import { InlineAlertHistory } from "./AlertHistoryInlineView";
-import TicketScreenshotUpload from "./ScreenshotReport";
 import { TicketFormHeader } from "./TicketFormHeader";
 import { TicketFormMainContent } from "./TicketFormMainContent";
 import { TicketFormSidebar } from "./TicketFormSidebar";
 import {
   dialogBusinessUnitOptions,
-  alertSectionOptions,
   getAlertSectionOptionsForBu,
-  assigneeOptions,
-  ticketStateOptions,
-  ticketSeverityOptions,
 } from "./ticket-form-constants";
 
 const CREATE_TICKET_ROLES = ["HQO HSE LPG", "HQO HSE SOD", "HQO TICKETING"];

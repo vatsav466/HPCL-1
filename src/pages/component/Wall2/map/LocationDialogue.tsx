@@ -6,7 +6,6 @@ import {
   SheetTitle,
 } from '@/@/components/ui/sheet';
 import { Button } from '@/@/components/ui/button';
-import { Badge } from '@/@/components/ui/badge';
 import { Building2, BarChart3, Users, X, Layers } from 'lucide-react';
 import SalesDialog from './sales';
 

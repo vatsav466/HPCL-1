@@ -5,7 +5,7 @@ import DashboardHeader from '../components/DashboardHeader';
 import AlertTable from '../components/AlertTable';
 import { Button } from '../components/ui/button';
 import { useAlerts } from '../hooks/useAlerts';
-import { PaginationInfo, AlertRecord } from '../types';
+import { PaginationInfo } from '../types';
 import { UnblockConfirmationModal } from '../components/UnblockConfirmationModal';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/@/components/ui/tabs";
 import useAuthStore from '@/store/authStore';

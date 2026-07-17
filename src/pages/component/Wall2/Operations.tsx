@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '../../../@/components/ui/card';
-import SpotFire from '../../assets/hpcl/spotfire.png';
 import VA from '../../assets/hpcl/VA.png';
 import VTS from '../../assets/hpcl/VTS.png';
 import CEMS from '../../assets/hpcl/CEMS.jpeg';
 import REFINARY from '../../assets/hpcl/REFINARY.jpeg';
 import SUPPLY_CHAIN from '../../assets/hpcl/SUPPLY_CHAIN.png';
 import EMLOCK from '../../assets/hpcl/EMLOCK.png';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '../../../@/components/ui/dialog';
+import { Dialog, DialogContent } from '../../../@/components/ui/dialog';
 
 const HomePage = () => {
 

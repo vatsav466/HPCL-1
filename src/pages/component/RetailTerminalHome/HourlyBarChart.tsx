@@ -10,7 +10,6 @@ import {
   LabelList,
   Brush,
 } from 'recharts';
-import axios from 'axios';
 import { convertUTCDateToLocalDate } from '@/hooks/useRelativeTime';
 import { apiClient } from '@/services/apiClient';
 

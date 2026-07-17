@@ -122,7 +122,6 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent } from "../../../@/components/ui/card";
-import { Button } from '../../../@/components/ui/button';
 import { ROAlertsTable } from '../alertsTable/ROAlertsTable';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';

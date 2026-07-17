@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LabelList, Legend } from 'recharts';
 import { ProcessedBottlingData } from './Types';
-import { Loader2, AlertTriangle, PackageCheck } from 'lucide-react';
+import { Loader2, PackageCheck } from 'lucide-react';
 
 interface BottlingSummaryChartProps {
   data: ProcessedBottlingData;

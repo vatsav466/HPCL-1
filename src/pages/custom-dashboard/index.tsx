@@ -1,13 +1,9 @@
 import { DashboardProvider } from '@/pages/custom-dashboard/context/DashboardContext';
 import { Dashboard } from '@/pages/custom-dashboard/Dashboard';
-import GlobalFilter, { GlobalFilterProvider } from './GlobalFilter';
+import { GlobalFilterProvider } from './GlobalFilter';
 import { BarChart } from './charts/BarChart';
 import apiService from '@/services/apiService';
 import { useEffect, useState } from 'react';
-import consolidatedJson from '../../assets/json/consolidated_json.json';
-import { useChartData } from '@/hooks/useChartData';
-import BigNumber from '../dashboard/ActionCenter/Chart/ListOfCharts/BigNumber/BigNumber';
-import classnames from 'classnames';
 import { DryoutProvider } from '@/providers/DryoutProvider';
 
 

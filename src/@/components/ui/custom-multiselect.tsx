@@ -5,7 +5,6 @@ import {
   XCircle,
   ChevronDown,
   Loader2,
-  XIcon,
   WandSparkles,
 } from "lucide-react";
 
@@ -27,8 +26,6 @@ import {
   CommandSeparator,
 } from "./command";
 import { cn } from "../../lib/utils";
-import { values } from "lodash";
-import { use } from "echarts";
 import { useEffect } from "react";
 
 const multiSelectVariants = cva(

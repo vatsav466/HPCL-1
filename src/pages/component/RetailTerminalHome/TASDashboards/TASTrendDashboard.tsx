@@ -15,7 +15,7 @@ import { Input } from "@/@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/@/components/ui/tooltip";
 import { DateRangePickerFilter } from "./DateRangePickerFilter";
-import { Loader2, RotateCcw, Download, Maximize2, Minimize2 } from "lucide-react";
+import { Loader2, RotateCcw, Download } from "lucide-react";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";

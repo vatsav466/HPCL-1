@@ -3,13 +3,8 @@ import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { X } from 'lucide-react';
 
 // Import images
-import infrastructureImg from '../../assets/hpcl/infraa.jpeg';
 import operationsImg from '../../assets/hpcl/Misson60.png';
 import performanceImg from '../../assets/hpcl/SalesPerformance.png';
-import governanceImg from '../../assets/hpcl/IndustryPerformance.png';
-import inventoryImg from '../../assets/hpcl/infraa.jpeg';
-import customerImg from '../../assets/hpcl/ops.jpg';
-import { Console } from 'console';
 import { useNavigate } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 

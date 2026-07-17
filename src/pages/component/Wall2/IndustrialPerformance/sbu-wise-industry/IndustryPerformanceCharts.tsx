@@ -1,20 +1,13 @@
 
-import React, { useState, useEffect } from "react";
-import {
-  fetchIndustryAreaChartData,
-  fetchIndustryData,
-  fetchProductLevelHeatmapData,
-  fetchSbuLevelHeatmapData,
-} from "../industryperformanceapi";
-import AreaChart from "../charts/areachartamcharts";
-import IndustryPerformanceGrid from "../IndustryGridTable";
+import React, { useState } from "react";
+
+
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from "@/@/components/ui/tabs";
-import { apiClient } from "@/services/apiClient";
 import PerformersPage from "./PerformersPage";
 import SbuWiseDynamicPieBarChart from "./industrypage/sbuWiseDynamicPieBarChart";
 import SbuWiseAreaChart from "./industrypage/sbuWiseAreaChart";

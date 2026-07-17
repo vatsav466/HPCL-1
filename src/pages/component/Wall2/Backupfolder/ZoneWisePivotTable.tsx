@@ -294,11 +294,8 @@
 //   }
   "use client"
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card"
-import { useEffect, useRef } from "react"
+import { useRef } from "react"
 import * as am5 from "@amcharts/amcharts5"
-import * as am5xy from "@amcharts/amcharts5/xy"
-import am5themes_Animated from "@amcharts/amcharts5/themes/Animated"
 import FilterComponent from "./FiltersLayout"
 import ExcelStyleTabs from "./IndustrialTabs"
 

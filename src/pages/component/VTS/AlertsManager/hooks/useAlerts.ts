@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { alertService } from '../services/alertService';
-import { AlertRecord, PaginationInfo } from '../types';
+import { AlertRecord } from '../types';
 
 interface Filter {
   key: string;

@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { Box, Card, CardContent, Typography, Grid } from '@mui/material';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { PieChart, Pie, Cell } from 'recharts';
 import RouteIcon from '@mui/icons-material/Route';
 import PowerIcon from '@mui/icons-material/Power';
 import PanToolIcon from '@mui/icons-material/PanTool';
@@ -12,7 +11,6 @@ import NightlightIcon from '@mui/icons-material/Nightlight';
 import DoNotDisturbOnIcon from '@mui/icons-material/DoNotDisturbOn';
 import SignalCellularOffIcon from '@mui/icons-material/SignalCellularOff';
 import BuildIcon from '@mui/icons-material/Build';
-import Solidgaugechart from './Solidgaugechart';
 
 const ViolationsTrend = () => {
   const [activePeriod, setActivePeriod] = useState('Today');

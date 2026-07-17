@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { useDrag, useDragLayer } from 'react-dnd';
-import axios from 'axios';
 import { IconDotsVertical, IconGripVertical } from '@tabler/icons-react';
 import { MdExpandMore, MdChevronLeft, MdChevronRight } from 'react-icons/md';
 import { TbAbc } from "react-icons/tb";
@@ -13,7 +12,6 @@ import {
   DropdownMenuTrigger,
 } from "../../../../../@/components/ui/dropdown-menu";
 import { Tooltip } from '@mui/material';
-import { LuSearch } from "react-icons/lu";
 import { Search } from 'lucide-react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../../redux/store';

@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../../../@/components/ui/select';
 import { ChartType } from "../../../../../types/chartTabs";
-import { useSelector } from 'react-redux';
-import { RootState } from '../../../../../redux/store';
 
 interface ChartDropdownProps {
   activeChartType: string;

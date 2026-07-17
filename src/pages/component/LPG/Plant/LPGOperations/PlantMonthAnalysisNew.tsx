@@ -6,8 +6,7 @@ import { apiClient } from "@/services/apiClient";
 import { Button } from "@/@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
 import { Loader2, Check, ChevronsUpDown, Maximize2, Minimize2, RotateCcw } from "lucide-react";
-import { AgGridReact } from "ag-grid-react";
-import { ColDef, ColGroupDef, SizeColumnsToContentStrategy, IFilterParams, IDoesFilterPassParams } from "ag-grid-community";
+import { ColDef, ColGroupDef, IFilterParams, IDoesFilterPassParams } from "ag-grid-community";
 import {
   Popover,
   PopoverContent,
@@ -40,7 +39,6 @@ import {
   monthToShort,
   formatMonthLabel,
   monthDateToMonthName,
-  getScrollbarStartFromAugust,
   getYAxisRangeProductivity,
   getYAxisRange,
   sortByMonthOrder,

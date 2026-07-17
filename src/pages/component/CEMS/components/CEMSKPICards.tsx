@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Activity, AlertTriangle, CheckCircle2, Search, X } from 'lucide-react';
 import { apiClient } from "@/services/apiClient";
-import { Card, CardContent } from '@/@/components/ui/card';
 
 // SolarPanel icon component
 const SolarPanel = ({ className, ...props }: React.SVGProps<SVGSVGElement>) => (

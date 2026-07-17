@@ -9,14 +9,12 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from '@/@/components/ui/button';
 import { VisuallyHidden } from '@chakra-ui/react';
 // import Select from '@mui/material/Select';
-import axios from 'axios';
 import { keyframes } from '@mui/system';
 import { Checkbox } from '@/@/components/ui/checkbox';
 import ROAlertsTable from '@/pages/component/alertsTable/ROAlertsTable';

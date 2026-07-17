@@ -1,5 +1,5 @@
 import React, { useState, KeyboardEvent } from 'react';
-import { LogIn, Eye, EyeOff } from 'lucide-react';
+import { Eye, EyeOff } from 'lucide-react';
 import hpLogo from '../../assets/svg/hp.png';
 import loginPageData from './loginPageData.json';
 import hpclbg from '../../assets/hpcl/—Pngtree—a large oil refinery at_12816562.jpg'

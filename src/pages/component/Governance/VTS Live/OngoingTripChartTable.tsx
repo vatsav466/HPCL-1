@@ -20,11 +20,7 @@ import {
   Search,
   X,
   Plus,
-  Minimize2,
-  MoreHorizontal,
-  MoreVertical,
 } from "lucide-react";
-import { CreateTicketDialog } from "@/pages/component/Ticketing2/components/CreateTicketDialog";
 import TicketDialogModal from "@/pages/component/Ticketing2/components/TicketDialogModal";
 import { apiClient } from "@/services/apiClient";
 import * as am5 from "@amcharts/amcharts5";

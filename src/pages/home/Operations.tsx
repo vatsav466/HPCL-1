@@ -1,6 +1,5 @@
 // import React, { useState } from 'react';
 // import { Card, CardContent, CardHeader, CardTitle } from '../../@/components/ui/card';
-import SpotFire from '../../assets/hpcl/spotfire.png';
 import VA from '../../assets/hpcl/VA.png';
 import VTS from '../../assets/hpcl/VTS.png';
 import CEMS from '../../assets/hpcl/CEMS.jpeg';
@@ -322,7 +321,6 @@ import SALESCDCEMS from '../../assets/hpcl/SALESCDCEMS.png';
 import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { X } from 'lucide-react';
-import { Header } from '@/@/components/ui/header';
 import { useNavigate } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import { toggleSidebar } from '@/redux/features/sidebarSlice';

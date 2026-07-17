@@ -3,11 +3,7 @@ import { Button } from '../../../@/components/ui/button';
 import { Input } from '../../../@/components/ui/input';
 import {
   RefreshCw,
-  Filter,
-  MoreVertical,
   Loader,
-  ArrowUp,
-  ArrowDown,
   ChevronDown,
   ChevronRight,
   Download

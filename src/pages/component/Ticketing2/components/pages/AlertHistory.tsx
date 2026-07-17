@@ -3,18 +3,11 @@ import {
   AlertCircle, 
   Clock, 
   Store, 
-  Building2, 
-  AlertOctagon,
-  FileText,
-  Target,
-  ShieldAlert,
-  Hash,
+  Building2,
   MapPin,
   Map,
   Users,
-  Phone,
-  Ticket,
-  Activity
+  Phone
 } from 'lucide-react';
 import { encryptPayload } from '@/configs/encryptFernet';
 import { apiClient } from '@/services/apiClient';

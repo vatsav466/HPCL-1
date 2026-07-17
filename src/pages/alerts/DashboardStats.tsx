@@ -7,8 +7,7 @@ import {
   YAxis, 
   Tooltip, 
   Legend,
-  ResponsiveContainer, 
-  Rectangle
+  ResponsiveContainer
 } from 'recharts';
 import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { useSelector } from 'react-redux';

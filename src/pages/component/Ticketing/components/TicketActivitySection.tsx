@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from "react";
 import ReactQuill from "react-quill-new";
 import "quill/dist/quill.snow.css";
-import { Settings, MessageCircle, Clock, Pencil, Trash2 } from "lucide-react";
+import { MessageCircle, Clock, Pencil, Trash2 } from "lucide-react";
 import { Button } from "@/@/components/ui/button";
 import { apiClient } from "@/services/apiClient";
 import { toast } from "sonner";

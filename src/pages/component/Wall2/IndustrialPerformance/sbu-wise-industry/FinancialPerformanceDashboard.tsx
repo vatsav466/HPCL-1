@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import ReactECharts from 'echarts-for-react';
-import { Filter, ChevronDown, X, AlertCircle, Search, Check, RefreshCw } from 'lucide-react';
+import { ChevronDown, AlertCircle, Search, Check, RefreshCw } from 'lucide-react';
 import { fetchHistoricalYearsData, HistoricalFilters } from './services/performanceApi';
 import { HistoricalSalesData, DrilldownYearlyData, FilterValues } from './types';
 import { graphic } from 'echarts';

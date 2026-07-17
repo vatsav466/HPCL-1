@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Maximize2, Minimize2 } from 'lucide-react';
 
 interface FullscreenContainerProps {
   children: React.ReactNode;

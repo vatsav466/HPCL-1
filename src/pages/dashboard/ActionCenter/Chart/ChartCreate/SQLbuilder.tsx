@@ -1,19 +1,16 @@
 // SQLQueryBuilder.tsx
 import React, { useState, useEffect } from 'react';
-import databaseService from './queryService';
 import {
   Box, Paper, Typography, TextField, Select, FormControl,
   InputLabel, Button, Table, TableBody, TableCell, TableHead,
-  TableRow, IconButton, Grid, Chip, Drawer, Dialog, DialogTitle,
-  DialogContent, DialogActions, Divider, MenuItem, Checkbox,
+  TableRow, IconButton, Grid, Chip, Dialog, DialogTitle,
+  DialogContent, Divider, MenuItem, Checkbox,
   Accordion, AccordionSummary, AccordionDetails,
   FormHelperText
 } from '@mui/material';
-import { IconDatabase } from '@tabler/icons-react';
 import {
   Add as AddIcon, PlayArrow as PlayArrowIcon,
-  DeleteOutline as DeleteIcon, SaveAlt as SaveIcon,
-  History as HistoryIcon, Storage as DatabaseIcon,
+  DeleteOutline as DeleteIcon, SaveAlt as SaveIcon, Storage as DatabaseIcon,
   TableChart as TableIcon, MergeType as JoinIcon,
   FilterList as FilterIcon, Sort as SortIcon,
   Functions as FunctionIcon, OpenInFull as ExpandIcon, Close as CloseIcon
@@ -22,7 +19,6 @@ import {
   TableJoinRow, FilterRow, LogicRow, SchemaOption, TableOption,
   SortRow, databaseStructure, conditionOperators, smallTextStyle,
   selectStyles, menuProps,
-  sidebarButtonStyle,
   HavingRow,
   aggregateFunctions,
   limitOption

@@ -5,8 +5,8 @@ import ChartModal from './ChartModal';
 import DrilldownModal from './DrilldownModal';
 import FinancialPerformanceDashboard from './FinancialPerformanceDashboard';
 import { fetchTopPerformers, fetchBottomPerformers, downloadPerformanceData } from './services/performanceApi';
-import { RefreshCw, Download, AlertCircle, TrendingUp, TrendingDown, Activity, Info, Building2 } from 'lucide-react';
-import { ApiResponse, FilterValues, RegionData } from './types';
+import { RefreshCw, Download, TrendingUp, TrendingDown, Activity, Building2 } from 'lucide-react';
+import { FilterValues, RegionData } from './types';
 
 const getPreviousFiscalMonthAbbr = (): string => { 
   const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];

@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
 import {
   Tabs,
@@ -12,9 +12,9 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/@/components/ui/tabs";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
+import convertToFilters from "@/utils/dynamicFilter";
 import { fetchChartData, fetchDistinctValues } from "../api";
-import { format, formatDate, startOfMonth, subDays } from "date-fns";
+import { format, startOfMonth, subDays } from "date-fns";
 import RetailSalesPerformance from "./RetailSalesPerformance";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";

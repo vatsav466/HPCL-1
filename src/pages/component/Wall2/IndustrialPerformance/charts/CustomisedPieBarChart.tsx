@@ -6,13 +6,10 @@ import am5themes_Animated from "@amcharts/amcharts5/themes/Animated"
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card"
 import { Button } from "@/@/components/ui/button"
 import { Maximize2, Minimize2, RotateCcw } from "lucide-react"
-import axios from "axios"
 import PerformanceControls from "./PerformanceControls"
 import { GrowthBarChart } from "./piechartamcharts"
 import CompanyWiseMarketshareChart from "./CompanyWiseMarketshareChart"
-import { toast } from "sonner"
 import { apiClient } from "@/services/apiClient"
-import { encryptPayload } from "@/configs/encryptFernet"
 
 // Company colors configuration (remains the same)
 const COMPANY_COLORS = {

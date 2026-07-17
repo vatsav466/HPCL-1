@@ -13,7 +13,7 @@ import {
   Brush
 } from 'recharts';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
-import { Loader2, AlertCircle, RefreshCw } from 'lucide-react';
+import { Loader2, RefreshCw } from 'lucide-react';
 import { convertUTCDateToLocalDate } from '@/hooks/useRelativeTime';
 import { Alert, AlertDescription } from "@/@/components/ui/alert";
 import DatePicker from '../RetailOutletHome/DatePicker';

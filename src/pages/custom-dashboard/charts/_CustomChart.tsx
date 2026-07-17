@@ -9,38 +9,23 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from '@/@/components/ui/button';
-import { ArrowUpRight, ChevronLeft, ChevronRight, ClipboardCheck, FileText, Filter, Navigation, Receipt, ShoppingCart, TrendingDown, TrendingUp, Truck } from 'lucide-react';
+import { ChevronLeft, ChevronRight, TrendingDown, TrendingUp } from 'lucide-react';
 import { VisuallyHidden } from '@chakra-ui/react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 // import Select from '@mui/material/Select';
-import axios from 'axios';
 import { Tooltip, IconButton, Box } from '@mui/material';
 import { keyframes } from '@mui/system';
 import CircleIcon from '@mui/icons-material/Circle';
 import ModalDialogBox from './ModalDialogBox';
-import { Badge } from '@/@/components/ui/badge';
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/@/components/ui/select";
+
+
 import { Checkbox } from '@/@/components/ui/checkbox';
 import ROAlertsTable from '@/pages/component/alertsTable/ROAlertsTable';
 import { CustomMultiSelect } from '@/@/components/ui/custom-multiselect';
 import { Skeleton, SVGSkeleton } from './Skeleton';
-import { data } from './data';
 import { apiClient } from '@/services/apiClient';
 
 const expandBar = keyframes`

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { ChevronRight, ChevronDown, Plus, GripVertical, Search, ZoomIn, ZoomOut, RotateCcw, BarChart3, Table, Eye, EyeOff, X, Download, Hash, RefreshCw, ArrowUpDown, ArrowUp, ArrowDown, ArrowLeft, ArrowRight, Truck, AlertTriangle, ArrowLeftRight, FileText, ShieldAlert, Info, Calendar, LayoutGrid } from 'lucide-react';
-import { format, startOfWeek, endOfWeek, eachDayOfInterval, addWeeks, subWeeks, parseISO, isSameDay, isAfter, startOfDay, subDays, subMonths, getDay, differenceInDays, addHours, addMinutes } from 'date-fns';
+import { ChevronRight, ChevronDown, Search, Eye, EyeOff, X, Download, Hash, RefreshCw, Info, Calendar, LayoutGrid } from 'lucide-react';
+import { format, startOfWeek, endOfWeek, parseISO, isSameDay, isAfter, startOfDay, subDays, subMonths, getDay, differenceInDays, addHours, addMinutes } from 'date-fns';
 import { apiClient } from '@/services/apiClient';
 import { Loader2 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { Card, CardContent } from '@/@/components/ui/card';
 import { Popover, PopoverContent, PopoverTrigger } from '@/@/components/ui/popover';
 import type { Bay, BayCategory, LocationWiseCounts, LocationWiseItem } from './BayAlertTables/BayAlertTableTypes';
-import { LOCATION_EXPORT_COLUMNS, getLocationWiseRowTotal, FIELD_TO_CATEGORY_ID } from './BayAlertTables/BayAlertTableTypes';
+import { LOCATION_EXPORT_COLUMNS, getLocationWiseRowTotal } from './BayAlertTables/BayAlertTableTypes';
 import { BayAlertLocationWiseTable } from './BayAlertTables/BayAlertLocationWiseTable';
 import { BayAlertDateWiseTable } from './BayAlertTables/BayAlertDateWiseTable';
 

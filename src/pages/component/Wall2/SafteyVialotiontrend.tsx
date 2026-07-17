@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PerformanceDashboard from './PerformanceDashboard';
 
 const SafetyViolationTrend = () => {

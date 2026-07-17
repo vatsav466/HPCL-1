@@ -726,8 +726,6 @@
 import React from 'react';
 import EChartsReact from 'echarts-for-react';
 import { Westeros, Essos, Wonderland, Walden, Infographic, Macarons, Roma, CoolTheme, Shine } from '../../../_Chart/ChartTheme/ChartTheme';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../../../../@/components/ui/tabs';
-import GaugeDataTable from './GaugeDataTable';
 
 interface GaugeProps {
   data: {

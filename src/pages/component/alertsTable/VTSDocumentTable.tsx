@@ -1,7 +1,6 @@
 import { ChangeEvent, useEffect, useMemo, useRef, useState } from "react"
 import { Card, CardContent } from "../../../@/components/ui/card"
-import { Alert, AlertDescription } from "../../../@/components/ui/alert"
-import { AlertCircle, Download, Loader2, UploadCloud } from "lucide-react"
+import { Download, Loader2, UploadCloud } from "lucide-react"
 import { Button } from "../../../@/components/ui/button"
 import { apiClient } from "@/services/apiClient"
 import { toast } from "sonner"

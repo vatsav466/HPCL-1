@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect, useCallback, useRef, useLayoutEffect } from "react";
 import ReactQuill from "react-quill-new";
 import "quill/dist/quill.snow.css";
-import { Settings, MessageCircle, Clock, Pencil, Trash2, Download } from "lucide-react";
+import { MessageCircle, Clock, Download } from "lucide-react";
 import { Button } from "@/@/components/ui/button";
 import {
   AlertDialog,

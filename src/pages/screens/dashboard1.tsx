@@ -1,5 +1,5 @@
-import { Search, Plus, LayoutDashboard, CheckCircle2, Send, Trash2, GripVertical, User, Users } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from '../../@/components/ui/card';
+import { LayoutDashboard, CheckCircle2, Send, Trash2, GripVertical, User } from 'lucide-react';
+import { Card, CardContent } from '../../@/components/ui/card';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../../@/components/ui/dropdown-menu';
 import { Dashboard } from '../../redux/features/dashboardSlice';
 

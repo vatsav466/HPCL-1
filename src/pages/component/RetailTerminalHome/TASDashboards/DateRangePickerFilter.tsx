@@ -5,7 +5,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
 import { CalendarIcon } from "lucide-react"
 import { Button } from "@/@/components/ui/button"
 import { useState } from "react"
-import dayjs from "dayjs"
 
 export const DateRangePickerFilter = ({ fromDate, toDate, onFromDateChange, onToDateChange, onApply, disabled = false, maxDate }: {
   fromDate: any;

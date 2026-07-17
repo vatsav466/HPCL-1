@@ -9,12 +9,8 @@ import {
   CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { Loader2, RotateCcw, CalendarIcon, Maximize2, Minimize2 } from "lucide-react";
+import { Loader2, RotateCcw, Maximize2, Minimize2 } from "lucide-react";
 import { FilterDropdown } from "../../Sales/FilterDropdown";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { Popover, PopoverContent, PopoverTrigger } from "@/@/components/ui/popover";
 import { apiClient } from "@/services/apiClient";
 import NoDataDisplay from "@/components/common/NoDataDisplay";
 

@@ -1,9 +1,8 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { apiClient } from '@/services/apiClient';
-import { Loader2, AlertCircle, Search, XCircle } from 'lucide-react';
+import { Loader2, Search, XCircle } from 'lucide-react';
 import * as am5 from '@amcharts/amcharts5';
 import * as am5xy from '@amcharts/amcharts5/xy';
-import * as am5percent from '@amcharts/amcharts5/percent';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
 import { Card, CardHeader, CardTitle, CardContent } from '@/@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/@/components/ui/dialog';

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { SingleCSRejectionData } from './Types';
-import { Loader2, AlertTriangle, BarChart3, PackageCheck } from 'lucide-react';
+import { Loader2, BarChart3 } from 'lucide-react';
 
 // THE FIX: The color palette has been updated with darker, richer tones.
 const REJECTION_COLORS = {

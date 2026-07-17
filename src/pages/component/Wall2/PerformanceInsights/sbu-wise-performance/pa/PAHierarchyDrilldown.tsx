@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ArrowUpRight, ChevronRight, Play, RefreshCw } from "lucide-react";
-import { D, LoadingBlock } from "./pa.shared";
+import { LoadingBlock } from "./pa.shared";
 import { fmtTmt, growthColor, buildTwoFyFromSingleFyResponses, getPaDateRange } from "./pa.utils";
 import { saPayload, distPayload } from "./pa.payloads";
 import { postTwoFy } from "./pa.fetchers";

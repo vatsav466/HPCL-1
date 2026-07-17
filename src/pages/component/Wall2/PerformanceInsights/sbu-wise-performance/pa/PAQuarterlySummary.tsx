@@ -1,7 +1,7 @@
 import React from "react";
 import { BarChart3, RefreshCw } from "lucide-react";
 import { LoadingBlock } from "./pa.shared";
-import { fmtTmt, growthColor } from "./pa.utils";
+import { growthColor } from "./pa.utils";
 import type { TwoFyRow } from "./pa.types";
 
 interface Props {

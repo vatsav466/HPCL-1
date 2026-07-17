@@ -1,15 +1,11 @@
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import './equipment.css';
 
-import { useNavigate } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { Download, FileDown, RefreshCw, AlertTriangle, Activity, X, MoreVertical, MoreHorizontal, Search, Info, Loader2, Plus, Copy, Trash2, ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react';
+import { Download, RefreshCw, MoreVertical, MoreHorizontal, Loader2 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { apiClient } from '@/services/apiClient';
 import { toast } from "sonner";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
-import { Input } from "@/@/components/ui/input";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/@/components/ui/tooltip";
 import useAuthStore from "@/store/authStore";
 import {

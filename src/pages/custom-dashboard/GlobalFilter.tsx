@@ -329,11 +329,9 @@
 
 
 
-import React, { createContext, useState, useContext, useMemo } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '../../@/components/ui/card';
+import React, { useState, useContext, useMemo } from 'react';
 import { ChevronDown, ChevronUp, X } from 'lucide-react';
 import { MultiSelect } from './multi-select/multi-select';
-import { Bar, BarChart, Legend, ResponsiveContainer, XAxis, YAxis, Tooltip } from 'recharts';
 import { Label } from '../../@/components/ui/label';
 import { Tooltip as ShadcnTooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../../@/components/ui/tooltip';
 import filtersConfigs from './charts/filtersConfig.json'; // Dynamic filter config

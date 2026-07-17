@@ -1,27 +1,25 @@
 
-import { useState, useCallback, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import {
   Card,
   CardContent,
 } from "@/@/components/ui/card";
-import { styled } from "@mui/material/styles";
 import dayjs, { Dayjs } from "dayjs";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { format, formatDate, startOfMonth, subDays } from "date-fns";
+import convertToFilters from "@/utils/dynamicFilter";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React from "react";
 import { Separator } from "@/@/components/ui/separator";
 import RetailSalesPerformance from "../RetailSalesPerformance";
-import { fetchChartData, fetchDistinctValues, fetchProductValues } from "../../api";
+import { fetchChartData, fetchProductValues } from "../../api";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/@/components/ui/popover";
 import { Button } from "@/@/components/ui/button";
-import { Calendar, RotateCcw, Loader2, Check, ChevronsUpDown, Search, X } from "lucide-react";
+import { Calendar, RotateCcw, Loader2, Check, ChevronsUpDown, Search } from "lucide-react";
 import GrowthStatCard from "../GrowthCard";
 import SBUWiseProductLevel from "../SalesProductLevelCard";
 import {
@@ -31,23 +29,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/@/components/ui/select";
-import { MultiSelect } from "@/@/components/ui/industry-multiselect";
 import { Alert, AlertDescription } from "@/@/components/ui/alert";
-import ScrollToTop from "@/components/common/ScrollToTop";
 import TopRetailsub from "../topRetail/TopRetailsub";
-import { useAuth } from '@/services/useuth';
 import useAuthStore from "@/store/authStore";
-import useMenuStore from "@/store/menuStore";
 
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-} from "@/@/components/ui/command";
-import { Badge } from "@/@/components/ui/badge";
-import SalesPerformanceTable from "../topRetail/SalesPerformanceTable";
+
+
 
 
 type ChartMode = "month" | "year" | "ytd" | "date";

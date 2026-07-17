@@ -3,9 +3,7 @@ import { Button } from '../../../@/components/ui/button';
 import { Input } from '../../../@/components/ui/input';
 import {
     RefreshCw,
-    Filter,
     MoreVertical,
-    Loader,
     Triangle,
     Download
 } from 'lucide-react';
@@ -17,7 +15,6 @@ import { apiClient } from '@/services/apiClient';
 import * as XLSX from 'xlsx';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
-import AlertHistoryDialog from '../alertsTable/AlertHistoryDialog';
 import VTSAlertHistoryDialog from './VTSAlertHistoryDialog';
 
 interface ROAlertsTableProps {

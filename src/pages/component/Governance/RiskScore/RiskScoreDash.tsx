@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, useCallback, useMemo } from 'react';
-import { RefreshCw, Search, ChevronUp, ChevronDown, ChevronsUpDown, Filter, X, Download, MoreVertical, Loader2, Ticket, Minimize2, CheckSquare, XSquare, Plus, AlertCircle, CalendarDays, Info, BarChart3, Table2, Check, Map, ArrowLeft, Sun, Satellite, Layers, Mountain, Globe } from 'lucide-react';
+import { RefreshCw, Search, ChevronUp, ChevronDown, Filter, X, Download, Loader2, Plus, AlertCircle, Info, Check, Map, ArrowLeft, Sun, Satellite, Layers, Mountain, Globe } from 'lucide-react';
 import { Input } from "@/@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
 import { AgGridReact } from 'ag-grid-react';
@@ -8,13 +8,10 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { apiClient } from '@/services/apiClient';
 import ZonePlantSelections from '../../RetailOutletHome/ZonePlantSelections';
-import EnhancedTimeFilter from '../filters/TimeFilterButtons';
 import ReusableFilterBar from '../VTS Analytics/ReusableFilterBar';
 import VTSVehicleAI from '../VTS/VTSVehicleAI';
 import { Popover, PopoverContent, PopoverTrigger } from "@/@/components/ui/popover";
-import { Checkbox } from "@/@/components/ui/checkbox";
 // Sheet components moved to extracted detail sheet files
-import { Button } from "@/@/components/ui/button";
 import { cn } from "@/@/lib/utils";
 import {
   Command,

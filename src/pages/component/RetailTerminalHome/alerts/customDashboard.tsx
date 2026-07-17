@@ -1,6 +1,5 @@
 import { BarChart } from '@/pages/custom-dashboard/charts/BarChart';
 import { DashboardProvider } from '@/pages/custom-dashboard/context/DashboardContext';
-import { Dashboard } from '@/pages/custom-dashboard/Dashboard';
 import { GlobalFilterProvider } from '@/pages/custom-dashboard/GlobalFilter';
 import apiService from '@/services/apiService';
 import { useEffect, useState } from 'react';

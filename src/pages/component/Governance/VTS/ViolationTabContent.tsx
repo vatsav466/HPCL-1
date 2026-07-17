@@ -1,12 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
-import { AlertTriangle, CheckCircle, XCircle, Wrench, Truck, ArrowRightLeft, Loader2 } from 'lucide-react';
+import { AlertTriangle, CheckCircle, XCircle, Wrench, Truck, Loader2 } from 'lucide-react';
 import ViolationPieChart from './ViolationPieChart';
 import ViolationTrendsChart from './ViolationTrendsChart';
 import AlertsPivotTable, { InstancePivotData } from './AlertsPivotTable';
 import { apiClient } from '@/services/apiClient';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
-import { Button } from '@/@/components/ui/button';
 
 interface Column {
     id: string;

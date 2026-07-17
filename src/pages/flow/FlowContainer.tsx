@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import axios from "axios";
 import { Loader } from "lucide-react";
 import FlowChart from "./chart/FlowChart";
 import AutomationTableDetail from "./AutomationTableDetail";

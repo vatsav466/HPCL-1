@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, DragEvent } from "react";
+import React, { useState, useEffect, DragEvent } from "react";
 import {
   Card,
   CardHeader,
@@ -7,38 +7,23 @@ import {
 } from "../../@/components/ui/card";
 import { Input } from "../../@/components/ui/input";
 import { Button } from "../../@/components/ui/button";
-import { DashboardWidget } from "./dashboard1";
 import {
   Search,
-  Monitor,
-  ArrowRight,
   ArrowLeft,
   Loader2,
   X,
-  GripHorizontal,
   LayoutGrid,
-  LayoutList,
   BarChart3,
   Users,
   TrendingUp,
   LineChart,
   ArrowUp,
   ArrowDown,
-  Maximize2,
-  Minimize2,
-  MoreHorizontal,
-  Download,
-  Settings
+  Maximize2
 } from "lucide-react";
 import { Alert, AlertDescription } from "../../@/components/ui/alert";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "../../@/components/ui/dialog";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../../@/components/ui/dropdown-menu";
+
+
 import { apiClient } from "@/services/apiClient";
 
 const SCREEN_PRESETS = [

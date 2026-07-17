@@ -13,7 +13,7 @@ import { X, Clock, AlertTriangle, Wrench, Info } from "lucide-react";
 import "@xyflow/react/dist/base.css";
 import Legend from "../legend/Legend";
 import { statusColors } from "../util/util";
-import { Tooltip, Dialog, DialogTitle, DialogContent, DialogActions, Button } from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 // Define a type for the parsed device object for type safety
 interface ParsedDevice {

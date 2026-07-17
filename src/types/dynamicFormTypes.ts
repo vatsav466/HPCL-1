@@ -1,4 +1,3 @@
-import { RegisterOptions } from "react-hook-form";
 export interface ParamsType {
   method: "get" | "post" | "put" | "delete";
   query: {

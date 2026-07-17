@@ -15,10 +15,9 @@ import {
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from "../../@/components/ui/dropdown-menu";
-import { LineChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Line, Bar,BarChart } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, Bar,BarChart } from 'recharts';
 import { Card } from "../../@/components/ui/card";
-import { Popover, PopoverContent, PopoverTrigger } from '../../@/components/ui/popover';
-import { Calendar } from '../../@/components/ui/calendar';
+import { Popover } from '../../@/components/ui/popover';
 
 const AlarmDetailsView = ({ selectedAlarms, setShowAlarmDetails }) => {
   const [visibleColumns, setVisibleColumns] = useState({

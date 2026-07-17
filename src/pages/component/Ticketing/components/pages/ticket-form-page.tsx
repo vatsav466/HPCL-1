@@ -1,22 +1,13 @@
 
-import { useParams, useNavigate, useSearchParams, useLocation, Link } from "react-router-dom";
-import { Input } from "@/@/components/ui/input";
-import { Button } from "@/@/components/ui/button";
-import { Textarea } from "@/@/components/ui/textarea";
-import {
-  ReusableCombobox,
-  ComboboxOption,
-} from "../reusable-combobox";
-import { ScrollArea } from "@/@/components/ui/scroll-area";
-import { Loader2, ArrowLeft, Save, PlusCircle, Home, ArrowRight, X } from "lucide-react";
+import { useParams, useNavigate, useSearchParams, useLocation } from "react-router-dom";
+
+
+import { Loader2, ArrowLeft } from "lucide-react";
 import { useTickets } from "../../hooks/useTickets";
 import { toast } from "sonner";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
 } from "@/@/components/ui/card";
 import {
   CreateOrFetchAlertTypesPayload,

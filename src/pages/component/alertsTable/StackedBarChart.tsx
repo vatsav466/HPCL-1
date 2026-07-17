@@ -6,7 +6,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer
 } from 'recharts';
 import { fetchTerminalData } from '../RetailTerminalHome/ApiServiceFile'; // Adjust import path as needed

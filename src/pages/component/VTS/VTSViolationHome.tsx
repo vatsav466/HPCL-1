@@ -1,18 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Projects from '../../projects/Projects';
-import { ROAlertsTable } from '../alertsTable/ROAlertsTable';
 import { SeverityProvider } from '../../projects/Projects';
-import HorizontalStackedBarChart from '../RetailTerminalHome/HorizontalStackedBarChart';
-import StackedBarChart from '../RetailTerminalHome/StackedBarChart';
-import InterlockStackedBarChart from '../RetailTerminalHome/InterlockStackedBarChart';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import TimeFilterButtons from '../RetailOutletHome/TimeFilterButtons';
-import axios from "axios";
-import VTSAlertsTable from '../alertsTable/VTSAlertsTable';
-import VTSAlertsTableV2 from '../alertsTable/VTSAlertsTAbleV2';
-import VTSAlertsTableClosedTab from '../alertsTable/VTSAlertsTableClosedTab';
 import { Button } from "@/@/components/ui/button"
 import { RotateCcw } from "lucide-react"
 import { apiClient } from '@/services/apiClient';

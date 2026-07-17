@@ -26,7 +26,6 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from "@/@/components/ui/popover";
 import { useLocations } from "../hooks/useLocations";
 import useAuthStore from "@/store/authStore";
-import { apiClient } from "@/services/apiClient";
 
 const BU_OPTIONS = [
   { value: "all", label: "All BU" },

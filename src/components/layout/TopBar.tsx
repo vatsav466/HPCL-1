@@ -4,15 +4,8 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "@/@/components/ui/tooltip";
-import { Flex, HStack, IconButton, Spacer, Text } from "@chakra-ui/react";
+import { Flex, HStack, IconButton, Spacer } from "@chakra-ui/react";
 import {
-  IconBell,
-  IconGlobe,
-  IconScreenshot,
-  IconSearch,
-  IconSettings,
-  IconUser,
-  IconIkosaedr,
   IconHome2,
 } from "@tabler/icons-react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -27,7 +20,6 @@ import {
 } from "@/@/components/ui/popover";
 import { Button } from "@/@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/@/components/ui/avatar";
-import { Separator } from "@/@/components/ui/separator";
 import { Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";

@@ -414,7 +414,7 @@ import { PlusCircle, XCircle } from 'lucide-react';
 import PivotTable from '../../Chart/ListOfCharts/PivotTable/PivotTable';
 import Donut from '../../Chart/ListOfCharts/Donut/Donut';
 import CustomBar from '../../Chart/ListOfCharts/CustomBar/CustomBar';
-import { IconDeviceFloppy, IconSettings, IconPencil } from '@tabler/icons-react';
+import { IconSettings, IconPencil } from '@tabler/icons-react';
 import { Popover, PopoverContent, PopoverTrigger } from "../../../../../@/components/ui/popover";
 import { Button } from "../../../../../@/components/ui/button";
 import { Label } from "../../../../../@/components/ui/label";

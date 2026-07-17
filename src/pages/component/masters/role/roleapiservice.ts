@@ -1,6 +1,5 @@
 // roleapiservice.ts
 import { apiClient } from '@/services/apiClient';
-import axios from 'axios';
 
 export interface RoleMasterResponse {
   data: {

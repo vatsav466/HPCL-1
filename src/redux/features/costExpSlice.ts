@@ -1,6 +1,5 @@
 import { apiClient } from '@/services/apiClient';
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 interface ChartDataItem {
   date: string;

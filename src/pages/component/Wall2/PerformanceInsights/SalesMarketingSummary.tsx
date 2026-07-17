@@ -7,9 +7,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/@/components/ui/select";
-import SalesMarketingCards from "./SalesMarketingCards";
 import SalesMarketingProductLevel from "./SalesMarketingProductLevel";
-import SalesMarketingPivotTable from "./SalesMarketingPivot";
 import SalesPerformanceDrillDown from "./SalesPerformanceDrillDown";
 import MarketingSummaryCards from "./MarketingSummaryCards";
 import ZoneWisePerformance from "./ZoneWisePerformance";

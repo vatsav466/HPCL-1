@@ -1,8 +1,5 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Sidebar } from './components/Sidebar';
-import { ScreenLayout } from './components/ScreenLayout';
-import type { Layout, ScreenItem, GridScreen } from '@/types/screen';
+import type { ScreenItem } from '@/types/screen';
 import React from 'react';
 import ConfettiExplosion, { ConfettiProps } from 'react-confetti-explosion';
 import { GalleryNavButton } from '../GalleryView/gallery/GalleryNavButton';

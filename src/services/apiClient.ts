@@ -1,4 +1,4 @@
-import axios, { isCancel, AxiosInstance } from "axios";
+import axios, { AxiosInstance } from "axios";
 import { encryptPayload, decryptPayload } from "../configs/encryptFernet";
 import { config } from "../configs/excrypt.config";
 import useAuthStore from "../store/authStore";

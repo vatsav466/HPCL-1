@@ -7,15 +7,9 @@ import {
   DialogTitle,
 } from "../../../../@/components/ui/dialog";
 import { Input } from "../../../../@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "../../../../@/components/ui/select";
-import { Save, XCircle, PlusCircle } from "lucide-react";
-import axios from 'axios';
+
+
+import { XCircle, PlusCircle } from "lucide-react";
 // import { SaveDashboardData } from '../../../../types/DashbordTypes';
 
 interface Tag {

@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../../../../../@/components/ui/dialog";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../../../../../@/components/ui/dialog";
 import React, { useEffect, useState } from "react";
 import { Input } from "../../../../../@/components/ui/input";
 import { Calendar } from "lucide-react";

@@ -1,7 +1,6 @@
 import { create } from 'zustand';
 import axios from 'axios';
 import { toast } from 'sonner';
-import debounce from 'lodash/debounce';
 import { apiClient } from '@/services/apiClient';
 // Update the UserData interface to better match how you're using it
 interface AllowedMenu {

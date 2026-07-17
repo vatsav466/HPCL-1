@@ -59,7 +59,6 @@ import {
 } from "./index";
 import {
   AddDashboardProps,
-  DraggableChartInfo,
   ExistingDashboardDetails,
   SaveDashboardData,
   Widget,

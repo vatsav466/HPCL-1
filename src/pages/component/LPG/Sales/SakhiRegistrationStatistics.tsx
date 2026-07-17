@@ -5,7 +5,7 @@ import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { ArrowLeft, RotateCcw, Loader2, ChevronsUpDown, X, Minimize2, Maximize2 } from "lucide-react";
+import { ArrowLeft, RotateCcw, Loader2, Minimize2, Maximize2 } from "lucide-react";
 import { FilterDropdown } from "./FilterDropdown";
 import { apiClient } from "@/services/apiClient";
 

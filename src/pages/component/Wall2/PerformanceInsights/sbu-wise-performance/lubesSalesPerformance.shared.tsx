@@ -4,7 +4,6 @@ import {
   ChevronRight,
   Loader2,
   Maximize2,
-  Minimize2,
   Search,
   TrendingDown,
   TrendingUp,

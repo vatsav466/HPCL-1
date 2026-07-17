@@ -1,21 +1,15 @@
 import React, { useState } from 'react';
 import { Download, Info, Loader2 } from 'lucide-react';
 import MetricCard from './MetricCard';
-import ProductSecurityRisk from './ProductSecurityRisk';
 import ItdgActionableChart from './ItdgActionableChart';
 import { InstanceData } from './VTSanalyDashboard';
-import TripSafetyRisk from './TripSafetyRisk';
-import OngoingTripCard from './OngoingTripCard';
-import ActionLinkCard from './ActionLinkCard';
 import { Dialog, DialogContent } from '@/@/components/ui/dialog';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/@/components/ui/tooltip';
 import ViolationPieChart from './ViolationPieChart';
 import { apiClient } from '@/services/apiClient';
 import { toast } from 'sonner';
-import VTSDrillDownTable from '../VTS Insight/VTSDrillDownTable';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/@/components/ui/select';
 import { Button } from '@/@/components/ui/button';
-import { ProSidebarProvider } from 'react-pro-sidebar';
 import GovernanceDrillDownTable from './GovernanceDrillDownTable';
 
 interface GovernanceTabProps {

@@ -9,7 +9,6 @@ import {
   RowClassParams,
   GridReadyEvent,
   CellClassParams,
-  ICellRendererParams,
 } from "ag-grid-community";
 import { Download, RotateCcw } from "lucide-react";
 import { toast } from "sonner";

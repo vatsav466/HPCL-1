@@ -1,7 +1,7 @@
 
 import { RouteType } from "./config";
 
-import { IconApps, IconArticle, IconCellSignal5, IconChecklist, IconHierarchy2, IconHome, IconUserCog, IconUserSquareRounded } from '@tabler/icons-react';
+import { IconCellSignal5, IconChecklist, IconHierarchy2, IconUserCog, IconUserSquareRounded } from '@tabler/icons-react';
 import { IconCoin } from '@tabler/icons-react';
 import { IconAdjustmentsHorizontal } from '@tabler/icons-react';
 import { IconLayoutDashboard } from '@tabler/icons-react';

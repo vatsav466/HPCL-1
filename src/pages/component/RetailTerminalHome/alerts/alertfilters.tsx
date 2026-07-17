@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Filter, X, ChevronRight } from 'lucide-react';
+import { Filter, ChevronRight } from 'lucide-react';
 import { Button } from "../../../../@/components/ui/button";
 import { ScrollArea } from "../../../../@/components/ui/scroll-area";
 import { Popover, PopoverContent, PopoverTrigger } from "../../../../@/components/ui/popover";

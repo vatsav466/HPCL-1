@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 import { useDashboard } from '@/pages/custom-dashboard/context/DashboardContext';
 import { hierarchicalData } from '@/@/lib/chart-data';
-import { ChartData } from '@/pages/custom-dashboard/types/charts';
 
 export function useChartData(chartId: keyof typeof hierarchicalData) {
   const { state } = useDashboard();

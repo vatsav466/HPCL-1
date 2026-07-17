@@ -1,6 +1,6 @@
 import React from "react";
 import { ICellRendererParams } from "ag-grid-community";
-import { ChevronRight, ChevronDown, Loader2, Plus, Minus } from "lucide-react";
+import { ChevronRight, ChevronDown, Loader2 } from "lucide-react";
 import { TableDataType } from "./DataTypes";
 
 export const getHierarchyColWidth = (key: string): number => {

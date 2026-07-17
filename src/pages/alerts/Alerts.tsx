@@ -4,10 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import {
   flexRender,
   getCoreRowModel,
-  useReactTable,
-  ColumnDef
+  useReactTable
 } from "@tanstack/react-table";
-import { Search, RefreshCw, Eye, ChevronLeft, ChevronRight, Filter, Columns2 } from "lucide-react";
+import { Search, RefreshCw, Eye, ChevronLeft, ChevronRight, Columns2 } from "lucide-react";
 
 import { Button } from "../../@/components/ui/button";
 import {

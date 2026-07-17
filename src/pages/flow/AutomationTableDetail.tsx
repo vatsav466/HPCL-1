@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from "@/@/components/ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/@/components/ui/sheet";
 import { X, Download } from "lucide-react";
 import { initialEdges } from "./edges";
 

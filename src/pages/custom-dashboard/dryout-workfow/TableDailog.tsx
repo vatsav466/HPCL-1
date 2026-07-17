@@ -5,7 +5,6 @@ import {
   DialogHeader, 
   DialogTitle 
 } from "@/@/components/ui/dialog";
-import { Card, CardContent } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import { RiFileExcel2Fill } from "react-icons/ri";
 import dayjs from "dayjs";
@@ -17,9 +16,7 @@ import {
   CsvExportModule, 
   SizeColumnsToContentStrategy, 
   SizeColumnsToFitGridStrategy, 
-  SizeColumnsToFitProvidedWidthStrategy,
-  GridApi,
-  ValueFormatterParams 
+  SizeColumnsToFitProvidedWidthStrategy 
 } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 // Removed enterprise modules - using community only

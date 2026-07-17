@@ -6,7 +6,7 @@ import type { ColDef, GridApi, SelectionChangedEvent, SortChangedEvent } from "a
 import { toast } from "sonner"
 import dayjs from "dayjs"
 import { convertUTCDateToLocalDate, formatRelativeTime } from "@/hooks/useRelativeTime"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/@/components/ui/dialog"
 import { Textarea } from "@/@/components/ui/textarea"
 import { apiClient } from "@/services/apiClient"
 

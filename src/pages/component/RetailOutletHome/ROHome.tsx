@@ -14,7 +14,7 @@ import TimeFilterButtons from './TimeFilterButtons';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import ROAlertsTableV2 from '../alertsTable/AlertTableV2';
 import { Button } from "@/@/components/ui/button"
-import { RotateCcw, Settings } from "lucide-react"
+import { RotateCcw } from "lucide-react"
 import AlertsTableClosedTab from '../alertsTable/AlertsTableCloseTab';
 import PerformanceScoreTable from '../alertsTable/PerformanceScoreTable';
 import { apiClient } from '@/services/apiClient';

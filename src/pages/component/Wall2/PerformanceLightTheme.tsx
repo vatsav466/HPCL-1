@@ -7,33 +7,29 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartTooltip,
-  Legend,
   ResponsiveContainer,
   LabelList,
-  Brush,
 } from "recharts";
 import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { fetchChartData, fetchDistinctValues } from "./api";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
 import TablePerformancesales from "./TablePerformancesales";
 import SalesPerformanceChartAHTDateFilters from "./SalesAHTDateFilters";
@@ -46,8 +42,8 @@ import {
   TabsTrigger,
 } from "@/@/components/ui/tabs";
 import { SalesDropdowns } from "./SalesDropdowns";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/@/components/ui/breadcrumb";
+import convertToFilters from "@/utils/dynamicFilter";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/@/components/ui/breadcrumb";
 import {
   Popover,
   PopoverContent,

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '../../../../@/components/ui/card';
-import { ChartContainer, ChartConfig } from '../../../../@/components/ui/chart';
 import { apiClient } from '@/services/apiClient';
 import BCUAlertsTable from '../../alertsTable/BCUAlertsTable';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import TimeFilterButtons from "../../RetailOutletHome/TimeFilterButtons";
 import { Button } from "@/@/components/ui/button";
-import { RotateCcw, AlertTriangle } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 
 interface InterlockData {
   name: string;

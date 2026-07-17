@@ -1,12 +1,11 @@
-import React, { useState, useEffect, ReactNode, useCallback } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
 import { useDrop } from "react-dnd";
-import { IconX,IconArrowBarToRight,IconPencil,IconSettings,
+import { IconX,IconArrowBarToRight,
 } from "@tabler/icons-react";
 import { Popover,  PopoverContent, PopoverTrigger,} from "../../../../../@/components/ui/popover";
 import { Button } from "../../../../../@/components/ui/button";
 import { Label } from "../../../../../@/components/ui/label";
-import {Select,SelectContent,SelectGroup,SelectItem,SelectLabel,SelectTrigger, SelectValue,} from "../../../../../@/components/ui/select";
+import {Select,SelectContent,SelectItem,SelectTrigger, SelectValue,} from "../../../../../@/components/ui/select";
 import { Card,CardContent, CardFooter,} from "../../../../../@/components/ui/card";
 import MultiSelect from "../../../../../@/components/ui/multi-select";
 import {Tabs,TabsContent,TabsList, TabsTrigger} from "../../../../../@/components/ui/tabs";
@@ -14,7 +13,7 @@ import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../../redux/store";
 import {getChartIcon} from './CharttabsIcons';
-import { ChartForm, ChartTabsProps, ChartType, Column, ChartMetric,Dimension, DroppedItem, Filter, FormField, Metric,Option } from "../../../../../types/chartTabs";
+import { ChartForm, ChartTabsProps, ChartType, Column, ChartMetric, DroppedItem, Filter, FormField, Metric,Option } from "../../../../../types/chartTabs";
 import { TimeRangeType } from "./TimeRange";
 import ChartFormField from './ChartFormField';
 import { ChartDropdown } from "./ChartDropdown";

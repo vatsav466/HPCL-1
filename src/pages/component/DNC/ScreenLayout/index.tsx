@@ -3,13 +3,11 @@ import { ToolBar } from './components/ToolBar';
 import { Sidebar } from './components/Sidebar';
 import { Canvas } from './components/Canvas';
 import { Groups } from '@/types/groups';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/@/components/ui/dialog';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from '@/@/components/ui/dialog';
 import { Button } from '@/@/components/ui/button';
-import { Label } from '@/@/components/ui/label';
-import { Input } from '@/@/components/ui/input';
 import { useLayoutStore } from '@/redux/features/useLayoutStore';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/@/components/ui/card';
-import { Briefcase, Calculator, Clock, Cylinder, Fuel, LucideIcon, Users, Video, VideoIcon } from 'lucide-react';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/@/components/ui/card';
+import { Clock, Fuel, LucideIcon, Video } from 'lucide-react';
 import { cn } from '@/@/lib/utils';
 import { apiClient } from '@/services/apiClient';
 

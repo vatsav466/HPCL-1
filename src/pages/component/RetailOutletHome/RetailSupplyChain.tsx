@@ -11,7 +11,6 @@ import {
 } from "@/@/components/ui/card";
 import { Button } from '@/@/components/ui/button';
 import { VisuallyHidden } from '@chakra-ui/react';
-import axios from 'axios';
 import { Checkbox } from '@/@/components/ui/checkbox';
 import { CustomMultiSelect } from '@/@/components/ui/custom-multiselect';
 import { useOutletStore } from '@/store/useOutletStore';
@@ -24,7 +23,6 @@ import { DashboardProvider } from '@/pages/custom-dashboard/context/DashboardCon
 import { transformChartData } from '@/pages/custom-dashboard/status-tracker/utils';
 import { Skeleton } from '@/@/components/ui/skeleton';
 import WorkflowDiagram from '@/pages/custom-dashboard/dryout-workfow/WorkflowDiagram';
-import { SVGSkeleton } from '@/pages/custom-dashboard/charts/Skeleton';
 import StatusTracker from '@/pages/custom-dashboard/status-tracker/StatusTracker';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/@/components/ui/tabs';
 import { Tabs as CTabs, TabList as CTabList, TabPanels as CTabPanels, Tab as CTab, TabPanel as CTabPanel } from "@chakra-ui/react";

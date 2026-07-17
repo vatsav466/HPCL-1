@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import { Settings, User, RefreshCw, Search, Download } from 'lucide-react';
+import { RefreshCw, Search, Download } from 'lucide-react';
 import { apiClient } from "@/services/apiClient";
 import { toast } from "sonner";
 import * as XLSX from "xlsx";

@@ -1,5 +1,4 @@
 import { apiClient } from "@/services/apiClient";
-import axios from "axios";
 
 interface DateFilter {
   key: 'created_at';

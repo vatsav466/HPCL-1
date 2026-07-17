@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Button } from "@/@/components/ui/button"
 import { Input } from "@/@/components/ui/input"
-import { RefreshCw, Shield, AlertTriangle, Image, Lock, Search, Download, Calendar, CalendarDays, Flag } from "lucide-react"
+import { RefreshCw, Shield, AlertTriangle, Image, Lock, Search, Download, Calendar, CalendarDays } from "lucide-react"
 import { apiClient } from "@/services/apiClient"
 import { toast } from "sonner"
 import RetailGovernanceTable from "./RetailGovernanceTable"

@@ -10,10 +10,8 @@ import ROAlertsTable from '../../alertsTable/ROAlertsTable';
 import Projects, { SeverityProvider } from '@/pages/projects/Projects';
 import TimeFilterButtons from '../../RetailOutletHome/TimeFilterButtons';
 import ZonePlantSelections from '../../RetailOutletHome/ZonePlantSelections';
-import axios from "axios";
 import ROAlertsTableV2 from '../../alertsTable/AlertTableV2';
 import AmGaugeChart from '../../Wall2/AmGaugeChart';
-import AlertStatusToggle from '../../RetailTerminalHome/AlertStatusToggle';
 import PerformanceScoreTable from '../../alertsTable/PerformanceScoreTable';
 import { Button } from "@/@/components/ui/button"
 import { RotateCcw } from "lucide-react"

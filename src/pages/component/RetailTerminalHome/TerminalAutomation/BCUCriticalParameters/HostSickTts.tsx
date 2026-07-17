@@ -6,7 +6,7 @@ import { ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Button } from '@/@/components/ui/button';
 import { Input } from '@/@/components/ui/input';
 import { RefreshCw, Loader, Download } from 'lucide-react';
-import { convertUTCDateToLocalDate, formatDateToIST } from "@/hooks/useRelativeTime";
+import { convertUTCDateToLocalDate } from "@/hooks/useRelativeTime";
 import { Card } from '@/@/components/ui/card';
 import { toast } from 'sonner';
 import * as XLSX from 'xlsx';

@@ -14,7 +14,6 @@ import { Loader2, RotateCcw, Maximize2, Minimize2, X, Search, Info } from "lucid
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select"
 import { Input } from "@/@/components/ui/input"
 import { DateRangePickerFilter } from "../../RetailTerminalHome/TASDashboards/DateRangePickerFilter"
-import BCUGantryCount from "../maintanenceGraphs/BCUGantryCount"
 import BCUGantryChart from "../maintanenceGraphs/BCUGantryChart"
 import { toast } from "sonner";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/@/components/ui/tooltip";
@@ -22,7 +21,6 @@ import { Download } from "lucide-react"
 import { apiClient } from "@/services/apiClient"
 import { saveAs } from 'file-saver';
 import * as XLSX from "xlsx";
-import { minWidth } from "@mui/system"
 interface AggregatedData {
   totalCount: number;
   interlocks: Record<string, number>;

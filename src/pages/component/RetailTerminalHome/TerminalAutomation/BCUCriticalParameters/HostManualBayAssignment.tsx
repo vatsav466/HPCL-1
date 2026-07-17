@@ -1,9 +1,8 @@
-import React, { useEffect, useState, useCallback, useMemo, useRef } from "react";
+import React, { useState, useCallback, useMemo, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { ColDef, GridReadyEvent } from 'ag-grid-community';
-import axios from "axios";
 import { convertUTCDateToLocalDate, formatRelativeTime } from "@/hooks/useRelativeTime";
 import { apiClient } from "@/services/apiClient";
 

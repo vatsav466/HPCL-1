@@ -1,25 +1,19 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Card,
   CardContent,
 } from "@/@/components/ui/card";
-import { toast } from "sonner";
-import {
-  Stepper,
-  Step,
-  StepLabel,
-} from "@mui/material";
-import { styled } from "@mui/material/styles";
-import dayjs, { Dayjs } from "dayjs";
+
+
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { format, formatDate, startOfMonth, subDays } from "date-fns";
+import convertToFilters from "@/utils/dynamicFilter";
+import { format, startOfMonth, subDays } from "date-fns";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React from "react";
 import { Separator } from "@/@/components/ui/separator";
-import RetailSalesPerformance from "../RetailSalesPerformance";
 import { fetchChartData, fetchDistinctValues } from "../../api";
 import {
   Popover,

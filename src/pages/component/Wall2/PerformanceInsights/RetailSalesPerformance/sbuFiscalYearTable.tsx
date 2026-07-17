@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "@/@/components/ui/card";
-import dayjs from "dayjs";
 import { apiClient } from "@/services/apiClient";
 
 interface QuarterData {

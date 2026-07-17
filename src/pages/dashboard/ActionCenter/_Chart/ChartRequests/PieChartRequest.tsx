@@ -1,7 +1,6 @@
 
 
 import { apiClient } from '@/services/apiClient';
-import axios from 'axios';
 
 interface Metric {
   expression_type?: string;

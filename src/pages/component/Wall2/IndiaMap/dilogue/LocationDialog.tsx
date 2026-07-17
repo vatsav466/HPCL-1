@@ -5,8 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "../../../../../../src/@/components/ui/dialog";
-import { MapPin, Activity, TrendingUp, Database, Factory, Loader2, Users, Phone, X, Award, UserRoundCheck, Calendar, Weight, Building } from "lucide-react";
-import axios from 'axios';
+import { MapPin, TrendingUp, Database, Factory, Loader2, Users, Phone, X, Award, UserRoundCheck } from "lucide-react";
 import { apiClient } from "@/services/apiClient";
 
 export interface LocationData {

@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { MapPin, Users, RefreshCw, Phone, Mail, X, Eye, Building, Navigation, Award, MapPinIcon, SendHorizonal, Building2, FileBadge2, FileBadge, CircleUserRound, UserRoundCheck } from 'lucide-react';
-import axios from 'axios';
+import { MapPin, Users, RefreshCw, Phone, Mail, X, Eye, Building, Navigation, Award, MapPinIcon, SendHorizonal, Building2, FileBadge, CircleUserRound, UserRoundCheck } from 'lucide-react';
 import { apiClient } from '@/services/apiClient';
 
 // Types

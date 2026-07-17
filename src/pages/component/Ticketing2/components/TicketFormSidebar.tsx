@@ -5,7 +5,6 @@ import { Link as RouterLink } from "react-router-dom";
 import { Plus, Info, Check, ChevronsUpDown } from "lucide-react";
 import { ReusableCombobox } from "./reusable-combobox";
 import { MultiSelectCombobox } from "@/@/components/ui/multiselect-combobox";
-import { Card, CardContent, CardFooter } from "@/@/components/ui/card";
 import {
   Popover,
   PopoverContent,
@@ -21,8 +20,6 @@ import {
 } from "@/@/components/ui/command";
 import { cn } from "@/@/lib/utils";
 import {
-  assigneeOptions,
-  ticketStateOptions,
   ticketSeverityOptions,
   getTicketStateOptionsForEdit,
 } from "./ticket-form-constants";

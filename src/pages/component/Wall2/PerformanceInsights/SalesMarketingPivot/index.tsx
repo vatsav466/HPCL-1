@@ -39,7 +39,7 @@ import { AgGridReact } from "ag-grid-react";
 import { ColDef, GridReadyEvent } from "ag-grid-community";
 import { debounce } from "lodash";
 import { fetchChartData } from "../../api";
-import { getHierarchyColWidth, HierarchyRenderer, LoadingOverlay, SbuNameRenderer, getRowStyleByLevel } from "./RedesignUtils";
+import { LoadingOverlay, SbuNameRenderer, getRowStyleByLevel } from "./RedesignUtils";
 import {
   ActiveStates,
   ChartMode,

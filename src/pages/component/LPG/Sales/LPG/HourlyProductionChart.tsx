@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, LabelList, Legend, CartesianGrid } from 'recharts';
 import { ProcessedHourlyProductionData } from './Types';
-import { Loader2, AlertTriangle, BarChart3 } from 'lucide-react';
+import { Loader2, BarChart3 } from 'lucide-react';
 
 interface HourlyProductionChartProps {
   data: ProcessedHourlyProductionData;

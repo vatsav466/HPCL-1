@@ -9,7 +9,6 @@ import StackedBarChart from '../RetailTerminalHome/StackedBarChart';
 import InterlockStackedBarChart from '../RetailTerminalHome/InterlockStackedBarChart';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import TimeFilterButtons from '../RetailOutletHome/TimeFilterButtons';
-import axios from "axios";
 import ROAlertsTableV2 from '../alertsTable/AlertTableV2';
 import { apiClient } from '@/services/apiClient';
 

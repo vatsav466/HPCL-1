@@ -15,7 +15,6 @@ import CustomStackedBarChart from "../../../../../assets/viz_thumbnails/custom_s
 import TimeSeriesLineChart from "../../../../../assets/viz_thumbnails/time_series_line.png";
 import TimeSeriesBarChart from "../../../../../assets/viz_thumbnails/time_series_bar.png";
 
-import { createGaugeChart } from "../ChartRequests/GaugeChartRequest";
 export const getChartIcon = (chartName: string): string => {
   switch (chartName.toLowerCase()) {
     case "bar":

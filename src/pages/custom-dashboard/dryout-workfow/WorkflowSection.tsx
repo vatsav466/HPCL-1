@@ -3,7 +3,6 @@ import { cn } from '@/@/lib/utils';
 import { WorkflowStep } from './WorkflowStep';
 import { SECTION_STYLES } from '@/@/lib/constants';
 import type { WorkflowStep as WorkflowStepType } from '@/types/dryoutCount';
-import { useState } from 'react';
 
 interface WorkflowSectionProps {
   title: string;

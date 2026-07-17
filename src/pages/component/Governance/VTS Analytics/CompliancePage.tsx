@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import ComplianceTab from './ComplianceTab';
 import ReusableFilterBar from './ReusableFilterBar';
 import { apiClient } from '@/services/apiClient';
-import { format, subDays, subWeeks, subMonths } from 'date-fns';
+import { format } from 'date-fns';
 import VTSVehicleAI from '../VTS/VTSVehicleAI';
 import useAuthStore from '@/store/authStore';
 

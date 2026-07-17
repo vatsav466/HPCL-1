@@ -6,13 +6,11 @@ import React, {
   useRef,
 } from "react";
 import {
-  Package,
   Box,
   CheckCircle2,
   Clock,
   Loader2,
   RefreshCw,
-  X,
   Download,
   MoreVertical,
   Info,

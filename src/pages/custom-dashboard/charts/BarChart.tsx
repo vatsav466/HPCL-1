@@ -8,7 +8,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { ChartTooltip } from './ChartTooltip';
-import { useChartData } from '@/hooks/useChartData';
 import { useDashboard } from '../context/DashboardContext';
 
 export interface BarChartProps {

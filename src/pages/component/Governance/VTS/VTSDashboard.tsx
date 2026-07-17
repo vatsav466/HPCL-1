@@ -3,15 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card
 import { Button } from "@/@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/@/components/ui/tabs";
-import { RefreshCw, AlertTriangle, ShieldCheck, Wrench, XCircle, Loader2, Download } from 'lucide-react';
-import ZonePlantSelections from '../../RetailOutletHome/ZonePlantSelections';
-import EnhancedTimeFilter from '../filters/TimeFilterButtons';
+import { Loader2, Download } from 'lucide-react';
 import ViolationPieChart from './ViolationPieChart';
 import ViolationTrendsChart from './ViolationTrendsChart';
 import ViolationTabContent from './ViolationTabContent';
 import ZoneViolationHeatMap from './ZoneViolationHeatMap';
 import { apiClient } from '@/services/apiClient';
-import { format, subDays } from 'date-fns';
+import { format } from 'date-fns';
 import ReusableFilterBar from '../VTS Analytics/ReusableFilterBar';
 import VTSVehicleAI from './VTSVehicleAI';
 import useAuthStore from '@/store/authStore';

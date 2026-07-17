@@ -138,7 +138,7 @@
 //   },
 // };
 // services/realApi.ts
-import { ApiTicket, ApiResponse, Ticket, User, TicketStatus } from '../types/ticket';
+import { ApiResponse, Ticket, User } from '../types/ticket';
 
 // Transform API ticket to internal ticket format
 const transformApiTicket = (apiTicket: Ticket): Ticket => {

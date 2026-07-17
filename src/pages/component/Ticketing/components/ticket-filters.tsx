@@ -2,10 +2,10 @@ import { useRef } from "react";
 import { Input } from "@/@/components/ui/input";
 import { Button } from "@/@/components/ui/button";
 
-import { Search, Plus, RefreshCw, Merge, Filter, ChevronRight, LayoutGrid, List, Download, Calendar } from "lucide-react";
+import { Search, Plus, RefreshCw, Merge, Filter, LayoutGrid, List, Download, Calendar } from "lucide-react";
 import { ToggleGroup, ToggleGroupItem } from "@/@/components/ui/toggle-group";
 import { Zone, Plant } from "./types/location";
-import { ComboboxOption, ReusableCombobox } from "./reusable-combobox";
+import { ComboboxOption } from "./reusable-combobox";
 import {
   DropdownMenu,
   DropdownMenuContent,

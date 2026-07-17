@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Loader2, ArrowUpDown, ArrowUp, ArrowDown, BarChart3 } from 'lucide-react';
+import { ArrowUpDown, ArrowUp, ArrowDown } from 'lucide-react';
 
 const TIME_RANGES = ['30m', '1h', '2h', '4h', '8h', '1d'] as const;
 type TimeRange = (typeof TIME_RANGES)[number];

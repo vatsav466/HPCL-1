@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { ChevronDown, Monitor } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
 import { fetchDashboards } from "../../redux/features/dashboardSlice";
-import { Card, CardContent } from "../../@/components/ui/card";
 import {
   Select,
   SelectContent,
@@ -11,7 +9,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../../@/components/ui/select";
-import axios from "axios";
 import { Layout, Responsive, WidthProvider } from "react-grid-layout";
 import "react-grid-layout/css/styles.css";
 import "react-resizable/css/styles.css";

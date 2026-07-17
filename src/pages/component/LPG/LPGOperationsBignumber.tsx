@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '@/@/components/ui/card';
-import { Button } from '@/@/components/ui/button';
-import axios from 'axios';
 import { ScrollArea } from '@/@/components/ui/scroll-area';
 import { Search } from '@/pages/dashboard/ActionCenter/Dashboard';
-import { Popover, PopoverContent, PopoverTrigger } from '@/@/components/ui/popover';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/@/components/ui/dialog';
 import LPGCSRejection from './Plant/LPGOperations/LPGCSRejection';
 import LPGGDRejection from './Plant/LPGOperations/LPGGDRejection';
 import LPGPTRejection from './Plant/LPGOperations/LPGPTRejection';
 import { apiClient } from '@/services/apiClient';
-import { PlugZap, Loader2, ChevronRight } from 'lucide-react';
+import { Loader2, ChevronRight } from 'lucide-react';
 
 const cardConfigs = [ 
   {

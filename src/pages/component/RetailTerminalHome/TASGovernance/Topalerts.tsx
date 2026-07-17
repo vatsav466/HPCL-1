@@ -3,7 +3,7 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import { apiClient } from '@/services/apiClient';
-import { Loader2, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Search, X, Info, Download } from 'lucide-react';
+import { Loader2, ChevronUp, ChevronDown, Search, X, Info, Download } from 'lucide-react';
 import dayjs from 'dayjs';
 import * as XLSX from 'xlsx';
 import {

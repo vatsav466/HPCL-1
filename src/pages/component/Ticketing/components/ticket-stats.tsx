@@ -2,7 +2,6 @@
 import { Badge } from "@/@/components/ui/badge";
 import { Ticket } from "../types/ticket";
 import { motion } from "framer-motion";
-import { TicketIcon } from "lucide-react";
 
 interface TicketStatsProps {
   tickets: Ticket[];

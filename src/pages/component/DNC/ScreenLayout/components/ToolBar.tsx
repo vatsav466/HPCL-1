@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Undo2, Redo2, Plus, Save, Video, Monitor, Settings } from 'lucide-react';
+import { Undo2, Redo2, Save, Monitor, Settings } from 'lucide-react';
 import { useLayoutStore } from '@/redux/features/useLayoutStore';
 import { Button } from '@/@/components/ui/button';
 import { Groups } from '@/types/groups';
@@ -8,7 +8,6 @@ import { Label } from '@/@/components/ui/label';
 import { Input } from '@/@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/@/components/ui/select';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/@/components/ui/dialog';
-import axios from 'axios';
 import { apiClient } from '@/services/apiClient';
 
 interface ToolBar  {

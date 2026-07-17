@@ -12,9 +12,7 @@ import {
   Info,
   TrendingUp,
   TrendingDown,
-  BarChart3,
   Loader2,
-  RefreshCw,
   Download,
   X
 } from 'lucide-react';

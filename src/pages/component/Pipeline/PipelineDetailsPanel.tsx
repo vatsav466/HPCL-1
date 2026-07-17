@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, MapPin, FileText, Droplet, Gauge, ArrowUp, Download, Maximize2, X } from 'lucide-react';
+import { ExternalLink, MapPin, FileText, Droplet, Gauge, Maximize2, X } from 'lucide-react';
 import dispatchImage from '@/assets/images/dispatch-terminal.svg';
 import intermediatePumpingImage from '@/assets/images/intermediate-pumping.png';
 import receivingTerminalImage from '@/assets/images/latch_7426516.png';

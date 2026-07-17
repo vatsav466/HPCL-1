@@ -1,19 +1,16 @@
 import type React from "react"
 import { useState, useRef, useEffect, useCallback } from "react"
 import { Button } from "@/@/components/ui/button"
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/@/components/ui/dialog"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/@/components/ui/dialog"
 import { Card, CardContent } from "@/@/components/ui/card"
 import { Label } from "@/@/components/ui/label"
 import { Textarea } from "@/@/components/ui/textarea"
 import { Input } from "@/@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select"
 import { Separator } from "@/@/components/ui/separator"
-import { Camera, Send, Undo, Redo, Type, Pen, Square, Circle, ArrowRight, Download, Command, Upload, Clipboard, X } from 'lucide-react'
+import { Camera, Undo, Redo, Type, Pen, Square, Circle, ArrowRight, Download, Command, Upload, Clipboard, X } from 'lucide-react'
 import { useToast } from "@/@/components/ui/use-toast"
-import { TbMessageReportFilled } from "react-icons/tb"
 import { SearchableSelect } from "../../alertsTable/ReportButton/SearchableSelect"
 import { apiClient } from "@/services/apiClient"
-import { Add } from "@mui/icons-material"
 import  { forwardRef, useImperativeHandle } from "react"
 
 type CaptureMode = "full" | "selection" | "paste"

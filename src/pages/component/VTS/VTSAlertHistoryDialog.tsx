@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
 } from "../../../@/components/ui/dialog";
 import { Button } from "../../../@/components/ui/button";
@@ -20,19 +19,12 @@ import {
   MapPin,
   Building2,
   Clock,
-  AlertTriangle,
   Store,
   Phone,
-  User,
-  Globe,
-  Mail,
   Map,
-  BookOpen,
   Users,
   Minimize2,
   Maximize2,
-  X,
-  Navigation2,
   ZoomIn,
   ZoomOut,
   Loader2,
@@ -42,7 +34,6 @@ import {
 import { Alert, AlertDescription } from "../../../@/components/ui/alert";
 import { Badge } from "../../../@/components/ui/badge";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import axios from "axios";
 
 import { Input } from "@/@/components/ui/input";
 import { convertUTCDateToLocalDate, formatRelativeTime } from '@/hooks/useRelativeTime';

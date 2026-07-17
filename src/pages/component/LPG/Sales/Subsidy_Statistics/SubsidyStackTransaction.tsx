@@ -11,7 +11,7 @@ import {
 import { Button } from "@/@/components/ui/button";
 import { ArrowLeft, RotateCcw, Loader2, Maximize2, Minimize2 } from "lucide-react";
 import { FilterDropdown } from "../FilterDropdown";
-import { BRIGHT_COLORS, formatNumberByDrillLevel } from "./useformatnumberdrilldown";
+import { formatNumberByDrillLevel } from "./useformatnumberdrilldown";
 import { apiClient } from "@/services/apiClient";
 import NoDataDisplay from "@/components/common/NoDataDisplay";
 

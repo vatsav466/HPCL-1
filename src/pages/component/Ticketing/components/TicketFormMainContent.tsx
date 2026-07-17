@@ -16,7 +16,6 @@ import {
   Ban,
   CheckCircle2,
 } from "lucide-react";
-import { Checkbox } from "@/@/components/ui/checkbox";
 import { ReusableCombobox } from "./reusable-combobox";
 import { MultiSelectCombobox } from "@/@/components/ui/multiselect-combobox";
 import TicketScreenshotUpload from "./ScreenshotReport";

@@ -6,16 +6,7 @@ import {
   DialogTitle,
   Button,
   Box,
-  Drawer,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
 } from "@mui/material";
-import axios from "axios";
 import { apiClient } from "@/services/apiClient";
 
 export default function DialogModal(props: any) {

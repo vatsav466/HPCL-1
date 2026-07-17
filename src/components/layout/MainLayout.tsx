@@ -5,7 +5,6 @@ import { Tooltip, Zoom } from '@mui/material';
 import * as TablerIcons from '@tabler/icons-react';
 import { Fuel } from 'lucide-react';
 import { TbReportAnalytics } from 'react-icons/tb';
-import menuData from './menuData.json';
 import TopBarComponent from './TopBar';
 import { Box, Flex, IconButton } from '@chakra-ui/react';
 import colorConfigs from "../../configs/colorConfigs";

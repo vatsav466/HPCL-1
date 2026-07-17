@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Loader2, ArrowLeft, X, Download } from "lucide-react";
+import { Loader2, X, Download } from "lucide-react";
 import { Dialog, DialogContent } from "@/@/components/ui/dialog";
 import ComplianceBarchart from "./ComplianceBarchart";
 import { apiClient } from "@/services/apiClient";
 import axios from "axios";
 import { ViolationDialog } from "./ViolationDialog";
 import { ShortageDialog } from "./ShortageDialog";
-import { Button } from "@/@/components/ui/button";
 import { toast } from "sonner";
 import MetricCards from "./ComplianceMetricCard";
 

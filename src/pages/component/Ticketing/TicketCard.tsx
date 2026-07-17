@@ -130,11 +130,10 @@
 
 import { Card, CardContent, CardHeader } from '@/@/components/ui/card';
 import { Badge } from '@/@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/@/components/ui/avatar';
 import { Button } from '@/@/components/ui/button';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/@/components/ui/dropdown-menu';
 import { Ticket, TicketStatus } from './types/ticket';
-import { MoreHorizontal, Calendar, User, Flag } from 'lucide-react';
+import { MoreHorizontal, Calendar } from 'lucide-react';
 import { format } from 'date-fns';
 
 interface TicketCardProps {

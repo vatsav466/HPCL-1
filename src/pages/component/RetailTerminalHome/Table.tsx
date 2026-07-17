@@ -10,12 +10,10 @@ import {
   DropdownMenuTrigger 
 } from '@/@/components/ui/dropdown-menu';
 import { 
-  FileDown, 
   RefreshCw, 
   Filter 
 } from 'lucide-react';
 import DataGrid from '../../../components/common/DataGrid';
-import axios from 'axios';
 import { apiClient } from '@/services/apiClient';
 
 interface Location {

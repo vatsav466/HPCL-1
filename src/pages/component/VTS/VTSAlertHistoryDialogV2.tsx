@@ -22,7 +22,6 @@ import {
 import { Alert, AlertDescription } from "../../../@/components/ui/alert"
 import { Badge } from "../../../@/components/ui/badge"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react"
-import axios from "axios"
 
 import { convertUTCDateToLocalDate, formatRelativeTime } from "@/hooks/useRelativeTime"
 import { encryptPayload } from "@/configs/encryptFernet"

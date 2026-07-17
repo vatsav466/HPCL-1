@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 import { apiClient } from "@/services/apiClient";
-import { Loader2, ChevronUp, ChevronDown, Plus, Minus, ChevronRight, X, FilterX } from 'lucide-react';
+import { Loader2, ChevronUp, ChevronDown, X, FilterX } from 'lucide-react';
 
 // Default data structure (will be replaced by API data)
 const defaultData = [];

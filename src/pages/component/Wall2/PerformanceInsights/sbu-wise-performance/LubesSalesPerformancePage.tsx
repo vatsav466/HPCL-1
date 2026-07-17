@@ -30,9 +30,6 @@ import type {
   PeriodViewMode,
 } from "./lubesSalesPerformance.types";
 import {
-  FISCAL_MONTH_ORDER,
-  HALF_YEAR_ORDER,
-  QUARTER_ORDER,
   buildCompanyApiFilters,
   buildLubesConnectedFilterDistinctPayload,
   type LubesConnectedFilterDraft,
@@ -57,7 +54,6 @@ import {
   buildSegmentCardItems,
   buildSegmentPivotTable,
   filterRowsByPeriods,
-  halfYearLabel,
   mapLubesCompanyRows,
   mapLubesPeriodRows,
   mapLubesPremiumSegmentRows,
@@ -68,13 +64,10 @@ import {
   mapLubesSalesAreaRows,
   mapLubesSegmentRows,
   mapLubesSegmentOfficerRows,
-  monthLabel,
   normalizeAggregationRows,
   parseDistinctColumnValues,
   periodFilterKey,
   periodFilterLabel,
-  quarterLabel,
-  sortByOrder,
   togglePeriodFilterDraft,
 } from "./lubesSalesPerformance.utils";
 import LubesFiltersPopover, { type LubesFiltersDraft } from "./LubesFiltersPopover";
@@ -84,12 +77,10 @@ import SegmentBreakdownPanel from "./SegmentBreakdownPanel";
 import SegmentBreakdownTablePanel from "./SegmentBreakdownTablePanel";
 import PremiumSegmentPanel from "./PremiumSegmentPanel";
 import PremiumSegmentDrilldownPanel from "./PremiumSegmentDrilldownPanel";
-import SalesAreaBreakdownPanel from "./SalesAreaBreakdownPanel";
 import RegionalOfficerBreakdownPanel from "./RegionalOfficerBreakdownPanel";
 import RegionalOfficerDrilldownPanel from "./RegionalOfficerDrilldownPanel";
 import ProductCategoryBreakdownPanel from "./ProductCategoryBreakdownPanel";
 import ProductCategoryDrilldownPanel from "./ProductCategoryDrilldownPanel";
-import ItemCategoryBreakdownPanel from "./ItemCategoryBreakdownPanel";
 import BldCategoryBreakdownPanel from "./BldCategoryBreakdownPanel";
 import SegmentRegionStatusList from "./SegmentRegionStatusList";
 import PerformanceAnalyticsTab from "./PerformanceAnalyticsTab";

@@ -1,7 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/@/components/ui/tabs';
 import OverallKPItab from './OverallKPItab';
-import SBUWiseKPITab from './SBUWiseKPITab';
-import IndustryAnalyticsTab from './IndustryAnalyticsTab';
 import ASkNovexTab from './AskNovexTab';
 import React, { useState } from 'react';
 

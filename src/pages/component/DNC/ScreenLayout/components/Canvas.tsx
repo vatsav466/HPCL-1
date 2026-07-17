@@ -160,7 +160,6 @@ import 'react-resizable/css/styles.css';
 import classNames from 'classnames';
 import { useLayoutStore } from '@/redux/features/useLayoutStore';
 import { Groups } from '@/types/groups';
-import { Card, CardContent } from '@/@/components/ui/card';
 import { DashboardWidget } from './DashboardWidget';
 // import { useGridStore } from '@/redux/features/gridStore';
 import { FullscreenContainer } from './FullScreenContainer';

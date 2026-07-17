@@ -7,16 +7,13 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip as RechartTooltip,
-  Legend,
   ResponsiveContainer,
   LabelList,
-  Brush,
 } from "recharts";
 import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
 import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
@@ -26,21 +23,16 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
-import ApiLoader from "@/services/apiLoader";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/@/components/ui/tabs";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { RetailSalesDropdowns, SalesDropdowns } from "../SalesDropdowns";
+import dayjs from "dayjs";
+
+
+import convertToFilters from "@/utils/dynamicFilter";
+import { RetailSalesDropdowns } from "../SalesDropdowns";
 import TablePerformancesales from "../TablePerformancesales";
 import { fetchChartData, fetchDistinctValues } from "../api";
 import { format, startOfMonth, subDays } from "date-fns";

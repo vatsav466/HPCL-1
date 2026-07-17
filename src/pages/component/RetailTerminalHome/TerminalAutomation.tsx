@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState, useRef, useEffect, useCallback } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react"
 import { SeverityProvider } from "../../projects/Projects"
 import {
@@ -13,7 +13,6 @@ import {
   BreadcrumbSeparator,
 } from "@/@/components/ui/breadcrumb"
 import { useNavigate } from "react-router-dom"
-import axios from "axios"
 import TerminalAutomationZonePlantSelections from "../RetailOutletHome/TerminalAutomationZonePlantSelections"
 import BCUAlertsTable from "../alertsTable/BCUAlertsTable"
 import MaintenanceTable from "../alertsTable/MaintenanceTable"

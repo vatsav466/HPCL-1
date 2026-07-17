@@ -3,7 +3,6 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { ColDef, GridReadyEvent } from 'ag-grid-community';
-import axios from "axios";
 import { Button } from '@/@/components/ui/button';
 import { Input } from '@/@/components/ui/input';
 import { RefreshCw, Loader, Download, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';

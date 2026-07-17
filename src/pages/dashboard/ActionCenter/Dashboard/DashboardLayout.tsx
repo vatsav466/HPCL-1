@@ -1,11 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-} from "../../../../@/components/ui/card";
+
+
 import {
   Select,
   SelectContent,
@@ -17,33 +13,19 @@ import { Input } from "../../../../@/components/ui/input";
 import { Button } from "../../../../@/components/ui/button";
 import {
   Search,
-  Plus,
-  LayoutDashboard,
-  CheckCircle2,
-  Send,
-  Trash2,
   GripVertical,
-  User,
-  Users,
 } from "lucide-react";
 import { AppDispatch, RootState } from "../../../../redux/store";
 import {
   Dashboard,
   fetchDashboards,
-  updateDashboardGroup,
   updateDashboardOrderLocally,
   updateDashboardStatus,
-  deleteDashboard,
   updateGroupsOrder,
   deleteDashboardFromGroup,
 } from "../../../../redux/features/dashboardSlice";
-import axios from "axios";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "../../../../@/components/ui/dropdown-menu";
+
+
 import { DashboardWidget } from "./DashboardWidget";
 import AI_Animation_5 from "../../../../assets/gif/ai_animation_5.gif";
 import { useNavigate } from "react-router";

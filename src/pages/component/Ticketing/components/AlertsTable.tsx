@@ -9,9 +9,7 @@ import { Button } from "../../../../@/components/ui/button";
 import { Input } from "../../../../@/components/ui/input";
 import {
   RefreshCw,
-  Filter,
   MoreVertical,
-  Loader,
   Triangle,
   Download,
 } from "lucide-react";
@@ -24,8 +22,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import AlertHistoryDialogV2 from "../../alertsTable/AlertHistoryDialogV2";
 import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
-import advancedFormat from "dayjs/plugin/advancedFormat";
 import { apiClient } from "@/services/apiClient";
 import clsx from "clsx";
 import * as XLSX from "xlsx";

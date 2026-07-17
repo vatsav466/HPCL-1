@@ -9,8 +9,6 @@ import {
   ResponsiveContainer,
   Brush,
   Legend,
-  Label,
-  Cell,
 } from "recharts";
 import { fetchTerminalData } from "../RetailTerminalHome/ApiServiceFile";
 

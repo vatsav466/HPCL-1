@@ -5,13 +5,11 @@ import {
   AlertCircle,
   ChevronLeft,
   ChevronRight,
-  X,
   Maximize2,
   ZoomOut,
   ZoomIn,
   Play
 } from 'lucide-react';
-import axios from 'axios';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import { useNavigate } from 'react-router-dom';
 import { convertUTCDateToLocalDate, useRelativeTime } from '@/hooks/useRelativeTime';
@@ -19,7 +17,7 @@ import ZonePlantSelections from '../RetailOutletHome/ZonePlantSelections';
 import TimeFilterButtons from '../RetailOutletHome/TimeFilterButtons';
 import { toast } from 'sonner';
 import AlertHistoryDialog from '../alertsTable/AlertHistoryDialog';
-import { Tooltip, tooltipClasses } from '@mui/material';
+import { Tooltip } from '@mui/material';
 import { apiClient } from '@/services/apiClient';
 import AlertMediaCardSkeleton from '@/components/common/AlertMediaCardSkeleton';
 

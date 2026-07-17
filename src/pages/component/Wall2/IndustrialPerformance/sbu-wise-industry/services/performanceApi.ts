@@ -1,5 +1,5 @@
 import { apiClient } from '@/services/apiClient';
-import { ApiPayload, ApiResponse, FilterValues, MonthWiseApiResponse, HistoricalDataApiResponse, FilterItem } from '../types';
+import { ApiPayload, ApiResponse, FilterValues, HistoricalDataApiResponse, FilterItem } from '../types';
 
 export interface HistoricalFilters {
   sbu_name: string;

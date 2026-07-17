@@ -97,7 +97,6 @@ import ConfirmationDialog from '../../../../components/common/ConfirmationDialog
 import LoadingSpinner from '../../../../components/common/LoadingSpinner';
 import { useDispatch, useSelector } from "react-redux";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { AppDispatch, RootState } from "../../../../redux/store";
 import {
 deleteDashboard,
 fetchDashboards,

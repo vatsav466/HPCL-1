@@ -665,7 +665,7 @@ import {
 } from "@/@/components/ui/dialog";
 import { Avatar, AvatarFallback, AvatarImage } from "@/@/components/ui/avatar";
 import { Card, CardContent } from "@/@/components/ui/card";
-import { Ticket, User, TicketType, TicketPriority, CreateTicketInput } from "./types/ticket";
+import { Ticket, User, TicketType, TicketPriority } from "./types/ticket";
 import {
   ChevronDown,
   Search,
@@ -675,7 +675,6 @@ import {
   CheckSquare,
   Bug,
   FileText,
-  X,
 } from "lucide-react";
 import { realApi } from "./services/mockApi";
 

@@ -8,7 +8,7 @@ import { Textarea } from "@/@/components/ui/textarea"
 import { Input } from "@/@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/@/components/ui/select"
 import { Separator } from "@/@/components/ui/separator"
-import { Camera, Send, Undo, Redo, Type, Pen, Square, Circle, ArrowRight, Download, Command, Upload, Clipboard, X } from 'lucide-react'
+import { Camera, Undo, Redo, Type, Pen, Square, Circle, ArrowRight, Download, Command, Upload, Clipboard, X } from 'lucide-react'
 import { useToast } from "@/@/components/ui/use-toast"
 import { TbMessageReportFilled } from "react-icons/tb"
 import { SearchableSelect } from "./SearchableSelect"

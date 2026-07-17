@@ -1,7 +1,6 @@
-import React, { useState, useMemo, useRef, useEffect, useLayoutEffect } from "react";
+import React, { useState, useMemo, useRef, useLayoutEffect } from "react";
 import {
     Loader2,
-    X,
     AlertCircle,
     ChevronRight,
     Search,

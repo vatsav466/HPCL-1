@@ -9,66 +9,37 @@ import {
   Legend,
   ResponsiveContainer,
   LabelList,
-  Brush,
 } from "recharts";
 import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
-import Box from "@mui/material/Box";
-import InputLabel from "@mui/material/InputLabel";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import { IconRestore } from "@tabler/icons-react";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { fetchChartData, fetchDistinctValues } from "./api";
 import { Stepper, Step, StepLabel } from "@mui/material";
-import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/@/components/ui/breadcrumb";
+
+
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { Alert } from "@/@/components/ui/alert";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
-import {
-  Select as ShadcnSelect,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/@/components/ui/select";
+
+
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/@/components/ui/popover";
-import { Calendar, TrendingDown, TrendingUp, X } from "lucide-react";
-import { Switch } from "@/@/components/ui/switch";
-import { Label } from "@/@/components/ui/label";
-import { data } from "@/pages/custom-dashboard/charts/data";
-import { Separator } from "@/@/components/ui/separator";
 import TablePerformancesales from "./TablePerformancesales";
-import { CustomMultiSelect } from "../../../@/components/ui/custom-multiselect";
 import { SalesDropdowns } from "./SalesDropdowns";
 import convertToFilters from "@/utils/dynamicFilter";
 

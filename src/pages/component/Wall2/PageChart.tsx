@@ -3,7 +3,7 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import { Factory, LocalGasStation, Propane, WaterDrop } from '@mui/icons-material';
 import { apiClient } from '@/services/apiClient';
 
-import waterDropPng from '../../../assets/hpcl/RetailTerminal.svg'; // Adjust the path based on your project structure
+// Adjust the path based on your project structure
 const AnimatedIcon = ({ Icon, imageSrc, iconColor }) => ( 
   <div className="relative w-24 h-24 flex items-center justify-center overflow-hidden cursor-pointer group">
     {Icon ? (

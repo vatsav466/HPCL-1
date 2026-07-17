@@ -9,9 +9,8 @@ import {
   DialogTitle,
 } from '@/@/components/ui/dialog';
 import { Button } from '@/@/components/ui/button';
-import { Badge } from '@/@/components/ui/badge';
 import { Input } from '@/@/components/ui/input';
-import { TrendingUp, ChevronLeft, ChevronRight, RefreshCw, ArrowUpDown, ArrowUp, ArrowDown, Loader2, AlertTriangle, Download, Users, Phone } from 'lucide-react';
+import { TrendingUp, RefreshCw, Loader2, AlertTriangle, Download, Users } from 'lucide-react';
 import { apiClient } from '../../../../services/apiClient';
 import { AgGridReact } from 'ag-grid-react';
 import { ColDef } from 'ag-grid-community';

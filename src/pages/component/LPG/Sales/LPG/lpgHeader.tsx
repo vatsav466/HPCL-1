@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { format } from 'date-fns';
-import { ChevronDown, Loader2, AlertCircle, RefreshCw, Search, Calendar, MapPin } from 'lucide-react';
+import { ChevronDown, Loader2, RefreshCw, Search, Calendar, MapPin } from 'lucide-react';
 import type { Plant, DatePreset } from './Types';
 import DateRangeModal from './DateRangeModal';
 import useAuthStore from "@/store/authStore";

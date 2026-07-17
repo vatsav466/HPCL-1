@@ -3,12 +3,10 @@ import { useState, useCallback, useEffect } from "react";
 import {
   BarChart,
   Bar,
-  LineChart, Line,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip as RechartTooltip,
-  Legend,
   ResponsiveContainer,
   LabelList,
   Brush,
@@ -17,25 +15,21 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
 import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/@/components/ui/tooltip";
-import { Toaster, toast } from "sonner";
+import { toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
-import { Badge } from "@/@/components/ui/badge";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/@/components/ui/breadcrumb";
+import convertToFilters from "@/utils/dynamicFilter";
 import {
   Popover,
   PopoverContent,
@@ -45,9 +39,7 @@ import { Calendar } from "lucide-react";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { CustomMultiSelect } from "@/@/components/ui/custom-multiselect";
 import { Button } from '@/@/components/ui/button';
-import TablePerformancesales from "../TablePerformancesales";
 import { fetchChartData, fetchDistinctValues } from "../api";
 
 

@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "../../../@/components/ui/card";
 import { Button } from "../../../@/components/ui/button";
-import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,  Cell} from 'recharts';
+import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,  Cell} from 'recharts';
 import terminalIcon from '../../../assets/images/oil-barrel.png';
 
 interface CustomizedLabelProps {

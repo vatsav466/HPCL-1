@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from "../../../@/components/ui/button";
 import { Input } from "../../../@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../../@/components/ui/select";
@@ -8,7 +8,7 @@ import { RootState } from '../../../redux/store';
 import { setSourceColumn } from '../../../redux/features/connectionSlice';
 import { setEachFormValue } from '../../../redux/features/eachFormValue';
 import { Card, CardContent } from '../../../@/components/ui/card';
-import { GripVertical, Plus, Save, Trash2, X } from 'lucide-react';
+import { Plus, Save, X } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../@/components/ui/tabs';
 
 interface AddFormProps {

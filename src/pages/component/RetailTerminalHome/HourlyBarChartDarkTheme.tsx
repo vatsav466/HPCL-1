@@ -10,7 +10,6 @@ import {
   LabelList,
   Brush,
 } from 'recharts';
-import axios from 'axios';
 import { convertUTCDateToLocalDate } from '@/hooks/useRelativeTime';
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
 import { Loader2 } from 'lucide-react';

@@ -1,7 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ProcessedProductivityData, ProductivityTableRow, CarouselProductivityData, TotalProductivityData } from './Types';
-import { Loader2, AlertTriangle, Clock, Package, Zap, BarChart3 } from 'lucide-react';
+import { Clock, Package, Zap } from 'lucide-react';
 
 interface ProductivityTableProps {
   data: ProcessedProductivityData;

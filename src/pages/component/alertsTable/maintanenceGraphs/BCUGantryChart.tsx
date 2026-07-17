@@ -11,8 +11,6 @@ import {
 import { Button } from "@/@/components/ui/button";
 import { Loader2, Maximize2, Minimize2 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { Separator } from "@/@/components/ui/separator";
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as ReactTooltip } from "recharts";
 
 // Context for active filters
 const ActiveFilterContext = createContext({

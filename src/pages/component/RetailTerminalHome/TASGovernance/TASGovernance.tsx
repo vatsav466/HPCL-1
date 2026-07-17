@@ -1,18 +1,11 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { flushSync } from 'react-dom';
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/@/components/ui/breadcrumb";
+
+
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { Download, RefreshCw, Check, Info } from 'lucide-react';
-import { apiClient } from '@/services/apiClient';
+import { Download, RefreshCw, Check } from 'lucide-react';
 import PerformanceScoreCard from './PerformanceScore';
 import PerformanceScoreZone from './PerformanceScoreZone';
 import EnhancedTimeFilter from '../../Governance/filters/TimeFilterButtons';
@@ -24,7 +17,6 @@ import CriticalAlertDetailsTable from './CriticalAlertDetailsTable';
 import NestedPivotTable, { NestedPivotTableRef } from './Pivottable';
 import EquipmentWiseDetails from './equipmentwisedetails';
 import LocationWiseDetails from './locatiowisedetails';
-import PivotTable from './equipmenttable';
 import ExceptionReport from './Exceptionreport';
 import PerformanceScoreBreakdownChart from './PerformanceScoreBreakdownChart';
 import TopAlerts from './Topalerts';

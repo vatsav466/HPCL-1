@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { processChartData } from '../../pages/dashboard/ActionCenter/Dashboard/ChartDataProcessor';
-import { Widget, WidgetLayout ,DashboardData} from '../../types/DashbordTypes';
-import { UserInfo } from "../../services/authService";
+import { Widget, WidgetLayout } from '../../types/DashbordTypes';
 import AuthService from "../../services/authService";
-import { Layout, Responsive, WidthProvider } from "react-grid-layout";
 
 
 // interface SaveDashboardData {

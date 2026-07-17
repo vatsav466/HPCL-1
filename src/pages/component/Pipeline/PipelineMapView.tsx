@@ -5,7 +5,6 @@ import { toast } from 'sonner';
 import { Loader2, ArrowUp, Gauge, Download } from 'lucide-react';
 import PipelineDetailsPanel from './PipelineDetailsPanel';
 import dispatchImage from '@/assets/images/dispatch-terminal.svg';
-import dispatchPngImage from '@/assets/images/dispatch.png';
 import intermediatePumpingImage from '@/assets/images/intermediate-pumping.png';
 import receivingTerminalImage from '@/assets/images/latch_7426516.png';
 

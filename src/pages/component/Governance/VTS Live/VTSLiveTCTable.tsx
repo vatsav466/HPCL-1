@@ -4,7 +4,6 @@ import {
     Loader2,
     AlertCircle,
     ChevronRight,
-    Search,
     RefreshCw,
     Home,
     Building,

@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/@/components/ui/card";
 import ZonePlantSelections from "../../RetailOutletHome/ZonePlantSelections";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { apiClient } from "@/services/apiClient";
 
 // Define TypeScript interfaces for the data structure

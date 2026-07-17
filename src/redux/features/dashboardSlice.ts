@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import axios from 'axios';
 import { RootState } from '../store';
 import { apiClient } from '@/services/apiClient';
 import { encryptPayload } from '@/configs/encryptFernet';

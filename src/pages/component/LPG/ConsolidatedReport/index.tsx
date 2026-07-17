@@ -1,6 +1,6 @@
 import React from 'react';
 
-import sampleData from "./sampleData.json"; // your API response
+// your API response
 import ConsolidatedPlantReport from './ConsolidatedReport';
 
 const LPGPlantwiseReport: React.FC = () => {

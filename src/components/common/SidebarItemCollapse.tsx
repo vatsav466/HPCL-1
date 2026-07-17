@@ -6,7 +6,6 @@ import { IconChevronDown, IconChevronUp } from '@tabler/icons-react';
 import SidebarItem from "./SidebarItem";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../../redux/store";
-import { setAppState } from "../../redux/features/appStateSlice";
 
 type Props = {
   item: RouteType;

@@ -602,7 +602,6 @@
 
 import React from 'react';
 import CarryForwardAnalysis from './DaywiseDryoutChart';
-import DryOut from './AverageDryoutChart';
 
 const DryoutDashboard = () => {
   // Sample location-wise dryout data

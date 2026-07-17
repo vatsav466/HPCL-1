@@ -2,10 +2,8 @@ import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Button } from '../../../@/components/ui/button';
 import { Input } from '../../../@/components/ui/input';
 import { 
-  RefreshCw, 
-  Filter,
+  RefreshCw,
   MoreVertical,
-  Loader,
   Triangle,
   Download
 } from 'lucide-react';
@@ -17,7 +15,6 @@ import { apiClient } from '@/services/apiClient';
 import * as XLSX from 'xlsx';
 import clsx from 'clsx';
 import dayjs from 'dayjs';
-import AlertHistoryDialogV2 from '../alertsTable/AlertHistoryDialogV2';
 import VTSAlertHistoryDialogV2 from './VTSAlertHistoryDialogV2';
 
 interface ROAlertsTableV2Props {

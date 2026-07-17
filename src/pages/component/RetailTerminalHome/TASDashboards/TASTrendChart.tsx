@@ -11,7 +11,7 @@ import type { SortDirection } from "ag-grid-community"
 import dayjs from "dayjs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/@/components/ui/card"
 import { Button } from "@/@/components/ui/button"
-import { Download, Loader2, Minimize2, Maximize2, X } from "lucide-react"
+import { Download, Loader2, X } from "lucide-react"
 import * as XLSX from "xlsx"
 import { apiClient } from "@/services/apiClient"
 import { saveAs } from 'file-saver';

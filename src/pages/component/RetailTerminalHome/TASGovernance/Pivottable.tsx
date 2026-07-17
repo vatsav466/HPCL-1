@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
-import { Plus, Minus, Loader2, ChevronUp, ChevronDown, Download } from 'lucide-react';
+import { Plus, Minus, Loader2, ChevronUp, ChevronDown } from 'lucide-react';
 import { apiClient } from "@/services/apiClient";
 import * as XLSX from 'xlsx';
 import { saveAs } from 'file-saver';

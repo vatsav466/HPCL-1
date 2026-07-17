@@ -619,7 +619,6 @@
 
 
 
-import { Center } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import { Tooltip, Button, IconButton, Box } from '@mui/material';
 import CircleIcon from '@mui/icons-material/Circle';
@@ -627,9 +626,6 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import { Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
-import axios from 'axios';
-import { fontSize } from '@mui/system';
 import { keyframes } from '@mui/system';
 import { Card, CardContent, CardHeader, CardTitle } from '@/@/components/ui/card';
 import ModalDialogBox from '@/pages/custom-dashboard/charts/ModalDialogBox';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  X, Building, MapPin, User, Phone, Loader2, AlertTriangle, Users
+  X, Building, MapPin, User, Phone, Loader2, Users
 } from 'lucide-react';
 import { apiClient } from '@/services/apiClient';
 import useAuthStore from '@/store/authStore';

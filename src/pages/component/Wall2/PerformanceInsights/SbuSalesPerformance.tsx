@@ -1,23 +1,14 @@
 import React from "react";
 import { useState, useCallback, useEffect, useMemo, useRef } from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip as RechartTooltip,
-  Legend,
-  ResponsiveContainer,
-  LabelList,
-} from "recharts";
+
+
 import {
   Card,
   CardContent,
   CardHeader,
 } from "@/@/components/ui/card";
 import { Button } from "@/@/components/ui/button";
-import { IconArrowLeft, IconMaximize, IconMinimize, IconRestore } from "@tabler/icons-react";
+import { IconArrowLeft, IconRestore } from "@tabler/icons-react";
 import {
   Tooltip,
   TooltipContent,
@@ -29,8 +20,6 @@ import { Stepper, Step, StepLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import dayjs, { Dayjs } from "dayjs";
 import convertToFilters from "@/utils/dynamicFilter";
-import { RetailSalesDropdowns } from "../SalesDropdowns";
-import TablePerformancesales from "../TablePerformancesales";
 import { fetchChartData, fetchDistinctValues } from "../api";
 import RetailSalesPerformanceTable from "./retailPerformanceTable";
 import IndividualData from "./individualData";
@@ -40,7 +29,6 @@ import RegionPerformanceTable from "./region/regionPerformanceTable";
 import RegionIndividualData from "./region/regionIndividualData";
 import RegionIndividualDataPercentage from "./region/regionPercentage";
 import SalesAreaPerformanceTable from "./salesarea/salesareaTable";
-import { CustomMultiSelect } from "@/@/components/ui/custom-multiselect";
 import SalesAreaIndividualDataPercentage from "./salesarea/salesareaPercentage";
 import SalesAreaIndividualData from "./salesarea/salesareaIndividual";
 import {

@@ -11,7 +11,7 @@ import { apiClient } from '@/services/apiClient';
 import * as am5 from '@amcharts/amcharts5';
 import * as am5xy from '@amcharts/amcharts5/xy';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
-import { Loader2, ChevronDown, X, Info, Plus, Minus, Check } from 'lucide-react';
+import { Loader2, ChevronDown, X, Plus, Minus, Check } from 'lucide-react';
 import { Button } from "@/@/components/ui/button";
 import { cn } from '@/@/lib/utils';
 import {

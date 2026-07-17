@@ -7,14 +7,10 @@ import {
     BreadcrumbSeparator,
   } from "@/@/components/ui/breadcrumb";
   import { useNavigate } from "react-router-dom";
-  import {
-    Tabs,
-    TabsContent,
-    TabsList,
-    TabsTrigger,
-  } from "@/@/components/ui/tabs";
   
-  interface ComponentNameProps {}
+
+
+interface ComponentNameProps {}
   
   const SODDashboard = (props: ComponentNameProps) => {
     const navigate = useNavigate();

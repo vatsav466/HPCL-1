@@ -11,8 +11,6 @@ import TASSupplyChainDaywiseDispatchReceiptTable from '@/pages/component/RetailT
 import TASSupplyChainDaywiseStockUllageLineChart from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainDaywiseStockUllageLineChart';
 import TASSupplyChainDaywiseStockUllageTable from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainDaywiseStockUllageTable';
 import TASSupplyChainTopCards from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainTopCards';
-import TASSupplyChainOutletDispatchSummaryCards from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainOutletDispatchSummaryCards';
-import TASSupplyChainZoneWiseCountChart from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainZoneWiseCountChart';
 
 const DEFAULT_TOP_CARD_PRODUCT_IDS = ['MS', 'HSD', 'ATF', 'BD'] as const;
 

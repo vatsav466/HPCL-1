@@ -2,24 +2,19 @@ import { useState, useCallback, useEffect } from "react";
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
 } from "@/@/components/ui/card";
-import { Toaster, toast } from "sonner";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { useNavigate } from "react-router-dom";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import ApiLoader from "@/services/apiLoader";
-import convertToFilters, { removeOldValues } from "@/utils/dynamicFilter";
-import { format, formatDate, startOfMonth, subDays } from "date-fns"
+import convertToFilters from "@/utils/dynamicFilter";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import React from "react";
 import { Separator } from "@/@/components/ui/separator";
 import RetailSalesPerformance from "../RetailSalesPerformance";
-import { fetchChartData, fetchDistinctValues } from "../../api";
+import { fetchChartData } from "../../api";
 import { Popover, PopoverContent, PopoverTrigger } from "@/@/components/ui/popover";
 import { Button } from "@/@/components/ui/button";
 import { Calendar } from "lucide-react";

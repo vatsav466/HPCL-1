@@ -7,7 +7,6 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 import { ASPL } from "./pipeline/Aspl";
-import { ATF } from "./pipeline/Atf";
 import { BOPL } from "./pipeline/Bopl";
 import { BTPL } from "./pipeline/Btpl";
 import { LOPL } from "./pipeline/Lopl";

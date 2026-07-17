@@ -1,16 +1,11 @@
 import React, { memo } from "react";
-import { useState, useCallback, useEffect } from "react";
+import { useState } from "react";
 import {
-    BarChart,
-    Bar,
-    LineChart, Line,
     XAxis,
     YAxis,
     CartesianGrid,
     Tooltip as RechartTooltip,
-    Legend,
     ResponsiveContainer,
-    LabelList,
     Brush,
     AreaChart, Area,
   } from "recharts";

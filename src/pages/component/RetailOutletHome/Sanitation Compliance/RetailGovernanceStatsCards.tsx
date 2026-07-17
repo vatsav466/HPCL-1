@@ -1,5 +1,5 @@
 import React from 'react'
-import { AlertTriangle, Lock, Shield, Clock } from 'lucide-react'
+import { Shield } from 'lucide-react'
 
 interface StatsData {
   total: number

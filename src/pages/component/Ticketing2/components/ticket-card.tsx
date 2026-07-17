@@ -3,21 +3,17 @@ import { Card } from "@/@/components/ui/card";
 import { Badge } from "@/@/components/ui/badge";
 import { Button } from "@/@/components/ui/button";
 import {
-  Eye,
-  Edit3,
   Trash2,
   Calendar,
   Folder,
   Copy,
   GripVertical,
   CheckCircle2,
-  Info,
   Merge,
   Flag,
 } from "lucide-react";
 import { Ticket } from "../types/ticket";
 import { getTicketStateDisplayLabel } from "./ticket-form-constants";
-import { motion } from "framer-motion";
 import { toast } from "sonner";
 import {
   Popover,

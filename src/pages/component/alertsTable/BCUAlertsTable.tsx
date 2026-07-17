@@ -3,18 +3,13 @@ import { Button } from '../../../@/components/ui/button';
 import { Input } from '../../../@/components/ui/input';
 import {
   RefreshCw,
-  Filter,
   MoreVertical,
   Loader,
-  Triangle,
   Download
 } from 'lucide-react';
 import DataGrid from '../../../components/common/DataGrid';
-import { Badge } from "../../../@/components/ui/badge";
-import axios from 'axios';
-import { convertUTCDateToLocalDate, formatRelativeTime } from '@/hooks/useRelativeTime';
+import { formatRelativeTime } from '@/hooks/useRelativeTime';
 import { useNavigate } from 'react-router-dom';
-import { maxWidth } from '@mui/system';
 import { toast } from 'sonner';
 import AlertHistoryDialogV2 from './AlertHistoryDialogV2';
 import * as XLSX from 'xlsx';

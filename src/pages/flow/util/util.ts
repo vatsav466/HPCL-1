@@ -58,7 +58,6 @@ import dykeOrange from "../../assets/flow/dyke-orange.png";
 import dykeRed from "../../assets/flow/dyke-red.png";
 
 import plcGreen from "../../assets/flow/plc-green.png";
-import plcOrange from "../../assets/flow/plc-orange.png";
 
 import upsGreen from "../../assets/flow/ups-green.png";
 

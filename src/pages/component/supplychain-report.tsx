@@ -23,7 +23,6 @@ import dayjs from "dayjs";
 import { toast } from "sonner";
 import ApiLoader from "@/services/apiLoader";
 import { apiClient } from "@/services/apiClient";
-import * as XLSX from "xlsx";
 import clsx from "clsx";
 
 // ---------------------------------------------------------------------------

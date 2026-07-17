@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, Monitor } from 'lucide-react';
+import { LayoutDashboard } from 'lucide-react';
 // import { GridItem } from '@/types/subGrid';
-import { SubGrid } from './SubGrid';
 // import { useGridStore } from '@/redux/features/gridStore';
 import { Dashboard, Groups } from '@/types/groups';
-import axios from 'axios';
 import ChartErrorBoundary from '@/components/common/ChartErrorBoundary';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import { GRID_BREAKPOINTS, GRID_COLUMNS, GRID_CONFIG } from '@/utils/dashboardUtils/gridLayoutConfig';

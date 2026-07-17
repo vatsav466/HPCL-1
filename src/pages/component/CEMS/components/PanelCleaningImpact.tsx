@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import * as am5 from '@amcharts/amcharts5';
 import * as am5xy from '@amcharts/amcharts5/xy';
 import am5themes_Animated from '@amcharts/amcharts5/themes/Animated';
-import { Calendar, FileCog, Filter, Clock, CheckCircle } from 'lucide-react';
+import { FileCog, Clock, CheckCircle } from 'lucide-react';
 import { apiClient } from "@/services/apiClient";
 import DataGrid from '@/components/common/DataGrid';
 

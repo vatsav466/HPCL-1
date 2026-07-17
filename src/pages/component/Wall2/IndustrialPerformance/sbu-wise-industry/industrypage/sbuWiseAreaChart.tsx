@@ -10,7 +10,6 @@ import { Button } from "@/@/components/ui/button"
 import { MultiSelect, type MultiSelectHandle } from "@/@/components/ui/industry-multiselect"
 import { Separator } from "@/@/components/ui/separator"
 import { generateZoneComparisonColumnDefs } from "./ZoneWisePerformance.utils"
-import _ from "lodash"
 import { apiClient } from "@/services/apiClient"
 import SbuWiseIndustryAnalyticsTab from "./SbuWiseIndustryAnalyticsTab"
 

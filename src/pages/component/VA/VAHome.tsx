@@ -6,13 +6,10 @@ import { ROAlertsTable } from '../alertsTable/ROAlertsTable';
 import { SeverityProvider } from '../../projects/Projects';
 import HorizontalStackedBarChart from '../RetailTerminalHome/HorizontalStackedBarChart';
 import StackedBarChart from '../RetailTerminalHome/StackedBarChart';
-import HourlyBarChart from '../RetailTerminalHome/HourlyBarChart';
 import InterlockStackedBarChart from '../RetailTerminalHome/InterlockStackedBarChart';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/@/components/ui/breadcrumb';
 import TimeFilterButtons from '../RetailOutletHome/TimeFilterButtons';
-import axios from "axios";
 import ROAlertsTableV2 from '../alertsTable/AlertTableV2';
-import AlertStatusToggle from '../RetailTerminalHome/AlertStatusToggle';
 import AlertsTableClosedTab from '../alertsTable/AlertsTableCloseTab';
 import { Button } from "@/@/components/ui/button"
 import { RotateCcw } from "lucide-react"

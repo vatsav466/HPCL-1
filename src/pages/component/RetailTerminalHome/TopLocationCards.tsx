@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "../../../@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, PieChart, Pie, Legend } from 'recharts';
 import { Badge } from "../../../@/components/ui/badge";
-import { AlertTriangle, TrendingUp, Clock, ArrowUpRight, Activity, Shield, AlertCircle } from 'lucide-react';
+import { AlertTriangle, TrendingUp, ArrowUpRight, Activity, Shield } from 'lucide-react';
 
 const AlertDashboardCards = () => {
   const locationData = [

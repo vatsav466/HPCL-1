@@ -1,11 +1,8 @@
-import { format, subDays, subWeeks, subMonths } from 'date-fns';
 import React, { useRef, useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams } from 'react-router-dom';
-import { VTSLiveTable } from "./VTSLiveTable";
-import ActionLinkCard from "../VTS Analytics/ActionLinkCard";
 import MetricCard from "../VTS Analytics/MetricCard";
 import ReusableFilterBar from "../VTS Analytics/ReusableFilterBar";
-import { Loader2, TrendingUp } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { apiClient } from "@/services/apiClient";
 import VTSVehicleAI from "../VTS/VTSVehicleAI";
 import useAuthStore from "@/store/authStore";

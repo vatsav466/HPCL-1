@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import {
   AlertDialog,
@@ -13,7 +12,6 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "../../../../../@/components/ui/alert-dialog";
-import { Checkbox } from "../../../../../@/components/ui/checkbox";
 import { Button } from "../../../../../@/components/ui/button";
 import {
   Command,
@@ -29,17 +27,14 @@ import {
   PopoverTrigger,
 } from "../../../../../@/components/ui/popover";
 import {
-  Star,
   Trash2,
   Eye,
   Filter,
   Grid,
   List,
   Check,
-  HelpCircle,
   X,
 } from "lucide-react";
-import { Card, CardContent } from "../../../../../@/components/ui/card";
 import { useDispatch } from "react-redux";
 import { cn } from "../../../../../@/lib/utils";
 import { setChartData } from "../../../../../redux/features/chartSlice";
@@ -50,20 +45,15 @@ import { CiCirclePlus } from "react-icons/ci";
 
 //imports for grid table
 import { useSelector, } from 'react-redux';
-import { useCallback } from 'react';
 import { AppDispatch, RootState } from '../../../../../redux/store';
 import { fetchDashboards } from '../../../../../redux/features/dashboardSlice';
-import { MoreVertical } from 'lucide-react';
 import DataGrid from '../../../../../components/common/DataGrid';
 import UserAvatar from '../../../../../components/common/UserAvatar';
-import { getStatusColumn } from '../../../../../components/common/StatusCell';
 import { getChartIcon } from '../ChartsTabs/ChartIcons';
 import Tooltip from '@mui/material/Tooltip';
-import { ChartType } from "../../../../../types/chartTabs";
-import { MenuItem } from '@mui/material';
 import { IconRefresh } from "@tabler/icons-react";
 // import {useRelativeTime} from "../../../../../hooks/useRelativeTime";
-import { FaPen, FaPeopleCarry, FaUser, FaUsers} from 'react-icons/fa';
+import { FaUser} from 'react-icons/fa';
 import { formatRelativeTime } from "../../../../../hooks/useRelativeTime";
 import { apiClient } from "@/services/apiClient";
 //api calling

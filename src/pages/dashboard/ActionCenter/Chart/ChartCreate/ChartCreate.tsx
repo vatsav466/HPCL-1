@@ -1,26 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { CircularProgress, Container, FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, styled } from "@mui/material";
+import { CircularProgress, Container, FormControl, InputLabel, MenuItem, Select, styled } from "@mui/material";
 import { Card } from "../../../../../@/components/ui/card";
 import { Button } from "../../../../../@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { RadioGroup, RadioGroupItem } from "../../../../../@/components/ui/radio-group";
 import { Label } from "../../../../../@/components/ui/label";
 import { Input } from "../../../../../@/components/ui/input";
-import { CaretSortIcon, CheckIcon } from "@radix-ui/react-icons";
-import { cn } from "../../../../../@/lib/utils";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "../../../../../@/components/ui/command";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "../../../../../@/components/ui/popover";
+
+
+
+
 import {
   Accordion,
   AccordionContent,
@@ -30,19 +19,11 @@ import {
 import { 
   Wand2, 
   Database, 
-  Terminal, 
   SendIcon,
-  SlidersHorizontal,
-  ArrowLeft
+  SlidersHorizontal
 } from "lucide-react";
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription,
-  DialogFooter
-} from "../../../../../@/components/ui/dialog";
+
+
 import { Textarea } from "../../../../../@/components/ui/textarea";
 import { IconX } from "@tabler/icons-react";
 import SQLQueryBuilder from "./SQLbuilder";

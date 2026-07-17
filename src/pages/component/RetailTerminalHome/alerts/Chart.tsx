@@ -1,4 +1,3 @@
-import { BarChart, LineChart, PieChart, CustomChart } from '@/pages/custom-dashboard/charts';
 import { ChartWrapper } from '@/pages/custom-dashboard/ChartWrapper';
 import { CustomChart1 } from './customChart';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 import { FillingAccuracyData } from './Types';
-import { Loader2, AlertTriangle, CheckCircle2, BarChart3 } from 'lucide-react';
+import { Loader2, CheckCircle2 } from 'lucide-react';
 
 // THE FIX: The color palette has been updated to match the provided image.
 const ACCURACY_COLORS = {

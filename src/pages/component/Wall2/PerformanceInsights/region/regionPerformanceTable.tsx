@@ -3,15 +3,12 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import {
-  ClientSideRowModelModule,
   ColDef,
   ColGroupDef,
-  ModuleRegistry,
   SizeColumnsToContentStrategy,
   SizeColumnsToFitGridStrategy,
   SizeColumnsToFitProvidedWidthStrategy,
 } from "ag-grid-community";
-import style from "@mui/system/style";
 
 const RegionPerformanceTable = ({ props, onRegionClick, selectedRegionName = "" }) => {
   // Filter out rows with invalid Region_Name values

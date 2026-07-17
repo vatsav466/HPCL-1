@@ -1,14 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Input } from '@/@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/@/components/ui/select';
-import { Fuel, RefreshCw, Search, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import DataGrid from '@/components/common/DataGrid';
 import EnhancedTimeFilter from '../../../Governance/filters/TimeFilterButtons';
 import TASSupplyChainProductInsightCalendar from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainProductInsightCalendar';
 import { CustomMultiSelect } from '@/@/components/ui/custom-multiselect';
 import { apiClient } from '@/services/apiClient';
-import TASSupplyChainDaywiseAm3BarChart from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainDaywiseAm3BarChart';
-import TASSupplyChainDaywiseStockUllageLineChart from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainDaywiseStockUllageLineChart';
 import TASSupplyChainStockUtilizationView from '@/pages/component/RetailTerminalHome/TASGovernance/TASSupplyChain/TASSupplyChainStockUtilizationView';
 
 interface TASSupplyChainTablesProps {

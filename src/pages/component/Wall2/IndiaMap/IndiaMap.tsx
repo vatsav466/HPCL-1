@@ -7,7 +7,6 @@ import am5geodata_india2019High from '@amcharts/amcharts5-geodata/india2019High'
 // Mappls will be loaded dynamically
 import { toast } from 'sonner';
 import { MapPin, Building2, Users, MapIcon, Navigation, Landmark, Filter, ChevronUp, ChevronDown, RefreshCw } from 'lucide-react';
-import { Tabs, TabsList, TabsTrigger } from "@/@/components/ui/tabs";
 import LocationDialog from './dilogue/LocationDialog';
 import UploadDialog, { type UploadStatus } from './dilogue/UploadDialog';
 import PieChartSection from './chart/PieChartSection';

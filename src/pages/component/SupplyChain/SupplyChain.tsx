@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "../../../@/components/ui/card";
-import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,  Cell} from 'recharts';
+import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,  Cell} from 'recharts';
 import LocationTable from '../RetailTerminalHome/Table'
 import LocationDetails from '../RetailTerminalHome/Graphs';
 import terminalIcon from '../../../assets/images/oil-barrel.png';
 import { Button } from '../../../@/components/ui/button';
-import TopLocationsCard from '../RetailTerminalHome/TopLocationCards';
 import AlertDashboardCards from '../RetailTerminalHome//TopLocationCards';
 import DashboardCards from '../RetailTerminalHome/DashboardGraphs';
-import DashboardGraph from '../RetailTerminalHome/alerts/graph'; // Import the DashboardGraph component
+// Import the DashboardGraph component
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import { ROAlertsTable } from '../alertsTable/ROAlertsTable';
 import { ReusableTable, TableColumn } from '../../../components/common/Reusable/ReusableTable';
