@@ -111,7 +111,7 @@ const CustomTable: React.FC<TableProps> = ({ data, theme }) => {
     const items = [];
     const halfVisible = Math.floor(visiblePageCount / 2);
     let start = Math.max(1, page - halfVisible);
-    let end = Math.min(totalPages, start + visiblePageCount - 1);
+    const end = Math.min(totalPages, start + visiblePageCount - 1);
 
     if (end - start + 1 < visiblePageCount) {
       start = Math.max(1, end - visiblePageCount + 1);

@@ -1717,7 +1717,7 @@ const [totalRecords, setTotalRecords] = useState({
         };
        
         const response = await apiClient.post("/api/charts/generate_vis_data", payload);
-        let newData = response.data?.data || [];
+        const newData = response.data?.data || [];
 
         // Extract total_records from API response (checking multiple possible field names)
         const extractTotalRecords = (responseData) => {
@@ -1827,7 +1827,7 @@ const [totalRecords, setTotalRecords] = useState({
         };
        
         const response = await apiClient.post("/api/charts/generate_vis_data", payload);
-        let newData = response.data?.data || [];
+        const newData = response.data?.data || [];
 
         // Extract total_records from API response
         const extractTotalRecords = (responseData) => {
@@ -1924,7 +1924,7 @@ const [totalRecords, setTotalRecords] = useState({
         };
        
         const response = await apiClient.post("/api/charts/generate_vis_data", payload);
-        let newData = response.data?.data || [];
+        const newData = response.data?.data || [];
 
         // Extract total_records from API response
         const extractTotalRecords = (responseData) => {

@@ -150,7 +150,7 @@ const transformChartData = (
   drillLevel: number,
   activeStates: ActiveStates
 ): ChartData[] => {
-  let isArray: boolean = Array.isArray(responseData);
+  const isArray: boolean = Array.isArray(responseData);
   if (drillLevel === 0 && !isArray) {
     if (mode === "month" || mode === "ytd" || mode === "date") {
       return Object.keys(responseData.Company_Name).map((key) => {
@@ -397,7 +397,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
   console.log("crossFilters", selectedMonths);
 
   // Initialize the base filter array
-  let distinctDynamicFilter: Array<{
+  const distinctDynamicFilter: Array<{
     key: string;
     cond: string;
     value: string;
@@ -531,8 +531,8 @@ const IndustrialPerformanceInsights: React.FC = () => {
   const loadData = useCallback(async () => {
     setIsLoading(true);
     try {
-      let originalFilter = removeDuplicateFilters(filters);
-      let originalCrossFilter = removeDuplicateFilters(crossFilters);
+      const originalFilter = removeDuplicateFilters(filters);
+      const originalCrossFilter = removeDuplicateFilters(crossFilters);
       // const orderedKeys = ['"FISCAL_YEAR"', '"Company_Name"'];
       // const reorderedData = reorderDataByKeys(originalFilter, orderedKeys);
       const response = await fetchChartData({
@@ -637,7 +637,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
 
   const YTDBox = async () => {
     setIsLoading(true);
-    let filter = [
+    const filter = [
       { key: '"A"', cond: "equals", value: "true" },
       { key: '"H"', cond: "equals", value: "true" },
       { key: '"YTD"', cond: "equals", value: "true" },
@@ -671,7 +671,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
 
   const toggleButtonState = (key: keyof ActiveStates) => {
     setActiveStates((prevStates) => {
-      let updatedStates = { ...prevStates };
+      const updatedStates = { ...prevStates };
       if (key === "T" && !prevStates.A) {
         toast.error("Target can only be selected if Actual is selected", {
           position: "top-right",
@@ -738,8 +738,8 @@ const IndustrialPerformanceInsights: React.FC = () => {
         ["A", "H", "T", "BE", "RI"].includes(filter.key.replace(/"/g, ""))
       );
       newFilters = [...newFilters, ...perspectiveFilters, ...ytd];
-      let removeDups = [...new Set(newFilters)];
-      let stringLubes = ["Lubes"];
+      const removeDups = [...new Set(newFilters)];
+      const stringLubes = ["Lubes"];
       if (entry.name.includes(stringLubes)) {
         console.log(true);
         setFilters(removeDups);
@@ -797,7 +797,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
         ...perspectiveFilters,
         ...updatedNonPerspectiveFilters,
       ];
-      let stringLubes = "Lubes";
+      const stringLubes = "Lubes";
       if (mode === "month" && drillLevel === 1) {
         setDrillLevel(0);
         setFilters(perspectiveFilters);
@@ -990,7 +990,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
       ]);
       setDrillHistory([]);
     }
-    let value = event.target.value;
+    const value = event.target.value;
     if (value === "_empty") {
       setFilters(filters.slice(0, -1));
       setDrillLevel(drillLevel - 1);
@@ -1065,7 +1065,7 @@ const IndustrialPerformanceInsights: React.FC = () => {
       ]);
       setDrillHistory([]);
     }
-    let value = event.target.value;
+    const value = event.target.value;
     if (value === "_empty") {
       setFilters(filters.slice(0, -1));
       setDrillLevel(drillLevel - 1);
@@ -1139,10 +1139,10 @@ const IndustrialPerformanceInsights: React.FC = () => {
       { key: '"Zone_Name"', cond: "equals", value },
     ]);
 
-    let newfilter = [...updatedFilters, { key: "Zone_Name", cond: "=", value }];
+    const newfilter = [...updatedFilters, { key: "Zone_Name", cond: "=", value }];
     // setDrillLevel(3);
     if (drillHistory.length === 2) {
-      let history = [...drillHistory.slice(0, -1)];
+      const history = [...drillHistory.slice(0, -1)];
       setDrillHistory([...history, value]);
     } else {
       setDrillHistory([...drillHistory, value]);
@@ -1191,13 +1191,13 @@ const IndustrialPerformanceInsights: React.FC = () => {
       ...updatedFilters,
       { key: '"Region_Name"', cond: "equals", value },
     ]);
-    let newfilter = [
+    const newfilter = [
       ...updatedFilters,
       { key: "Region_Name", cond: "=", value },
     ];
     // setDrillLevel(4);
     if (drillHistory.length === 3) {
-      let history = [...drillHistory.slice(0, -1)];
+      const history = [...drillHistory.slice(0, -1)];
       setDrillHistory([...history, value]);
     } else {
       setDrillHistory([...drillHistory, value]);
@@ -1243,13 +1243,13 @@ const IndustrialPerformanceInsights: React.FC = () => {
       ...updatedFilters,
       { key: '"SalesArea_Name"', cond: "equals", value },
     ]);
-    let newfilter = [
+    const newfilter = [
       ...updatedFilters,
       { key: "SalesArea_Name", cond: "=", value },
     ];
     // setDrillLevel(5);
     if (drillHistory.length === 4) {
-      let history = [...drillHistory.slice(0, -1)];
+      const history = [...drillHistory.slice(0, -1)];
       setDrillHistory([...history, value]);
     } else {
       setDrillHistory([...drillHistory, value]);
@@ -1291,13 +1291,13 @@ const IndustrialPerformanceInsights: React.FC = () => {
     setSelectedProductName(value);
     setFilters([...filters, { key: '"ProductName"', cond: "equals", value }]);
     const updatedFilters: any = removeOldValues(filters);
-    let newfilter = [
+    const newfilter = [
       ...updatedFilters,
       { key: "SalesArea_Name", cond: "=", value },
     ];
     // setDrillLevel(5);
     if (drillHistory.length === 5) {
-      let history = [...drillHistory.slice(0, -1)];
+      const history = [...drillHistory.slice(0, -1)];
       setDrillHistory([...history, value]);
     } else {
       setDrillHistory([...drillHistory, value]);

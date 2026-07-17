@@ -13,7 +13,7 @@ import { apiClient } from '@/services/apiClient';
 
 interface ToolBar  {
   groups: Groups[];
-};
+}
 
 export const ToolBar: React.FC<ToolBar> = (props) => {
   const { undo, redo, layout, openModal, openScreenSaveModal, isSaveScreenPopupOpen } = useLayoutStore();

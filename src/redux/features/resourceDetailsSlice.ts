@@ -5,7 +5,7 @@ import { encryptPayload } from '@/configs/encryptFernet';
 export const fetchResourceDetails = createAsyncThunk(
   'resourceDetails/fetchResourceDetails',
   async (resourceId: string) => {
-    let encryptedResourceId = encryptPayload(resourceId);
+    const encryptedResourceId = encryptPayload(resourceId);
     const response = await apiClient.get(`/api/resources/${encryptedResourceId}`);
     if (!response.status) {
       throw new Error('Failed to fetch resource details');

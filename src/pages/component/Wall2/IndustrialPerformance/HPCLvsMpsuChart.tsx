@@ -326,8 +326,8 @@ const HPCLvsMpsuChart: React.FC = () => {
     T: false,
     C: true,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = ['SBU_Name', 'Zone_Name', 'Region_Name', 'SalesArea_Name', 'ProductName'];
 
@@ -398,7 +398,7 @@ const HPCLvsMpsuChart: React.FC = () => {
     "info2",
   ] as const;
 
-  let activeDrills = [];
+  const activeDrills = [];
   let [drilldownList, setDrilldownList] = useState(getInitialDrilldownList(selectedYorM));
 
   const months = Array.from({ length: 12 }, (_, i) => ({
@@ -468,7 +468,7 @@ const HPCLvsMpsuChart: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -511,7 +511,7 @@ const HPCLvsMpsuChart: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -660,7 +660,7 @@ const HPCLvsMpsuChart: React.FC = () => {
   }
 
   const getData = (monthIndex) => {
-    let { historyData, actualData } = splitDataByType(monthLevelData);
+    const { historyData, actualData } = splitDataByType(monthLevelData);
     return companies.map(company => ({
       name: company.toUpperCase(),
       history: historyData[`history_${company}_share`] ? historyData[`history_${company}_share`][monthIndex] : 0,
@@ -670,9 +670,9 @@ const HPCLvsMpsuChart: React.FC = () => {
 
 
 function splitDataByType(data) {
-  let historyData = {};
-  let actualData = {};
-  let metadata = {};
+  const historyData = {};
+  const actualData = {};
+  const metadata = {};
 
   Object.keys(data).forEach((key) => {
       if (key.startsWith("history_")) {
@@ -787,7 +787,7 @@ function splitDataByType(data) {
   };
 
     function updateFiltersToCrossFilter(filters, crossFilters) {
-      let filterMap = new Map();
+      const filterMap = new Map();
 
       // Store filters in a Map for quick lookup
       filters.forEach((item) => {

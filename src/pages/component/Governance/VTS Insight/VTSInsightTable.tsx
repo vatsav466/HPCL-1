@@ -604,7 +604,7 @@ const VTSInsightTable: React.FC<VTSInsightTableProps> = ({
       setIsStreaming(false);
       isFetchingRef.current = false;
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [
     selectedBu,
     selectedZone,
@@ -662,7 +662,7 @@ const VTSInsightTable: React.FC<VTSInsightTableProps> = ({
         updateTimerRef.current = null;
       }
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, [
     selectedBu,
     selectedZone,
@@ -780,7 +780,7 @@ const VTSInsightTable: React.FC<VTSInsightTableProps> = ({
 
   // Use streamingData instead of data prop
   useEffect(() => {
-    let newData = [...streamingData];
+    const newData = [...streamingData];
     if (sortConfig) {
       newData.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key])

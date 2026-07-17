@@ -22,7 +22,7 @@ function CustomDashboard2() {
   // GET request with query parameters
   const getBigNumbers = async () => {
     try {
-      let params: any = {
+      const params: any = {
         "filters": [],
         "action": "get_production_details",
         "drill_state": ""

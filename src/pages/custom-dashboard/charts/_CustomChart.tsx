@@ -54,8 +54,8 @@ const expandBar = keyframes`
 
 export default function BarWithDotIcon(props: any) {
   const [isOpen, setIsOpen] = useState(false);
-  let txt = <div><strong>{props.top}</strong> <br /><strong>{props.bottom}</strong></div>;
-  let animationDuration = '2s';
+  const txt = <div><strong>{props.top}</strong> <br /><strong>{props.bottom}</strong></div>;
+  const animationDuration = '2s';
   const openModal = () => {
     setIsOpen(true);
   };
@@ -136,7 +136,7 @@ export function MetricCard(props: any) {
       </CardContent>
     </Card>
   );
-};
+}
 
 
 export function CustomChart () {
@@ -176,7 +176,7 @@ export function CustomChart () {
   }, [])
 
   const getLimitTxt = (text: any, maxLength: number) => {
-    let shortenedText =
+    const shortenedText =
       text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
     return shortenedText;
   };
@@ -245,7 +245,7 @@ export function CustomChart () {
   }
 
   const getDistinctPlant = async (region: any) => {
-    let params = {
+    const params = {
       region: region
     }
     try {
@@ -311,8 +311,8 @@ export function CustomChart () {
   }
 
   const SODHandleChange = (event: any, name: string) => {
-    let title = name; 
-    let value = event;
+    const title = name; 
+    const value = event;
     if (title === 'zoneName') { sodZoneName = value; }
     if (title === 'plantName') { sodPlantName = value; }
     setTimeout(() => {
@@ -323,8 +323,8 @@ export function CustomChart () {
 
   const RetailHandleChange = (event: any, name: string) => {
     console.log("event for handle change", event);
-    let title = name; // event.target.name;
-    let value = event;
+    const title = name; // event.target.name;
+    const value = event;
     if (title === 'zoneName') { retailZoneName = value; }
     if (title === 'regionName') { retailRegionName = value; }
     if (title === 'areaName') { retailAreaName = value; }
@@ -363,8 +363,8 @@ export function CustomChart () {
 
   const getDryoutCount = async () => {
     try {
-      let params = {};
-      let response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
+      const params = {};
+      const response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
       console.log("response", response);
       setDryoutCount(transformData(response.data))
     } catch(error) {

@@ -146,7 +146,7 @@ export const updateDashboardGroupOrder = createAsyncThunk(
 export const deleteDashboard = createAsyncThunk(
   "dashboard/deleteDashboard",
   async (dashboardId: number) => {
-    let encryptedDashboardId = encryptPayload(dashboardId);
+    const encryptedDashboardId = encryptPayload(dashboardId);
     const response = await apiClient.delete(`/api/dashboards/${encryptedDashboardId}`);
     return response.data;
   }

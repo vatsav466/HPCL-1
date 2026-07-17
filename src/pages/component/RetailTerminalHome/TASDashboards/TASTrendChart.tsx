@@ -222,7 +222,7 @@ const TASTrendChart = forwardRef<TASTrendChartHandle, EquipmentChartProps>(funct
       const filePath = response.data?.file_path;
       const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
       const filename = `TAS_${alertCategory}_${localSelectedEquipment}_${viewMode}_${timestamp}.xlsx`;
-      let fileName = filename;
+      const fileName = filename;
 
       saveAs(filePath, fileName);
 

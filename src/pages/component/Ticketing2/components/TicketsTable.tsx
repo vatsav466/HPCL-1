@@ -357,7 +357,7 @@ const parsePmOrdersWeeklyChart = (responseData: unknown): PmWeeklyChartPoint[] =
     for (const item of arr) {
       if (!item || typeof item !== "object") continue;
       const o = item as Record<string, unknown>;
-      let labelRaw =
+      const labelRaw =
         o.period ??
         o.month ??
         o.week ??

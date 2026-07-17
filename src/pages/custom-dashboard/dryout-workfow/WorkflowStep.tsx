@@ -151,7 +151,7 @@ export function WorkflowStep({ step }: WorkflowStepProps) {
       toggle(step.section)
     }
     
-    let data = {
+    const data = {
       type: 'filterByIndent',
       filters: {
         categoryValue: categoryValue,

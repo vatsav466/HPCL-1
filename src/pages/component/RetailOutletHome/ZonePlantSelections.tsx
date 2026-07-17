@@ -128,8 +128,8 @@ const ZonePlantSelections: React.FC<LocationFilterProps> = ({
   // Update selectedPlant when sapid prop changes
   useEffect(() => {
     // Check if sapid is null or undefined (reset case)
-    let sap_id = localStorage.getItem('sapId');
-    let zone = localStorage.getItem('zone');
+    const sap_id = localStorage.getItem('sapId');
+    const zone = localStorage.getItem('zone');
     if(sap_id && zone) {
       setSelectedPlant(sap_id);
       setSelectedZone(zone);

@@ -124,7 +124,7 @@ const handleDownloadExcel = async () => {
 
     const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss');
     const timePeriod = timeGrain === "monthly" ? "Monthly" : "Weekly"
-    let fileName = `Cancelled_TTS_${timePeriod}_${timestamp}.xlsx`
+    const fileName = `Cancelled_TTS_${timePeriod}_${timestamp}.xlsx`
 
     saveAs(file_path, fileName);
   } catch (error) {

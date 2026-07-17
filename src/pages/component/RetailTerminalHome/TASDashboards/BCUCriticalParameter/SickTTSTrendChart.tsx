@@ -127,8 +127,8 @@ const handleDownload = async () => {
       throw new Error(`Download failed with status ${response.status}`)
     }
     
-    let fileName = 'sick_tts_report.xlsx' // default filename
-    let filePath = response.data?.file_path;
+    const fileName = 'sick_tts_report.xlsx' // default filename
+    const filePath = response.data?.file_path;
 
     saveAs(filePath, fileName);
     toast.success("Excel file downloaded successfully");

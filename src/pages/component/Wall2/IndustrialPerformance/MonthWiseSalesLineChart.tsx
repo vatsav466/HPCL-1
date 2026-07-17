@@ -42,7 +42,7 @@ const MonthWiseSalesLineChart = ({
       setIsLoading(true)
 
       let companyFilter: any = {}
-      let monthString: any = startMonth + "," + endMonth
+      const monthString: any = startMonth + "," + endMonth
 
       if (selectedCompanies && selectedCompanies.length > 0) {
         companyFilter = {

@@ -26,7 +26,7 @@ export interface TableJoinRow extends BaseRow {
     sourceIsCustom?: boolean;
     targetIsCustom?: boolean;
   }[];
-};
+}
 
 interface JoinCondition {
   sourceColumn: string;

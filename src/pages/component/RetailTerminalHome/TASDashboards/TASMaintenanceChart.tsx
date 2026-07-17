@@ -1083,7 +1083,7 @@ const processData = (apiResponse: any): { chartData: DataPoint[]; gridData: Deta
 
   // Initialize and update chart
   useEffect(() => {
-    let root: am5.Root | null = null
+    const root: am5.Root | null = null
 
     const initChart = async () => {
       if (!lineChartRef.current) return

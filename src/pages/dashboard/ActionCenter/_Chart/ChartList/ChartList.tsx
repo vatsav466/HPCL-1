@@ -180,7 +180,7 @@ const fetchUserInfo = async () => {
 
   const fetchCharts = async (newFilters = filters) => {
     try {
-      let queryParams = new URLSearchParams({
+      const queryParams = new URLSearchParams({
         skip: "0",
         limit: "100",
       });
@@ -199,7 +199,7 @@ const fetchUserInfo = async () => {
       });
        console.log("filteredCharts:", filteredCharts);
 
-      let filterConditions = [];
+      const filterConditions = [];
       if (newFilters.name) filterConditions.push(`name='${newFilters.name}'`);
       if (newFilters.type)
         filterConditions.push(`visualization_name='${newFilters.type}'`);

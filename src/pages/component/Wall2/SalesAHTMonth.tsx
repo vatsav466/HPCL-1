@@ -391,8 +391,8 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     H: true,
     T: false,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] =
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] =
     useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = [
@@ -529,7 +529,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -572,7 +572,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -795,7 +795,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
   // }
 
   function updateFiltersToCrossFilter(filters, crossFilters) {
-    let filterMap = new Map();
+    const filterMap = new Map();
 
     // Store filters in a Map for quick lookup
     filters.forEach((item) => {
@@ -1027,7 +1027,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
 
     // setAppliedFilters((pre) => [...pre, monthFilter]);
 
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters(() => [
       ...perspectiveFilters,
       monthFilter
@@ -1100,7 +1100,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     }
 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1119,7 +1119,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     setSelectedProductName("");
     // setCrossFilters([]);
     // Set only SBU filter
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response = await loadDistinctValues(
@@ -1154,7 +1154,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     setSelectedProductName("");
     // setCrossFilters([]);
     // Set SBU and Zone filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
 
     let higherLevelFilter = [];
@@ -1194,7 +1194,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     const defaultFilter = handleFilterChange("Region_Name", value);
     const distinctValues = distinctFilterChange("Region_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSBU("");
       return;
@@ -1220,7 +1220,7 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
       higherLevelFilter = crossFilters;
     }
     // Set SBU, Zone, and Region filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response: any = await loadDistinctValues(
@@ -1242,14 +1242,14 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     const defaultFilter = handleFilterChange("SalesArea_Name", value);
     const distinctValues = distinctFilterChange("SalesArea_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSalesArea("");
       return;
     }
     setSelectedSalesArea(value);
     setSelectedProductName("");
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     let higherLevelFilter = [];
     if (crossFilters.length > 0) {
@@ -1288,13 +1288,13 @@ const SalesPerformanceChartAHTMonth: React.FC = () => {
     const defaultFilter = handleFilterChange("ProductName", value);
     const distinctValues = distinctFilterChange("ProductName", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedProductName("");
       return;
     }
     setSelectedProductName(value);
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     let higherLevelFilter = [];
     if (crossFilters.length > 0) {

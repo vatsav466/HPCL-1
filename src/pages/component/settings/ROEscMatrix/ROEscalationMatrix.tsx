@@ -145,7 +145,7 @@ const ROEscalationMatrix = () => {
     setIsLoading(true);
     try {
       const skip = currentPage * pageSize;
-      let queryParams: any = {
+      const queryParams: any = {
         skip: skip,
         limit: pageSize,
         search_text: searchText ? `${encodeURIComponent(searchText)}` : ''

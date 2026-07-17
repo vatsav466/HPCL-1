@@ -400,7 +400,7 @@ export const ViolationDialog: React.FC<ViolationDialogProps> = ({
                 payloadData[clickedKey] = clickedValue;
             }
 
-            let emlockFilters = [...baseFilters];
+            const emlockFilters = [...baseFilters];
 
             if (
                 violationType === "EM Lock Open" ||

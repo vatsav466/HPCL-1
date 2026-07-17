@@ -272,7 +272,7 @@ const AuditTable: React.FC<AuditTableProps> = ({
           if (isStatus && !statusBadgeRenderer) {
             let badgeClass = 'bg-gray-100 text-gray-700 border-gray-200';
             let icon = '•';
-            let displayValue = String(value || 'N/A');
+            const displayValue = String(value || 'N/A');
 
             const lowerVal = (value || '').toString().toLowerCase();
             if (lowerVal.includes('success') || lowerVal.includes('ok') || lowerVal.includes('completed') || lowerVal.includes('logged in')) {

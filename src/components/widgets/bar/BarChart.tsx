@@ -246,7 +246,7 @@ const BarChart: React.FC<ChartProps> = ({
 
     // Create and set the horizontal scrollbar
     if (config?.scrollbarX) {
-      let scrollbarX = am5.Scrollbar.new(root, {
+      const scrollbarX = am5.Scrollbar.new(root, {
         orientation: "horizontal",
         minHeight: 5,
         marginTop: 5,
@@ -262,7 +262,7 @@ const BarChart: React.FC<ChartProps> = ({
 
     //  Create and set the vertical scrollbar
     if (config?.scrollbarY) {
-      let scrollbarY = am5.Scrollbar.new(root, {
+      const scrollbarY = am5.Scrollbar.new(root, {
         orientation: "vertical",
         minWidth: 5,
         marginLeft: 5,

@@ -1,4 +1,4 @@
-export let data = {
+export const data = {
   zone: [
     { "label": "South Central Retail", "value": "South Central Retail" },
     { "label": "North West Retail Zo", "value": "North West Retail Zo" },

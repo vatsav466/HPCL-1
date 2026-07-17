@@ -304,7 +304,7 @@ const LPGSalesDashboard: React.FC = () => {
         const month = customValues?.Month || cardValue.Month;
         
         // Build the drill state query parameters
-        let params = [];
+        const params = [];
         
         // Add financial year if it's selected
         if (financialYear) {

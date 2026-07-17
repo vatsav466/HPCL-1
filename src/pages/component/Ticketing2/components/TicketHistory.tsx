@@ -512,7 +512,7 @@ export const TicketHistoryDialog = ({ isOpen, onClose, ticketId, onSubmitSuccess
       setLoading(true)
       setError(null)
 console.log("ticketId before encryption:", ticketId);
-let encryptedTicketId = encryptPayload(ticketId);
+const encryptedTicketId = encryptPayload(ticketId);
 console.log("encryptedTicketId:", encryptedTicketId);
 
       try {

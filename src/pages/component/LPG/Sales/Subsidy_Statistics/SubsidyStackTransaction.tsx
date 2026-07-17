@@ -289,7 +289,7 @@ const SubsidyStackTransaction = () => {
       };
 
       // Update active filters array
-      let updatedFilters = [...activeFilters];
+      const updatedFilters = [...activeFilters];
       const existingFilterIndex = updatedFilters.findIndex(
         (f) => f.key === `"${key}"`
       );

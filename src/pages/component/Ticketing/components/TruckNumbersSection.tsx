@@ -33,10 +33,10 @@ export const TruckNumbersSection: React.FC<TruckNumbersSectionProps> = ({
       const transporterName = row.transporter_name;
 
       // Create a display identifier
-      let displayId = truckNumber || ttNumber || tripName || tripId || `Item ${index + 1}`;
+      const displayId = truckNumber || ttNumber || tripName || tripId || `Item ${index + 1}`;
 
       // Create additional info
-      let additionalInfo = [];
+      const additionalInfo = [];
       if (transporterCode) additionalInfo.push(`Transporter: ${transporterCode}`);
       if (transporterName) additionalInfo.push(`Name: ${transporterName}`);
       if (tripId && tripId !== displayId) additionalInfo.push(`Trip ID: ${tripId}`);

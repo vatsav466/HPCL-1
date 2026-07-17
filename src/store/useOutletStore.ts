@@ -247,7 +247,7 @@ export const useOutletStore = create<OutletStore>((set) => ({
     try {
       const response = await apiClient.post('/api/indentdryout/get_distinct_location_details', params);
       if (response.data?.status === true) {
-        let { data } = response.data;
+        const { data } = response.data;
         set({
           zoneData: data['zone'],
           plantData: data['plant'],
@@ -341,7 +341,7 @@ export const useOutletStore = create<OutletStore>((set) => ({
     try {
       const response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
       if (response.data?.status === true) {
-        let { data } = response.data;
+        const { data } = response.data;
         set({
           dryoutCount: transformData(data)
         });

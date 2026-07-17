@@ -178,7 +178,7 @@ apiClient.postStream = async function(url: string, data: any, requestConfig?: an
   try {
     // Apply encryption if enabled (same logic as interceptor)
     let encryptedData = data;
-    let headers: Record<string, string> = {
+    const headers: Record<string, string> = {
       'Content-Type': 'application/json',
     };
 

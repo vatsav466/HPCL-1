@@ -296,7 +296,7 @@ const DonutCard = ({ chartId, data, title, isExpanded, onToggleExpand, defaultOp
   useEffect(() => {
     if (!data || data.length === 0) return;
     
-    let root = am5.Root.new(pieChartId)
+    const root = am5.Root.new(pieChartId)
     root.setThemes([am5themes_Animated.new(root)])
     if (root._logo) root._logo.dispose();
 

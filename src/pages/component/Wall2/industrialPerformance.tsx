@@ -488,8 +488,8 @@ const IndustrialPerformance: React.FC = () => {
     HC: true,
     AC: true,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = ['SBU_Name', 'Zone_Name', 'Region_Name', 'SalesArea_Name', 'ProductName'];
 
@@ -565,7 +565,7 @@ const IndustrialPerformance: React.FC = () => {
     "info2",
   ] as const;
 
-  let activeDrills = [];
+  const activeDrills = [];
   let [drilldownList, setDrilldownList] = useState(getInitialDrilldownList(selectedYorM));
 
   const months = Array.from({ length: 12 }, (_, i) => ({
@@ -635,7 +635,7 @@ const IndustrialPerformance: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -678,7 +678,7 @@ const IndustrialPerformance: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -838,7 +838,7 @@ const IndustrialPerformance: React.FC = () => {
         setCompaniesFromResponse(response.data.company);
         setMonthsFromResponse(response.data.month_name);
         // getCompanyData("hpcl");
-        let data:any=await getCompanyData("hpcl",response.data,cumulativeResponse.data,response.data.month_name);
+        const data:any=await getCompanyData("hpcl",response.data,cumulativeResponse.data,response.data.month_name);
         setAreaChartData(data);
         
         setIsCumulativeCompanyDataLoaded(true);
@@ -921,7 +921,7 @@ const IndustrialPerformance: React.FC = () => {
   }, [drillLevel, appliedFilters, crossFilters]);
 
   const industryMarketShare = async () => {
-    let payload = {"filters":[{"key":"\"A\"","cond":"equals","value":"true"},{"key":"\"H\"","cond":"equals","value":"true"},{"key":"\"YTM\"","cond":"equals","value":"true"},
+    const payload = {"filters":[{"key":"\"A\"","cond":"equals","value":"true"},{"key":"\"H\"","cond":"equals","value":"true"},{"key":"\"YTM\"","cond":"equals","value":"true"},
       {"key":"\"table\"","cond":"equals","value":"true"},{"key":"\"table_month\"","cond":"equals","value": selectedMonthForTable}
       
       ],"cross_filters":[],"action":"industry_performance","drill_state":"","time_grain":"Monthly","resp_format":"company_level"}
@@ -943,8 +943,8 @@ const IndustrialPerformance: React.FC = () => {
   } 
 
   const getData = (monthIndex) => {
-    let { historyData, actualData } = splitDataByType(monthLevelData);
-    let { historyDataCumulative, actualDataCumulative } = splitDataByTypeCumulative(monthLevelDataCumulative);
+    const { historyData, actualData } = splitDataByType(monthLevelData);
+    const { historyDataCumulative, actualDataCumulative } = splitDataByTypeCumulative(monthLevelDataCumulative);
     const data = companies.map(company => ({
       name: company.toUpperCase(),
       history: historyData[`history_${company}_share`] ? historyData[`history_${company}_share`][monthIndex] : 0,
@@ -960,12 +960,12 @@ const IndustrialPerformance: React.FC = () => {
     // console.log("monthLevelData", monthLevelData1);
     // console.log("monthLevelDataCumulative", monthLevelDataCumulative1);
 
-    let { historyData, actualData } = splitDataByType(monthLevelData1);
-    let { historyDataCumulative, actualDataCumulative } = splitDataByTypeCumulative(monthLevelDataCumulative1);
+    const { historyData, actualData } = splitDataByType(monthLevelData1);
+    const { historyDataCumulative, actualDataCumulative } = splitDataByTypeCumulative(monthLevelDataCumulative1);
     const data = [];
     Object.entries(monthsFromResponse1).some(([key, value]:any) => {
       
-      let result = {
+      const result = {
       name: value.toUpperCase(),
       history: historyData[`history_${company}_share`] ? historyData[`history_${company}_share`][key] : 0,
       actual: actualData[`actual_${company}_share`] ? actualData[`actual_${company}_share`][key] : 0,
@@ -985,7 +985,7 @@ const IndustrialPerformance: React.FC = () => {
 
   const getSBUWiseCompanyData = async (company) => {
     setIsSbuAreaChartDataLoaded(false);
-    let response:any=await getSBUData(company);
+    const response:any=await getSBUData(company);
     // console.log("response in sbu",response);
     const filteredData = response.filter(obj => obj.name !== "Unknown");
    
@@ -1000,7 +1000,7 @@ const IndustrialPerformance: React.FC = () => {
     return async (company) => {
       console.log("Processing chartData...");
       setIsSbuAreaChartDataLoaded(false);
-    let response:any=await getSBUData(company);
+    const response:any=await getSBUData(company);
     // console.log("response in sbu",response);
     const filteredData = response.filter(obj => obj.name !== "Unknown");
    
@@ -1017,7 +1017,7 @@ const IndustrialPerformance: React.FC = () => {
   const handleCompanyChange = async (e) => {
     
     setSelectedCompany(e.target.value)
-    let data:any=await getCompanyData(e.target.value,monthLevelData,monthLevelDataCumulative,monthsFromResponse);
+    const data:any=await getCompanyData(e.target.value,monthLevelData,monthLevelDataCumulative,monthsFromResponse);
     setAreaChartData(data);
   };
 
@@ -1025,7 +1025,7 @@ const IndustrialPerformance: React.FC = () => {
   const handleCompanyChangeForSBU = async (e) => {
     // console.log("e", e.target.value)
     setSelectedCompanyForSBU(e.target.value)
-    let data:any=await getSBUWiseCompanyData(e.target.value);
+    const data:any=await getSBUWiseCompanyData(e.target.value);
     // setAreaChartData(data);
   };
 
@@ -1039,9 +1039,9 @@ const IndustrialPerformance: React.FC = () => {
 
 
 function splitDataByType(data) {
-  let historyData = {};
-  let actualData = {};
-  let metadata = {};
+  const historyData = {};
+  const actualData = {};
+  const metadata = {};
 
   Object.keys(data).forEach((key) => {
       if (key.startsWith("history_")) {
@@ -1057,9 +1057,9 @@ function splitDataByType(data) {
 }
 
 function splitDataByTypeCumulative(data) {
-  let historyDataCumulative = {};
-  let actualDataCumulative = {};
-  let metadataCumulative = {};
+  const historyDataCumulative = {};
+  const actualDataCumulative = {};
+  const metadataCumulative = {};
 
   Object.keys(data).forEach((key) => {
       if (key.startsWith("history_")) {
@@ -1174,7 +1174,7 @@ function splitDataByTypeCumulative(data) {
   };
 
     function updateFiltersToCrossFilter(filters, crossFilters) {
-      let filterMap = new Map();
+      const filterMap = new Map();
 
       // Store filters in a Map for quick lookup
       filters.forEach((item) => {
@@ -1458,7 +1458,7 @@ function splitDataByTypeCumulative(data) {
     }
    
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1486,8 +1486,8 @@ function splitDataByTypeCumulative(data) {
     }
    
     // let perspectiveFilters = selectedYorM === "M" ? "" : convertToFilters(activeStates);
-    let perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
-    let ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
+    const perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
+    const ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
       ...ytdFilters,
@@ -1535,8 +1535,8 @@ function splitDataByTypeCumulative(data) {
       dateFilters = mode === "date" ? [{ key: '"DATE"', cond: "equals", value: formattedDates }] : [];
     }
    
-    let perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
-    let ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
+    const perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
+    const ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
       ...ytdFilters,
@@ -1583,7 +1583,7 @@ function splitDataByTypeCumulative(data) {
     const defaultFilter = handleFilterChange('Region_Name', value);
     const distinctValues = distinctFilterChange('Region_Name', value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1621,8 +1621,8 @@ function splitDataByTypeCumulative(data) {
       dateFilters = mode === "date" ? [{ key: '"DATE"', cond: "equals", value: formattedDates }] : [];
     }
    
-    let perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
-    let ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
+    const perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
+    const ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
       ...ytdFilters,
@@ -1649,7 +1649,7 @@ function splitDataByTypeCumulative(data) {
     const defaultFilter = handleFilterChange('SalesArea_Name', value);
     const distinctValues = distinctFilterChange('SalesArea_Name', value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1666,8 +1666,8 @@ function splitDataByTypeCumulative(data) {
       dateFilters = mode === "date" ? [{ key: '"DATE"', cond: "equals", value: formattedDates }] : [];
     }
    
-    let perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
-    let ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
+    const perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
+    const ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
       ...ytdFilters,
@@ -1714,7 +1714,7 @@ function splitDataByTypeCumulative(data) {
     const defaultFilter = handleFilterChange('ProductName', value);
     const distinctValues = distinctFilterChange('ProductName', value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1730,8 +1730,8 @@ function splitDataByTypeCumulative(data) {
       dateFilters = mode === "date" ? [{ key: '"DATE"', cond: "equals", value: formattedDates }] : [];
     }
    
-    let perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
-    let ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
+    const perspectiveFilters = convertToFilters({ ...activeStates, C: selectedYorM === "M" ? false : activeStates.C })
+    const ytdFilters = mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
       ...ytdFilters,

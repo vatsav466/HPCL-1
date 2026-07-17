@@ -258,7 +258,7 @@ export const PerformanceScoreTable: React.FC<PerformanceScoreTableProps> = ({
       let bu = "TAS"; // Default to TAS for SOD Home
       let zone = "";
       let sap_id = "";
-      let region = "";
+      const region = "";
       
       if (query) {
         // Extract bu from query - this will override the default
@@ -469,7 +469,7 @@ export const PerformanceScoreTable: React.FC<PerformanceScoreTableProps> = ({
       let bu = "TAS"; // Default to TAS for SOD Home
       let zone = "";
       let sap_id = "";
-      let region = "";
+      const region = "";
       
       if (query) {
         // Extract bu from query - this will override the default

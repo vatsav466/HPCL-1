@@ -117,7 +117,7 @@ export const fetchFilterOptions = createAsyncThunk(
           component: []
         };
 
-        for (let column of columns) {
+        for (const column of columns) {
           if (response.data.data[column]) {
             results[column] = response.data.data[column];
           }

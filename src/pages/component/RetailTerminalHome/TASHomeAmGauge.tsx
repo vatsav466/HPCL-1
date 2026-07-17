@@ -138,7 +138,7 @@ const TASHomeAmGauge: React.FC<TASHomeAmGaugeProps> = ({
         const response = await apiClient.post("/api/performanceindex/get_pi_score", payload);
 
         const apiData = response?.data;
-        let dataArray: any[] = Array.isArray(apiData)
+        const dataArray: any[] = Array.isArray(apiData)
           ? apiData
           : typeof apiData === "object" && apiData !== null
             ? Object.values(apiData)

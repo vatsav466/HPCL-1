@@ -228,7 +228,7 @@ export const AlertSheetAlertsGrid: React.FC<ROAlertsTableV2Props> = ({
       try {
         const currentPageNumber = Math.floor(startRow / pageSize);
 
-        let params: any = {
+        const params: any = {
           skip: currentPageNumber,
           limit: pageSize,
           sort: sortModel?.length

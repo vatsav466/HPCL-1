@@ -1306,7 +1306,7 @@ const VtsInsightDash: React.FC = () => {
         { key: "DATE", cond: "equals", value: dateFilterString },
       ];
 
-      let payload: any = {
+      const payload: any = {
         qlick_view: level,
       };
 

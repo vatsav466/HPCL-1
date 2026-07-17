@@ -113,7 +113,7 @@ const AreaChart: React.FC<AreaChartProps> = ({ height = "370px" }) => {
   const [endMonth, setEndMonth] = useState<string>("MAR")
   const [sbuComparisonColumnDefs, setSbuComparisonColumnDefs] = useState<any[]>([])
   const [colors, setColors] = useState([])
-  let [sbuAllData, setSbuAllData] = useState<any>([]);
+  const [sbuAllData, setSbuAllData] = useState<any>([]);
   const [showHistory, setShowHistory] = useState(true) // New state to toggle history data
   const [selectedYear, setSelectedYear] = useState(getCurrentFiscalYear);
   /** Bumped on manual refresh so child charts refetch the same APIs as filter changes. */

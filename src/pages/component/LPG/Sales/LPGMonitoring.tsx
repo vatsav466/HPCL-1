@@ -111,7 +111,7 @@ export default function LPGStockDashboard() {
   });
 
   const fetchPlantAnalytics = async () => {
-    let payload = {
+    const payload = {
       "filters": [
         {"key": '"zone_name"', "cond": "=", "val": locationFilter?.zone},
         {"key": '"plant_name"', "cond": "=", "val": locationFilter?.plant}

@@ -386,7 +386,7 @@ function getEquipmentRowUpdatedAtForResolvedActionMs(item: Record<string, unknow
     item.updated_at ??
     (item as { updatedAt?: unknown }).updatedAt ??
     (item as { Updated_at?: unknown }).Updated_at;
-  let ms = parseHelpDeskTimestampMs(raw);
+  const ms = parseHelpDeskTimestampMs(raw);
   if (ms != null) return ms;
   return parseHelpDeskTimestampMs(
     (item as { modified_at?: unknown }).modified_at ?? (item as { modifiedAt?: unknown }).modifiedAt

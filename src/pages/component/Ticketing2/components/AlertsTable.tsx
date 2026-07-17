@@ -124,7 +124,7 @@ export const AlertsTable: React.FC<ROAlertsTableV2Props> = ({
   const downloadExcel = useCallback(async () => {
     setIsDownloading(true);
     try {
-      let params: any = {
+      const params: any = {
         skip: 0,
         limit: 10000,
         sort: JSON.stringify({ created_at: "desc" }),
@@ -252,7 +252,7 @@ export const AlertsTable: React.FC<ROAlertsTableV2Props> = ({
       try {
         const currentPageNumber = Math.floor(startRow / pageSize);
 
-        let params: any = {
+        const params: any = {
           skip: currentPageNumber,
           limit: pageSize,
           sort: sortModel?.length

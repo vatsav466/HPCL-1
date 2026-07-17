@@ -290,8 +290,8 @@ export function CustomChart () {
   ]);
 
   const RetailHandleChange = async (event: any, name: string) => {
-    let title = name;
-    let value = event;
+    const title = name;
+    const value = event;
   
     // if (title === 'zoneName') {
     //   const regions = await fetchFilterData('region', [{ key: 'zone', cond: '=', value: value }]);
@@ -352,8 +352,8 @@ export function CustomChart () {
 
   const getDryoutCount = async () => {
     try {
-      let params = {};
-      let response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
+      const params = {};
+      const response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
       if(response.data?.status === true) {
         setFixedDryoutCount(transformData(response.data?.data));
       }
@@ -485,7 +485,7 @@ export function CustomChart () {
   const handleDryoutROChange = async (event, type) => {
     setDryoutRO(event);
     if(event) {
-      let params = {
+      const params = {
         filters: [
           { key: 'interlock_name', cond: '=', value: ['Dry Out Each Indent Wise MainFlow'] },
           { key: 'dry_out_in_days', cond: '=', value: ["1"] },

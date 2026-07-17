@@ -533,7 +533,7 @@ const LineChartWithTable = ({
     try {
       setIsLoading(true)
       
-      let monthString = startMonth + "," + endMonth
+      const monthString = startMonth + "," + endMonth
       
       const companiesToUse = selectedCompanies && selectedCompanies.length > 0 
         ? selectedCompanies 

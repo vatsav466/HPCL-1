@@ -310,7 +310,7 @@ const SubsidyExceptionStats = () => {
         value: value,
       };
 
-      let updatedFilters = [...activeFilters];
+      const updatedFilters = [...activeFilters];
       const existingFilterIndex = updatedFilters.findIndex(
         (f) => f.key === `"${key}"`
       );

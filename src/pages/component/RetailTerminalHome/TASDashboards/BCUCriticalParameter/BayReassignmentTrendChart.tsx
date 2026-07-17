@@ -978,7 +978,7 @@ const BayReassignmentTrendChart: React.FC<BayReassignmentChartProps> = ({ filter
       // Generate filename with current timestamp
       const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss')
       const timePeriod = timeGrain === "monthly" ? "Monthly" : "Weekly"
-      let fileName = `Bay_Reassignment_${timePeriod}_${timestamp}.xlsx`
+      const fileName = `Bay_Reassignment_${timePeriod}_${timestamp}.xlsx`
 
       saveAs(filePath, fileName);
 

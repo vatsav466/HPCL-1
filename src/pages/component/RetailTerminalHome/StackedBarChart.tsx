@@ -1441,8 +1441,8 @@ const StackedBarChart: React.FC<StackedBarChartProps> = ({
           ...(locationFilter?.zone && { zone: locationFilter.zone }),
           ...(locationFilter?.plant && { plant: locationFilter.plant }),
         }
-        let sap_id = localStorage.getItem('sapId');
-        let zone = localStorage.getItem('zone');
+        const sap_id = localStorage.getItem('sapId');
+        const zone = localStorage.getItem('zone');
         if(sap_id || zone) {
           locationFilterObj = {
             zone: zone,

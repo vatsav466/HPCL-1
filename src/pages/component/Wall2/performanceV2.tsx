@@ -356,7 +356,7 @@ const SalesPerformanceChart: React.FC = () => {
 
   const toggleButtonState = (key: keyof ActiveStates) => {
     setActiveStates((prevStates) => {
-      let updatedStates = { ...prevStates };
+      const updatedStates = { ...prevStates };
       if (key === "T" && !prevStates.A) {
         toast.error("Target can only be selected if Actual is selected", {
           position: "top-center",
@@ -415,7 +415,7 @@ const SalesPerformanceChart: React.FC = () => {
         ["A", "H", "T", "BE", "RI"].includes(filter.key.replace(/"/g, ""))
       );
       newFilters = [...newFilters, ...perspectiveFilters];
-      let removeDups = [...new Set(newFilters)];
+      const removeDups = [...new Set(newFilters)];
       setFilters(removeDups);
       setDrillLevel((prev) => prev + 1);
       setDrillHistory([...drillHistory, entry.name]);

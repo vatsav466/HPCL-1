@@ -264,7 +264,7 @@ const TerminalHomeZonePlantFilters: React.FC<{
   }
 
   /** When parent has no zone yet, default the dropdown to the logged-in user's zone (if it appears in the list). */
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- one-shot when zone list loads; handleZoneChange omitted to avoid churn
+   
   useEffect(() => {
     if (userDefaultZoneAppliedRef.current) return
     if (zone) return
@@ -301,7 +301,7 @@ const TerminalHomeZonePlantFilters: React.FC<{
    * Does not require a resolved zone: TAS/SOD users often have `sap_id` on session but no `zone`, while the
    * unscoped `get_dist_loc_details` list still contains their plant (e.g. Terminal / ZonePlant path vs TAS-only home).
    */
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- handlePlantChangeInternal omitted to avoid churn
+   
   useEffect(() => {
     if (userDefaultPlantAppliedRef.current) return
     if (sapid) return

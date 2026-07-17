@@ -25,8 +25,8 @@ const SbuWiseBigNumbersTable: React.FC<SbuWiseBigNumbersTableProps> = ({ data, t
 
   const sbuOrder = ["RETAIL", "LPG", "I&C", "LUBES", "AVIATION", "NG"];
 
-  let totalRow = normalizedData.find(item => item.displayName?.toLowerCase() === "total");
-  let filteredData = normalizedData.filter(item => item.displayName?.toLowerCase() !== "total");
+  const totalRow = normalizedData.find(item => item.displayName?.toLowerCase() === "total");
+  const filteredData = normalizedData.filter(item => item.displayName?.toLowerCase() !== "total");
 
   const sortedData = [...filteredData].sort((a, b) => {
     const nameA = a.displayName?.toUpperCase() || '';
@@ -50,7 +50,7 @@ const SbuWiseBigNumbersTable: React.FC<SbuWiseBigNumbersTableProps> = ({ data, t
     return null;
   }
 
-  let headers = Object.keys(firstValidRow[type]);
+  const headers = Object.keys(firstValidRow[type]);
   if (companyOrder?.length > 0) {
     headers.sort((a, b) => {
       const indexA = companyOrder.indexOf(a);

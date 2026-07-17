@@ -109,7 +109,7 @@ const OverallPendingPMUYNMPUY = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [totalSales, setTotalSales] = useState<number>(0);
 
-  let list = ["zone", "region", "distributor", "salesarea"]
+  const list = ["zone", "region", "distributor", "salesarea"]
 
   const handleBackClick = async () => {
     if (drilldownState.filters.length > 0) {

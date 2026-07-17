@@ -364,7 +364,7 @@ const EfficiencyHeatMap: React.FC<EfficiencyHeatMapProps> = ({
         const context = dataItem.dataContext as any;
         if (context && context.category && context.zone) {
           // Clean up category name by removing percentage ranges to match EFFICIENCY_CATEGORIES
-          let cleanCategory = context.category
+          const cleanCategory = context.category
             .replace('\n(>100%)', '')
             .replace('\n(90-99%)', '')
             .replace('\n(<=90%)', '')

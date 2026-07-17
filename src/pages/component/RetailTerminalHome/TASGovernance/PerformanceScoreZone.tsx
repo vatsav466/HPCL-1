@@ -171,7 +171,7 @@ const PerformanceScoreZone: React.FC<PerformanceScoreZoneProps> = ({
         };
         const response = await apiClient.post('/api/performanceindex/get_pi_score', payload);
         if (response?.data) {
-          let dataArray: any[] = Array.isArray(response.data) ? response.data : Object.values(response.data || {});
+          const dataArray: any[] = Array.isArray(response.data) ? response.data : Object.values(response.data || {});
           if (dataArray.length > 0) {
             const transformedData = dataArray.map((item: any, index: number) => {
               const tasCategory = item.category?.find((cat: any) => cat.name === 'TAS');
@@ -269,7 +269,7 @@ const PerformanceScoreZone: React.FC<PerformanceScoreZoneProps> = ({
       };
       const response = await apiClient.post('/api/performanceindex/get_pi_score', payload);
       if (response?.data) {
-        let dataArray: any[] = Array.isArray(response.data) ? response.data : Object.values(response.data || {});
+        const dataArray: any[] = Array.isArray(response.data) ? response.data : Object.values(response.data || {});
         const locationData = dataArray.find(
           (data: any) =>
             (data.sap_id && data.sap_id === item?.sap_id) || (data.name && data.name === item?.location)

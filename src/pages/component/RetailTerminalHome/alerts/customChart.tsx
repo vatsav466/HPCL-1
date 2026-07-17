@@ -21,8 +21,8 @@ const expandBar = keyframes`
 
 export default function BarWithDotIcon(props: any) {
   const [isOpen, setIsOpen] = useState(false);
-  let txt = <div><strong>{props.top}</strong> <br /><strong>{props.bottom}</strong></div>;
-  let animationDuration = '2s';
+  const txt = <div><strong>{props.top}</strong> <br /><strong>{props.bottom}</strong></div>;
+  const animationDuration = '2s';
   const openModal = () => {
     setIsOpen(true);
   };
@@ -128,7 +128,7 @@ export function CustomChart1() {
   }
 
   const getDistinctPlant = async (region: any) => {
-    let params = {
+    const params = {
       region: region
     }
     try {
@@ -141,7 +141,7 @@ export function CustomChart1() {
   }
 
   const fetchOutletData = async () => {
-    let params: any = {
+    const params: any = {
       filters: [{
         key: 'interlock_name',
         cond: '=',
@@ -170,8 +170,8 @@ export function CustomChart1() {
 
   const numbers = Array.from({ length: roleLength }, (_, index) => index + 1);
   const handleChange = (event: any) => {
-    let title = event.target.name;
-    let value = event.target.value;
+    const title = event.target.name;
+    const value = event.target.value;
     if (title === 'zoneName') { setZoneName(value); setStateName(''); setAreaName(''); getStatesData(value); getDistinctPlant(value); }
     if (title === 'stateName') { setStateName(value); setAreaName(''); getAreasData(value); getDistinctPlant(value); }
     // if (title === 'regionName') { setRegionName(value); setStateName(''); setAreaName(''); getDistinctPlant(value); }
@@ -180,7 +180,7 @@ export function CustomChart1() {
   }
 
   const getChartData = async () => {
-    let params: any = {
+    const params: any = {
       "filters": [
         {"key": "interlock_name","cond":"=","value":"Indent Dry Out"}, 
         {"key": "zone","cond":"=","value": zoneName}, 
@@ -203,7 +203,7 @@ export function CustomChart1() {
     fetchOutletData();
   }
   const getLimitTxt = (text: any, maxLength: number) => {
-    let shortenedText = text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
+    const shortenedText = text.length > maxLength ? text.substring(0, maxLength) + "..." : text;
     return shortenedText;
   }
 
@@ -356,4 +356,4 @@ export function CustomChart1() {
 
     </>
   );
-};
+}

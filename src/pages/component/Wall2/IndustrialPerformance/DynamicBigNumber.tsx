@@ -10,8 +10,8 @@ const BigNumbersTable = ({ data, type, companyOrder }) => {
   const sbuOrder = ["RETAIL", "LPG", "I&C", "LUBES", "AVIATION", "NG"];
 
   // Separate the "TOTAL" row from the rest of the data
-  let totalRow = data.find(sbu => sbu.sbu_name.toLowerCase() === "total");
-  let filteredData = data.filter(sbu => sbu.sbu_name.toLowerCase() !== "total");
+  const totalRow = data.find(sbu => sbu.sbu_name.toLowerCase() === "total");
+  const filteredData = data.filter(sbu => sbu.sbu_name.toLowerCase() !== "total");
 
   // Sort the filtered data based on the defined SBU order
   const sortedData = [...filteredData].sort((a, b) => {
@@ -37,7 +37,7 @@ const BigNumbersTable = ({ data, type, companyOrder }) => {
   }
 
   // Get headers and sort by companyOrder if provided
-  let headers = Object.keys(sortedData[0][type]);
+  const headers = Object.keys(sortedData[0][type]);
   if (companyOrder && companyOrder.length > 0) {
     headers.sort((a, b) => {
       const indexA = companyOrder.indexOf(a);

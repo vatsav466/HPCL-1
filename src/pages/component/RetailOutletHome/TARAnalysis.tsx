@@ -233,7 +233,7 @@ const RetailTAR = () => {
       };
 
       // Update active filters array
-      let updatedFilters = [...activeFilters];
+      const updatedFilters = [...activeFilters];
       const existingFilterIndex = updatedFilters.findIndex(
         (f) => f.key === key
       );
@@ -383,7 +383,7 @@ const RetailTAR = () => {
     // Set themes without locale dependency
     root.setThemes([am5themes_Animated.new(root)]);
 
-    let chart = root.container.children.push(
+    const chart = root.container.children.push(
       am5xy.XYChart.new(root, {
         panX: true,
         panY: true,
@@ -459,7 +459,7 @@ const RetailTAR = () => {
       }
     ]);
     
-    let xAxis = chart.xAxes.push(
+    const xAxis = chart.xAxes.push(
       am5xy.CategoryAxis.new(root, {
         categoryField: "label",
         renderer: am5xy.AxisRendererX.new(root, {
@@ -482,7 +482,7 @@ const RetailTAR = () => {
       })
     );
 
-    let yAxis = chart.yAxes.push(
+    const yAxis = chart.yAxes.push(
       am5xy.ValueAxis.new(root, {
         maxDeviation: 0.5,
         min: 0,
@@ -532,7 +532,7 @@ const RetailTAR = () => {
       return text;
     });
     
-    let series = chart.series.push(
+    const series = chart.series.push(
       am5xy.ColumnSeries.new(root, {
         name: "TAR Amount",
         xAxis: xAxis,

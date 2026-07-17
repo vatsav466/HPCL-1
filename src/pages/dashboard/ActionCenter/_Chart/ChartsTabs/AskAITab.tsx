@@ -55,7 +55,7 @@ const AskAITab: React.FC<AskAITabProps> = ({
 
   const chartDetails: any = useSelector((state: RootState) => state.chart);
   // console.log("chartDetails",chartDetails);
-  let { name, group_name, tags } = chartDetails?.chart;
+  const { name, group_name, tags } = chartDetails?.chart;
 
   // ...........debounce API call...........//
   const debouncedSearch = useCallback(

@@ -175,7 +175,7 @@ const LocationsManagement = () => {
             try {
                 // Calculate the current page based on startRow and pageSize
                 const currentPageNumber = Math.floor(params.startRow / pageSize);
-                let queryParams: any = {
+                const queryParams: any = {
                     skip: currentPageNumber,
                     limit: pageSize,
                     search_text: searchText ? `${encodeURIComponent(searchText)}` : ''

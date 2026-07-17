@@ -195,7 +195,7 @@ const transformChartData = (
   drillLevel: number,
   activeStates: ActiveStates
 ): ChartData[] => {
-  let isArray: boolean = Array.isArray(responseData);
+  const isArray: boolean = Array.isArray(responseData);
   if (drillLevel === 0 && !isArray) {
     if (mode === "month" || mode === "ytd" || mode === "date") {
       return Object.keys(responseData.month_name).map((key) => {
@@ -411,8 +411,8 @@ const SalesAHTYTD: React.FC = () => {
       H: true,
       T: false,
     });
-    let perspectiveFilters = convertToFilters(activeStates);
-    let [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
+    const perspectiveFilters = convertToFilters(activeStates);
+    const [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
     const filterOrder = ['SBU_Name', 'Zone_Name', 'Region_Name', 'SalesArea_Name', 'ProductName'];
   const [isLoading, setIsLoading] = useState(true);
   const [mode, setMode] = useState<ChartMode>("month");
@@ -445,7 +445,7 @@ const SalesAHTYTD: React.FC = () => {
   const [isDrillDown, setIsDrillDown] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [crossFilters, setCrossFilters] = useState<Filter[]>([]);
-  let [distinctFilter, setDistinctFilter] = useState<any[]>([]);
+  const [distinctFilter, setDistinctFilter] = useState<any[]>([]);
   const [isSwitchOn, setIsSwitchOn] = useState(false);
   const [sbuArray, setSbuArray] = useState([]);
   const [currentSalesArray, setCurrentSalesArray] = useState([]);
@@ -465,7 +465,7 @@ const SalesAHTYTD: React.FC = () => {
   console.log("crossFilters", selectedMonths);
 
   // Initialize the base filter array
-  let distinctDynamicFilter: Array<{
+  const distinctDynamicFilter: Array<{
     key: string;
     cond: string;
     value: string;
@@ -614,7 +614,7 @@ const SalesAHTYTD: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -657,7 +657,7 @@ const SalesAHTYTD: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -794,7 +794,7 @@ const SalesAHTYTD: React.FC = () => {
 
   const YTDBox = async () => {
     setIsLoading(true);
-    let filter = [
+    const filter = [
       { key: '"A"', cond: "equals", value: "true" },
       { key: '"H"', cond: "equals", value: "true" },
       { key: '"YTD"', cond: "equals", value: "true" },
@@ -895,8 +895,8 @@ const SalesAHTYTD: React.FC = () => {
         ["A", "H", "T", "BE", "RI"].includes(filter.key.replace(/"/g, ""))
       );
       newFilters = [...newFilters, ...perspectiveFilters, ...ytd];
-      let removeDups = [...new Set(newFilters)];
-      let stringLubes = ["Lubes"];
+      const removeDups = [...new Set(newFilters)];
+      const stringLubes = ["Lubes"];
       if (entry.name.includes(stringLubes)) {
         console.log(true);
         setAppliedFilters(removeDups);
@@ -954,7 +954,7 @@ const SalesAHTYTD: React.FC = () => {
         ...perspectiveFilters,
         ...updatedNonPerspectiveFilters,
       ];
-      let stringLubes = "Lubes";
+      const stringLubes = "Lubes";
       if (mode === "month" && drillLevel === 1) {
         setDrillLevel(0);
         setAppliedFilters(perspectiveFilters);
@@ -1131,7 +1131,7 @@ const SalesAHTYTD: React.FC = () => {
     const distinctValues = distinctFilterChange("SBU_Name", value);
 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1146,7 +1146,7 @@ const SalesAHTYTD: React.FC = () => {
     setSelectedSBU(value);
     setCrossFilters([]);
     // Set only SBU filter
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response = await loadDistinctValues(
@@ -1168,7 +1168,7 @@ const SalesAHTYTD: React.FC = () => {
     const defaultFilter = handleFilterChange("Zone_Name", value);
     const distinctValues = distinctFilterChange("Zone_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSBU("");
       return;
@@ -1176,7 +1176,7 @@ const SalesAHTYTD: React.FC = () => {
     setSelectedZone(value);
     setCrossFilters([]);
     // Set SBU and Zone filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response: any = await loadDistinctValues(
@@ -1199,14 +1199,14 @@ const SalesAHTYTD: React.FC = () => {
     const defaultFilter = handleFilterChange("Region_Name", value);
     const distinctValues = distinctFilterChange("Region_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSBU("");
       return;
     }
     setSelectedRegion(value);
     // Set SBU, Zone, and Region filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response: any = await loadDistinctValues(
@@ -1228,13 +1228,13 @@ const SalesAHTYTD: React.FC = () => {
     const defaultFilter = handleFilterChange("SalesArea_Name", value);
     const distinctValues = distinctFilterChange("SalesArea_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSalesArea("");
       return;
     }
     setSelectedSalesArea(value);
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
 
     try {
@@ -1256,13 +1256,13 @@ const SalesAHTYTD: React.FC = () => {
     const defaultFilter = handleFilterChange("ProductName", value);
     const distinctValues = distinctFilterChange("ProductName", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedProductName("");
       return;
     }
     setSelectedProductName(value);
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters, ...defaultFilter]);
     try {
       const response: any = await loadDistinctValues(

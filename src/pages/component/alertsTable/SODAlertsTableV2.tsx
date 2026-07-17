@@ -290,7 +290,7 @@ export const SODAlertsTableV2: React.FC<ROAlertsTableV2Props> = ({
     try {
       const currentPageNumber = Math.floor(startRow / pageSize);
 
-      let params: any = {
+      const params: any = {
         q: query,
         skip: currentPageNumber,
         limit: pageSize,

@@ -374,7 +374,7 @@ export const AlertHistoryDialog = ({
     setLoading(true);
     setError(null);
 
-    let encrypted = encryptPayload(alertIdToFetch);
+    const encrypted = encryptPayload(alertIdToFetch);
     console.log("encryptAlertId", encrypted);
 
     try {

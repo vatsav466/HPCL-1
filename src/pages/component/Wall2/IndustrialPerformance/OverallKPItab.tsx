@@ -42,7 +42,7 @@ const OverallKPItab: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      let params = {
+      const params = {
         filters: [
           {
             key: '"fiscal_year"',

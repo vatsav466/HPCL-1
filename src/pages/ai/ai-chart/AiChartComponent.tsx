@@ -26,7 +26,7 @@ function transformData(apiResponse: any) {
 
   // Transform the data based on the y-axis fields
   const transformedData = apiResponse.map((item: any) => {
-    let row: any = {
+    const row: any = {
       category: item[xAxisField], // Set the x-axis (category) value
     };
 

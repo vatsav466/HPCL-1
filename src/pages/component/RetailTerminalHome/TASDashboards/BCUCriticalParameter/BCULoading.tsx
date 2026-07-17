@@ -166,7 +166,7 @@ const BCUAlertTrendChart: React.FC<BCUAlertChartProps> = ({ filters, onDateFilte
 
       const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss');
       const timePeriod = timeGrain === "monthly" ? "Monthly" : "Weekly"
-      let fileName = `BCU_Loading_${timePeriod}_${timestamp}.xlsx`
+      const fileName = `BCU_Loading_${timePeriod}_${timestamp}.xlsx`
 
       saveAs(file_path, fileName);
     } catch (error) {

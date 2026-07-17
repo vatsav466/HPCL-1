@@ -1143,8 +1143,8 @@ const FaultGantry: React.FC<EquipmentChartProps> = ({ onRefresh, onDateRangeSele
     const processData = data.process || {};
     let graphData: any[] = [];
     let allDetails: any[] = [];
-    let allBcuNumbers: Set<string> = new Set(); // Track all BCU numbers from unfiltered data
-    let allInterlockNames: Set<string> = new Set(); // Track all interlock names from unfiltered data
+    const allBcuNumbers: Set<string> = new Set(); // Track all BCU numbers from unfiltered data
+    const allInterlockNames: Set<string> = new Set(); // Track all interlock names from unfiltered data
 
     // Create a combined dataset with counts summed by BCU and date/month
     const combinedData: Record<string, Record<string, {

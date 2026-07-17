@@ -155,10 +155,10 @@ const MFMKFactorTrendlineChart: React.FC<KFactorChartProps> = ({ filters, onDate
 
       // Generate filename with current timestamp
       const timestamp = dayjs().format('YYYY-MM-DD_HH-mm-ss')
-      let fileName = `MFMKFactor_Report_${timeGrain}_${timestamp}.xlsx`
+      const fileName = `MFMKFactor_Report_${timeGrain}_${timestamp}.xlsx`
 
       // Trigger download
-      let filePath = response.data?.file_path;
+      const filePath = response.data?.file_path;
       saveAs(filePath, fileName);
       toast.success("Excel file downloaded successfully");
 

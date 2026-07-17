@@ -837,7 +837,7 @@ const COMPANY_COLORS = {
   PVT: "#800080",
 }
 export const GrowthBarChart = ({ data, title }: { data: GrowthChartData, title: string }) => {
-  let number = Math.random();
+  const number = Math.random();
   const chartId = `chart-${title.replace(/\s+/g, '-').toLowerCase()}-${number}`;
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   

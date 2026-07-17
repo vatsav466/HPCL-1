@@ -1,5 +1,5 @@
 import axios from "axios";
-let count = 0;
+const count = 0;
 
 const config = {
   apiKey: "localhost:5173",

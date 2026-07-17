@@ -88,7 +88,7 @@ const TableDialog = ({ isOpen, onClose, data, title }) => {
       // Generate column definitions from the first data item
       const columns = Object.keys(data[0]).map(key => {
         // Default column definition
-        let columnDef: ColDef = {
+        const columnDef: ColDef = {
           field: key,
           headerName: key.replace(/_/g, ' ').toUpperCase(),
           sortable: true,
@@ -173,7 +173,7 @@ const TableDialog = ({ isOpen, onClose, data, title }) => {
     const maxPagesToShow = 5;
     
     let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
-    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+    const endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
     
     if (endPage - startPage + 1 < maxPagesToShow) {
       startPage = Math.max(1, endPage - maxPagesToShow + 1);

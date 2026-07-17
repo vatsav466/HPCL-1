@@ -50,7 +50,7 @@ const TimeSeriesLine: React.FC<LineProps> = ({ data, theme }) => {
 
   useEffect(() => {
     const resizeObserver = new ResizeObserver(entries => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         const { width, height } = entry.contentRect;
         setContainerSize({ width, height });
       }

@@ -44,7 +44,7 @@ const GrowthStatCard = ({
     if(dateType !== '"DATE"') {
       crossFilters = [{ key: '"month_name"', cond: "equals", value: "", }]
     }
-    let payload = {
+    const payload = {
       filters: [
         { key: '"A"', cond: "equals", value: "true", },
         { key: '"H"', cond: "equals", value: "true", },
@@ -116,7 +116,7 @@ const GrowthStatCard = ({
     if (historicalValue === 0) return 100;
   
     // Normal calculation
-    let percentage = ((currentValue - historicalValue) / historicalValue) * 100;
+    const percentage = ((currentValue - historicalValue) / historicalValue) * 100;
   
     // Clamp between -100 and 100
     // if (percentage > 100) percentage = 100;

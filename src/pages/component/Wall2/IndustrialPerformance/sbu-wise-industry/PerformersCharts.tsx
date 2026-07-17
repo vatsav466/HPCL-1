@@ -65,7 +65,7 @@ const getChartOption = (data: any[], nameKey: string, selectedMetric: MetricKey)
         const gainLossColor = item.gain_loss >= 0 ? '#16a34a' : '#dc2626';
         const growthColor = (item.growth || 0) >= 0 ? '#16a34a' : '#dc2626';
         
-        let formattedValue = metricInfo.unit === '%'
+        const formattedValue = metricInfo.unit === '%'
           ? `${value > 0 && (selectedMetric === 'gain_loss' || selectedMetric === 'growth') ? '+' : ''}${value.toFixed(2)}%`
           : value.toLocaleString();
 

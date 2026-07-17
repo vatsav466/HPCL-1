@@ -75,7 +75,7 @@ export const fetchResources = createAsyncThunk(
             limit: '100',
             view: 'resources'
         });
-        let encryptedQueryParams = encryptPayload(queryParams);
+        const encryptedQueryParams = encryptPayload(queryParams);
         const response = await apiClient.get(`/api/resources/views/resource_view?${encryptedQueryParams}`);
         if (!response.status) {
             throw new Error('Failed to fetch resources');
@@ -87,7 +87,7 @@ export const fetchResources = createAsyncThunk(
 export const fetchResourceDetails = createAsyncThunk(
     'resources/fetchResourceDetails',
     async (id: number) => {
-        let encryptedResourceId = encryptPayload(id);
+        const encryptedResourceId = encryptPayload(id);
         const response = await apiClient.get(`/api/resources/${encryptedResourceId}`);
         if (!response.status) {
             throw new Error('Failed to fetch resource details');

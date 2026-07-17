@@ -95,7 +95,7 @@ const DynamicAddForm: React.FC<AddFormProps> = ({ nodes, edges, targetNodeData, 
   const dispatch = useDispatch();
   let connectedNodes: any = useRef([]);
 
-  let [formRows, setFormRows] = useState([
+  const [formRows, setFormRows] = useState([
     formConfig.fields.reduce((acc, field) => ({ ...acc, [field.name]: '' }), {})
   ]);
 
@@ -119,7 +119,7 @@ const DynamicAddForm: React.FC<AddFormProps> = ({ nodes, edges, targetNodeData, 
     if (connectedNodes.length > 0) {
       connectedNodes.map( async node => {
         try {
-          let params = {
+          const params = {
             "name": "testing flow",
             "task_name": node.data.label
           };

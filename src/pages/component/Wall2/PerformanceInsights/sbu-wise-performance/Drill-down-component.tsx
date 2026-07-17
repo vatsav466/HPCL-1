@@ -510,7 +510,7 @@ const DrillDownComponent: React.FC<SalesPerformanceProps> = ({ sbu }) => {
     T: true,
     C: true,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
+  const perspectiveFilters = convertToFilters(activeStates);
   let [appliedFilters, setAppliedFilters] =
     useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
@@ -571,12 +571,12 @@ const [isDateSelectionEnabled, setIsDateSelectionEnabled] = useState(false); // 
     useState([]);
   const [selectedYorM, setSelectedYorM] = useState<"Y" | "M">("Y");
   // Get first day of current month
-  let [stackedData, setStackedData] = useState<any>([]);
+  const [stackedData, setStackedData] = useState<any>([]);
   let [sbuOriginalData, setSbuOriginalData] = useState([]);
   let [zoneOriginalData, setZoneOriginalData] = useState([]);
   let [regionOriginalData, setRegionOriginalData] = useState([]);
-  let [dataSeparation, setDataSeparation] = useState([]);
-  let [percentageData, setPercentageData] = useState([]);
+  const [dataSeparation, setDataSeparation] = useState([]);
+  const [percentageData, setPercentageData] = useState([]);
 
   // Get yesterday's date
   const firstDayOfMonth = dayjs().date(1).month(3); //.subtract(1, "year");
@@ -694,7 +694,7 @@ const [isDateSelectionEnabled, setIsDateSelectionEnabled] = useState(false); // 
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -737,7 +737,7 @@ const [isDateSelectionEnabled, setIsDateSelectionEnabled] = useState(false); // 
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -906,7 +906,7 @@ useEffect(() => {
           const responseData = response.data?.data;
           setStackedData(responseData);
 
-          let transformedData = [];
+          const transformedData = [];
           switch (drillState) {
             case '"SBU_Name"':
               sbuOriginalData = responseData;
@@ -1578,7 +1578,7 @@ const resetFilters = useCallback(async () => {
     }
 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1609,11 +1609,11 @@ const resetFilters = useCallback(async () => {
     }
 
     // let perspectiveFilters = selectedYorM === "M" ? "" : convertToFilters(activeStates);
-    let perspectiveFilters = convertToFilters({
+    const perspectiveFilters = convertToFilters({
       ...activeStates,
       C: selectedYorM === "M" ? false : activeStates.C,
     });
-    let ytdFilters =
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
@@ -1628,7 +1628,7 @@ const handleZoneChange = async (key, value: string) => {
   const distinctValues = distinctFilterChange("Zone_Name", value);
 
   if (value === "_empty") {
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters]);
     setSelectedZone("");
     return;
@@ -1648,11 +1648,11 @@ const handleZoneChange = async (key, value: string) => {
         : [];
   }
 
-  let perspectiveFilters = convertToFilters({
+  const perspectiveFilters = convertToFilters({
     ...activeStates,
     C: selectedYorM === "M" ? false : activeStates.C,
   });
-  let ytdFilters =
+  const ytdFilters =
     mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
 
   // Ensure ProductName filter is retained
@@ -1698,7 +1698,7 @@ const handleRegionChange = async (key, value: string) => {
   const distinctValues = distinctFilterChange("Region_Name", value);
   
   if (value === "_empty") {
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([...perspectiveFilters]);
     setSelectedRegion("");
     return;
@@ -1717,11 +1717,11 @@ const handleRegionChange = async (key, value: string) => {
         : [];
   }
 
-  let perspectiveFilters = convertToFilters({
+  const perspectiveFilters = convertToFilters({
     ...activeStates,
     C: selectedYorM === "M" ? false : activeStates.C,
   });
-  let ytdFilters =
+  const ytdFilters =
     mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
 
   // Ensure ProductName filter is retained
@@ -1766,7 +1766,7 @@ const handleRegionChange = async (key, value: string) => {
     const defaultFilter = handleFilterChange("SalesArea_Name", value);
     const distinctValues = distinctFilterChange("SalesArea_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSalesArea("");
       return;
@@ -1784,11 +1784,11 @@ const handleRegionChange = async (key, value: string) => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters({
+    const perspectiveFilters = convertToFilters({
       ...activeStates,
       C: selectedYorM === "M" ? false : activeStates.C,
     });
-    let ytdFilters =
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     if (drillLevel > 2) {
       setAppliedFilters([
@@ -1918,7 +1918,7 @@ const handleRegionChange = async (key, value: string) => {
     const defaultFilter = handleFilterChange("ProductName", value);
     const distinctValues = distinctFilterChange("ProductName", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       // setSelectedProductName("");
       return;
@@ -1934,11 +1934,11 @@ const handleRegionChange = async (key, value: string) => {
           ? [{ key: '"DATE"', cond: "equals", value: formattedDates }]
           : [];
     }
-    let perspectiveFilters = convertToFilters({
+    const perspectiveFilters = convertToFilters({
       ...activeStates,
       C: selectedYorM === "M" ? false : activeStates.C,
     });
-    let ytdFilters =
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     if (drillLevel > 2) {
       setAppliedFilters([
@@ -2640,7 +2640,7 @@ const resetDate = () => {
 
   const handleSwitchChange = async (checked: boolean) => {
     setIsSwitchOn(checked); // Set state when switch is toggled
-    let response = await loadDistinctValues(["ProductName"]);
+    const response = await loadDistinctValues(["ProductName"]);
     const transformedData = response["ProductName"].map((item) => ({
       name: item,
       id: item,

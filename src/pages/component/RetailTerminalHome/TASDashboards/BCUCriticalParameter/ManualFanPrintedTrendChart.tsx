@@ -132,8 +132,8 @@ const handleDownloadExcel = async () => {
       throw new Error(`Download failed: ${response.statusText}`)
     }
 
-    let filePath = response.data?.file_path
-    let fileName = `Manual_Fan_Data_${timeGrain}_${dayjs().format("YYYY-MM-DD_HH-mm-ss")}.xlsx`
+    const filePath = response.data?.file_path
+    const fileName = `Manual_Fan_Data_${timeGrain}_${dayjs().format("YYYY-MM-DD_HH-mm-ss")}.xlsx`
     
     saveAs(filePath, fileName);
     toast.success("Excel file downloaded successfully");

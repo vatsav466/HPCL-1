@@ -1332,7 +1332,7 @@ export const VTSAlertHistoryDialog = ({
     setError(null);
 
     const fetchAlertDetails = async () => {
-      let encryptAlertId = encryptPayload(alertId)
+      const encryptAlertId = encryptPayload(alertId)
       console.log("encryptAlertId", encryptAlertId);
       try {
         const response = await apiClient.get(`/api/violationhistoryvts/${encryptAlertId}`);

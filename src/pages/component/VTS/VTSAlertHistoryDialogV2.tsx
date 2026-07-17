@@ -616,7 +616,7 @@ export const AlertHistoryDialogV2 = ({ isOpen, onClose, alertId, onSubmitSuccess
       if (!alertId) return
       setLoading(true)
       setError(null)
-      let encryptAlertId = encryptPayload(alertId)
+      const encryptAlertId = encryptPayload(alertId)
       console.log("encryptAlertId", encryptAlertId);
       
       try {

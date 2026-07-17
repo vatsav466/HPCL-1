@@ -518,7 +518,7 @@ export function TicketFormCore({
     }
 
     // Resolve location names/IDs to plant IDs - handle arrays properly
-    let resolvedLocationIds: string[] = [];
+    const resolvedLocationIds: string[] = [];
 
     // Handle location_id arrays directly
     if (initialData.location_id) {
@@ -838,7 +838,7 @@ export function TicketFormCore({
 
   useEffect(() => {
     if (initialData && !parentTicketId && dialogFetchedPlants.length > 0) {
-      let newLocationsToAdd: string[] = [];
+      const newLocationsToAdd: string[] = [];
 
       // Handle location_id arrays directly first (normalize to string so plant.id match works)
       if (initialData.location_id) {

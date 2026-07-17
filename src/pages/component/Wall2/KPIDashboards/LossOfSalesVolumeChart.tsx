@@ -392,7 +392,7 @@ function parseMonthlyLossResponse(
         const md = monthKeyFromRow(row);
         const los = extractLossOfSaleMap(row);
         let ms = los.get("MS") ?? null;
-        let hsd = los.get("HSD") ?? null;
+        const hsd = los.get("HSD") ?? null;
         if (ms == null && hsd == null) {
           const legacy = extractLossFromRow(row);
           if (legacy == null) return null;
@@ -426,7 +426,7 @@ function parseMonthlyLossResponse(
             const md = monthKeyFromRow(row);
             const los = extractLossOfSaleMap(row);
             let ms = los.get("MS") ?? null;
-            let hsd = los.get("HSD") ?? null;
+            const hsd = los.get("HSD") ?? null;
             if (ms == null && hsd == null) {
               const legacy = extractLossFromRow(row);
               if (legacy == null) return null;

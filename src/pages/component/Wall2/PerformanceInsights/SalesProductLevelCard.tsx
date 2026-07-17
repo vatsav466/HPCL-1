@@ -159,10 +159,10 @@ const [toDate, setToDate] = useState(defaultDates.to);
 
   const fetchYtdData = async () => {
     setIsLoading(true);
-    let dateFilters = [];
-    let crossFilters = [];
+    const dateFilters = [];
+    const crossFilters = [];
 
-    let payload = {
+    const payload = {
       filters: [
         { key: '"A"', cond: "equals", value: "true" },
         { key: '"H"', cond: "equals", value: "true" },
@@ -199,10 +199,10 @@ const [toDate, setToDate] = useState(defaultDates.to);
 
   const fetchYtdpmData = async () => {
     setIsLoading(true);
-    let dateFilters = [];
-    let crossFilters = [];
+    const dateFilters = [];
+    const crossFilters = [];
 
-    let payload = {
+    const payload = {
       filters: [
         { key: '"A"', cond: "equals", value: "true" },
         { key: '"H"', cond: "equals", value: "true" },
@@ -241,7 +241,7 @@ const [toDate, setToDate] = useState(defaultDates.to);
   const handleDateRangeData = async () => {
     setIsLoading(true);
     setMode("DATE");
-    let payload = {
+    const payload = {
       filters: [
         { key: '"A"', cond: "equals", value: "true" },
         { key: '"H"', cond: "equals", value: "true" },

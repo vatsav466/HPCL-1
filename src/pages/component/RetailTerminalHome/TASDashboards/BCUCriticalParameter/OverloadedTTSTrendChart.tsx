@@ -131,8 +131,8 @@ const handleDownloadExcel = async () => {
     const response = await apiClient.post("/api/tasassetmaster/download_tas_report", requestBody);
     
     if (response.status) {
-      let filePath = response.data?.file_path;
-      let fileName = `overloaded_tts_report_${timeGrain}_${dayjs().format("YYYY-MM-DD")}.xlsx`;
+      const filePath = response.data?.file_path;
+      const fileName = `overloaded_tts_report_${timeGrain}_${dayjs().format("YYYY-MM-DD")}.xlsx`;
       saveAs(filePath, fileName);
       toast.success("Excel file downloaded successfully");
     } else {

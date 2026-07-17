@@ -393,7 +393,7 @@ const MultiSelectWithApply: React.FC<MultiSelectWithApplyProps> = ({
         newSelected = safeOptions.map(o => o.value);
       }
     } else {
-      let currentSelection = [...tempSelection];
+      const currentSelection = [...tempSelection];
       if (currentSelection.includes(optionValue)) {
         newSelected = currentSelection.filter(v => v !== optionValue && v !== selectAllValue);
       } else {
@@ -1094,7 +1094,7 @@ useEffect(() => {
       setAppliedSalesAreas([]);
       salesAreasLoadedForRegion.current = null;
       return;
-    };
+    }
 
     const fetchSalesAreas = async (region: string) => {
       setSalesAreasLoading(true);

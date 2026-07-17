@@ -36,14 +36,14 @@ export const DashboardWidget: React.FC<DashboardWidgetProps> = ({ item }) => {
   }, [subGridData]);
 
   const getDashBoardWidgets = async () => {
-    let { dashboard_id } = item.content as Dashboard;
+    const { dashboard_id } = item.content as Dashboard;
 
-    let encryptedDashboardId = encryptPayload(dashboard_id);
+    const encryptedDashboardId = encryptPayload(dashboard_id);
 
     try {
       const response = await apiClient.get(`/api/dashboards/${encryptedDashboardId}`);
       const data = await response.data;
-      let { widgets } = data;
+      const { widgets } = data;
       setWidgets(widgets);
     } catch (error) {
       console.error('Error fetching dashboard widgets:', error);

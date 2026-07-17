@@ -107,7 +107,7 @@ const DrillStateIndicator = ({ drillLevel }: { drillLevel: number }) => {
     </div>
   );
 };
-;
+
 
 
 const SalesComparisonChart = () => {

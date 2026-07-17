@@ -69,7 +69,7 @@ const VTSInsightSecondaryTable: React.FC<VTSInsightSecondaryTableProps> = ({
 
     // Update sorted data when data or sort config changes
     useEffect(() => {
-        let newData = [...data];
+        const newData = [...data];
         if (sortConfig) {
             newData.sort((a, b) => {
                 if (a[sortConfig.key] < b[sortConfig.key]) return sortConfig.direction === 'asc' ? -1 : 1;

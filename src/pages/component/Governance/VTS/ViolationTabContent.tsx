@@ -310,7 +310,7 @@ const ViolationTabContent: React.FC<ViolationTabContentProps> = ({
         }).then(r => setDetailsData(r?.data)).catch(() => {});
 
       } catch (e) {
-        // eslint-disable-next-line no-console
+         
         console.error('Error fetching violation details:', e);
       } finally {
         setDetailsLoading(false);
@@ -468,7 +468,7 @@ const computeDateRangeString = (): string => {
           setAlertSummaryPivot(null);
         }
       } catch (e) {
-        // eslint-disable-next-line no-console
+         
         console.error('Error fetching alert summary:', e);
         setAlertSummaryData(null);
         setAlertSummaryColumns(null);

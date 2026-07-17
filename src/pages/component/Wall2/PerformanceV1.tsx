@@ -372,8 +372,8 @@ const PerformanceV1: React.FC = () => {
     H: true,
     T: true,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] =
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] =
     useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = [
@@ -449,7 +449,7 @@ const PerformanceV1: React.FC = () => {
     "info2",
   ] as const;
 
-  let initialDrilldownList = [
+  const initialDrilldownList = [
     { key: "month_name", isActive: false, drillLevel: 1 },
     { key: "SBU_Name", isActive: false, drillLevel: 2 },
     { key: "Zone_Name", isActive: false, drillLevel: 3 },
@@ -457,7 +457,7 @@ const PerformanceV1: React.FC = () => {
     { key: "SalesArea_Name", isActive: false, drillLevel: 5 },
     { key: "ProductName", isActive: false, drillLevel: 6 },
   ];
-  let activeDrills = [];
+  const activeDrills = [];
   let [drilldownList, setDrilldownList] = useState(initialDrilldownList);
 
   // Function to remove duplicates keeping the latest entry for each key
@@ -514,7 +514,7 @@ const PerformanceV1: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -557,7 +557,7 @@ const PerformanceV1: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -690,7 +690,7 @@ const PerformanceV1: React.FC = () => {
         setYearOptions(years);
       }
       const sbus = await loadDistinctValues(["SBU_Name"]);
-      let removeItems = [
+      const removeItems = [
         "Common",
         "Mumbai Ref",
         "Renewable Energy",
@@ -699,7 +699,7 @@ const PerformanceV1: React.FC = () => {
       const updatedData = sbus["SBU_Name"].map((item) =>
         item === "PETROCHEMICALS SBU" ? "PetChem" : item
       );
-      let SBU_Name = updatedData.filter((item) => !removeItems.includes(item));
+      const SBU_Name = updatedData.filter((item) => !removeItems.includes(item));
       setSbuOptions(SBU_Name);
       // setSbuOptions(sbus);
       const alldropdownOption = await loadDistinctValues([
@@ -805,7 +805,7 @@ const PerformanceV1: React.FC = () => {
   // }
 
   function updateFiltersToCrossFilter(filters, crossFilters) {
-    let filterMap = new Map();
+    const filterMap = new Map();
 
     // Store filters in a Map for quick lookup
     filters.forEach((item) => {
@@ -1124,7 +1124,7 @@ const PerformanceV1: React.FC = () => {
     }
 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1154,8 +1154,8 @@ const PerformanceV1: React.FC = () => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters(activeStates);
-    let ytdFilters =
+    const perspectiveFilters = convertToFilters(activeStates);
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
@@ -1207,8 +1207,8 @@ const PerformanceV1: React.FC = () => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters(activeStates);
-    let ytdFilters =
+    const perspectiveFilters = convertToFilters(activeStates);
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
@@ -1266,7 +1266,7 @@ const PerformanceV1: React.FC = () => {
     const defaultFilter = handleFilterChange("Region_Name", value);
     const distinctValues = distinctFilterChange("Region_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSBU("");
       return;
@@ -1315,8 +1315,8 @@ const PerformanceV1: React.FC = () => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters(activeStates);
-    let ytdFilters =
+    const perspectiveFilters = convertToFilters(activeStates);
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
@@ -1344,7 +1344,7 @@ const PerformanceV1: React.FC = () => {
     const defaultFilter = handleFilterChange("SalesArea_Name", value);
     const distinctValues = distinctFilterChange("SalesArea_Name", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedSalesArea("");
       return;
@@ -1362,8 +1362,8 @@ const PerformanceV1: React.FC = () => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters(activeStates);
-    let ytdFilters =
+    const perspectiveFilters = convertToFilters(activeStates);
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,
@@ -1421,7 +1421,7 @@ const PerformanceV1: React.FC = () => {
     const defaultFilter = handleFilterChange("ProductName", value);
     const distinctValues = distinctFilterChange("ProductName", value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([...perspectiveFilters]);
       setSelectedProductName("");
       return;
@@ -1438,8 +1438,8 @@ const PerformanceV1: React.FC = () => {
           : [];
     }
 
-    let perspectiveFilters = convertToFilters(activeStates);
-    let ytdFilters =
+    const perspectiveFilters = convertToFilters(activeStates);
+    const ytdFilters =
       mode === "ytd" ? [{ key: '"YTD"', cond: "equals", value: "true" }] : [];
     setAppliedFilters([
       ...perspectiveFilters,

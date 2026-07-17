@@ -267,7 +267,7 @@ const CustomVlookup: React.FC<AddFormProps> = ({ nodes, edges, targetNodeData, f
     ]
   };
 
-  let [formRows, setFormRows] = useState([
+  const [formRows, setFormRows] = useState([
     formConfigForVlookup.fields.reduce((acc, field) => ({ ...acc, [field.name]: '' }), {})
   ]);
 
@@ -306,11 +306,11 @@ const CustomVlookup: React.FC<AddFormProps> = ({ nodes, edges, targetNodeData, f
 
   const handleFieldChange = (index, fieldName, value) => {
     if(fieldName === 'source') {
-      let opt = reduxFormdata.filter(node => (value === node?.formValues?.source))
+      const opt = reduxFormdata.filter(node => (value === node?.formValues?.source))
       setSelectedSource(opt[0]);
       dispatch(setSourceColumn(value));
     } else if(fieldName === 'target') {
-      let opt = reduxFormdata.filter(node => (value === node?.formValues?.source))
+      const opt = reduxFormdata.filter(node => (value === node?.formValues?.source))
       setSelectedTarget(opt[0]);
     }
     const newFormRows = [...formRows];

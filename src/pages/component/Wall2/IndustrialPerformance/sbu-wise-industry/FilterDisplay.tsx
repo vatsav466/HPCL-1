@@ -324,7 +324,7 @@ const FilterDisplay: React.FC<FilterDisplayProps> = ({ title, filters, onFilters
   }, [openDropdown]);
 
   const handleFilterChange = (key: keyof FilterValues, value: string) => { 
-    let newFilters = { ...filters, [key]: value };
+    const newFilters = { ...filters, [key]: value };
     
     // Handle cascade resets when parent filters change
     if (key === 'zone_name') {

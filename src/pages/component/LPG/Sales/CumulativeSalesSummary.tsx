@@ -364,7 +364,7 @@ const CumulativeSalesSummary = () => {
         };
 
         // Update active filters array
-        let updatedFilters = [...activeFilters];
+        const updatedFilters = [...activeFilters];
         const existingFilterIndex = updatedFilters.findIndex(f => f.key === `"${key}"`);
 
         if (existingFilterIndex !== -1) {
@@ -558,7 +558,7 @@ useEffect(() => {
   root.setThemes([am5themes_Animated.new(root)]);
 
 
-  let chart = root.container.children.push(
+  const chart = root.container.children.push(
     am5xy.XYChart.new(root, {
       panX: true,
       panY: true,
@@ -617,7 +617,7 @@ const getXAxisLabel = () => {
   // Calculate maximum value for y-axis
   const maxValue = Math.max(...chartData.map(item => item.value));
   const yAxisMax = Math.ceil(maxValue * 1.2);
-  let xAxis = chart.xAxes.push(
+  const xAxis = chart.xAxes.push(
     am5xy.CategoryAxis.new(root, {
       categoryField: "month",
       renderer: am5xy.AxisRendererX.new(root, {
@@ -639,7 +639,7 @@ const getXAxisLabel = () => {
     })
   );
 
-  let yAxis = chart.yAxes.push(
+  const yAxis = chart.yAxes.push(
     am5xy.ValueAxis.new(root, {
       maxDeviation: 0.5,
       renderer: am5xy.AxisRendererY.new(root, {
@@ -676,7 +676,7 @@ const getXAxisLabel = () => {
     oversizedBehavior: "truncate",
     textAlign: "center"
   });
-let series = chart.series.push(
+const series = chart.series.push(
     am5xy.ColumnSeries.new(root, {
       name: "Sales",
       xAxis: xAxis,

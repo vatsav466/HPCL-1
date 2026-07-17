@@ -106,7 +106,7 @@ const DryOutROLossChart = () => {
     const categoryField = getDrillLevelField(drillState.level)
 
     // Get all unique categories
-    let uniqueCategories = [
+    const uniqueCategories = [
       ...new Set(
         apiResponse.counts
           .filter((item) => item[categoryField] !== "") // Filter out empty values

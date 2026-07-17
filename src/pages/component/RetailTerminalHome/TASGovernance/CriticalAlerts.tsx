@@ -81,7 +81,7 @@ const CriticalAlertsTable: React.FC<CriticalAlertsTableProps> = ({ onCriticalAle
             }
           }
           const rawArray = Array.isArray(apiData) ? apiData : [];
-          let transformedData: AlertData[] = rawArray.map((item: any) => ({
+          const transformedData: AlertData[] = rawArray.map((item: any) => ({
             zone: item.zone || '',
             location: item.location_name || item.location || '',
             alerts: item.total_alerts || item.count || item.critical_count || item.alert_count || item.alerts || 0

@@ -429,7 +429,7 @@ const SbuSalesPerformance: React.FC<SbuSalesPerformanceProps> = ({ sbu }) => {
   const geoChartsLoadGenRef = useRef(0);
 
   let [sbuOriginalData, setSbuOriginalData] = useState([]);
-  let [sbuHeatMapData, setSbuHeatMapData] = useState([]);
+  const [sbuHeatMapData, setSbuHeatMapData] = useState([]);
   const [sbuGrowthDetails, setSbuGrowthDetails] = useState<GrowthIndicator[]>([]);
   const [zoneGrowthDetails, setZoneGrowthDetails] = useState<GrowthIndicator[]>([]);
   const [regionGrowthDetails, setRegionGrowthDetails] = useState<GrowthIndicator[]>([]);
@@ -438,17 +438,17 @@ const SbuSalesPerformance: React.FC<SbuSalesPerformanceProps> = ({ sbu }) => {
   const [regionTgtGrowthDetails, setTgtRegionGrowthDetails] = useState<GrowthIndicator[]>([]);
 
   let [zoneOriginalData, setZoneOriginalData] = useState([]);
-  let [zoneHeatMapData, setZoneHeatMapData] = useState([]);
+  const [zoneHeatMapData, setZoneHeatMapData] = useState([]);
   let [regionOriginalData, setRegionOriginalData] = useState([]);
-  let [dataSeparation, setDataSeparation] = useState([]);
-  let [percentageData, setPercentageData] = useState([]);
+  const [dataSeparation, setDataSeparation] = useState([]);
+  const [percentageData, setPercentageData] = useState([]);
   const [selectedZoneNameForTable, setSelectedZoneNameForTable] = useState<string>("");
-  let [regionSeparation, setRegionSeparation] = useState([]);
-  let [regionPercentage, setRegionPercentage] = useState([]);
+  const [regionSeparation, setRegionSeparation] = useState([]);
+  const [regionPercentage, setRegionPercentage] = useState([]);
   const [selectedRegionNameForTable, setSelectedRegionNameForTable] = useState<string>("");
-  let [regionHeatMapData, setRegionHeatMapData] = useState([]);
-  let [salesSeparation, setSalesSeparation] = useState([]);
-  let [salesPercentage, setSalesPercentage] = useState([]);
+  const [regionHeatMapData, setRegionHeatMapData] = useState([]);
+  const [salesSeparation, setSalesSeparation] = useState([]);
+  const [salesPercentage, setSalesPercentage] = useState([]);
   const [selectedSalesAreaNameForTable, setSelectedSalesAreaNameForTable] = useState<string>("");
   const [xaxisAHData, setXaxisAHData] = useState([]);
   const [xaxisATData, setXaxisATData] = useState([]);
@@ -491,7 +491,7 @@ const SbuSalesPerformance: React.FC<SbuSalesPerformanceProps> = ({ sbu }) => {
     { id: "Mar", name: "March", icon: undefined },
   ];
 
-  let [drilldownList, setDrilldownList] = useState(getInitialDrilldownList(selectedYorM));
+  const [drilldownList, setDrilldownList] = useState(getInitialDrilldownList(selectedYorM));
 
   useEffect(() => {
     if (mode === "date") return;

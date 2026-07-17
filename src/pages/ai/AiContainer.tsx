@@ -14,7 +14,7 @@ const AiContainer: React.FC = () => {
   const handleQueryApi = async () => {
     try {
       setIsLoading(true);
-      let encryptedQuery = encryptPayload(inputQuery);
+      const encryptedQuery = encryptPayload(inputQuery);
       const response = await apiClient.get(`/query/chat?query=${encryptedQuery}`);
       const data = response.data;
       if (data && data?.success && data?.data && data?.data?.length > 0) {

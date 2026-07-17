@@ -360,8 +360,8 @@ const PetChemPerformance: React.FC = () => {
     T: true,
     C: true
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] =
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] =
     useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = [
@@ -513,7 +513,7 @@ const PetChemPerformance: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -556,7 +556,7 @@ const PetChemPerformance: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {

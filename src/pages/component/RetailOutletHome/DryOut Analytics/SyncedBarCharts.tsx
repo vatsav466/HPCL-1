@@ -170,7 +170,7 @@ export default function SyncedCharts({ data }: SyncedChartsProps) {
         sourceAxis.on("start", () => {
           const skipSync = (sourceAxis as any)._skipSync
           if (!skipSync) {
-            ;(targetAxis as any)._skipSync = true
+            (targetAxis as any)._skipSync = true
             targetAxis.set("start", sourceAxis.get("start"))
             targetAxis.set("end", sourceAxis.get("end"))
             ;(targetAxis as any)._skipSync = false
@@ -180,7 +180,7 @@ export default function SyncedCharts({ data }: SyncedChartsProps) {
         sourceAxis.on("end", () => {
           const skipSync = (sourceAxis as any)._skipSync
           if (!skipSync) {
-            ;(targetAxis as any)._skipSync = true
+            (targetAxis as any)._skipSync = true
             targetAxis.set("start", sourceAxis.get("start"))
             targetAxis.set("end", sourceAxis.get("end"))
             ;(targetAxis as any)._skipSync = false

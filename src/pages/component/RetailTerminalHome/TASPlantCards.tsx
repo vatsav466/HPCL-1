@@ -278,7 +278,7 @@ const TASPlantCards: React.FC<TASPlantCardsProps> = ({
 
   useEffect(() => {
     if (!isConnDialogOpen) return;
-    let revealTimeouts: ReturnType<typeof setTimeout>[] = [];
+    const revealTimeouts: ReturnType<typeof setTimeout>[] = [];
     const fetchConnectionStatus = async () => {
       try {
         const today = new Date().toISOString().slice(0, 10);

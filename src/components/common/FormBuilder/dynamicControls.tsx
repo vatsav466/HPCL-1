@@ -127,7 +127,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
 
   useEffect(() => {
     if(initialData?.formValues && Object.keys(initialData?.formValues).length > 0) {
-      let fFields = formFields.length > 0 ? formFields : initialData.formData.parameters;
+      const fFields = formFields.length > 0 ? formFields : initialData.formData.parameters;
       
       fFields && fFields.length > 0 ? fFields.forEach((field) => {
         if (field.type === 'select' || field.type === 'multi-select') {
@@ -201,7 +201,7 @@ const DynamicForm: React.FC<DynamicFormProps> = ({
       // 
       if(!checkAndMakeApiCall(apiParams?.request_body?.params?.data ? apiParams?.request_body?.params?.data : {})) return;
 
-      let params = new URLSearchParams(Object.keys(apiParams?.query).length > 0 ? apiParams.query : {
+      const params = new URLSearchParams(Object.keys(apiParams?.query).length > 0 ? apiParams.query : {
         name: apiParams.request_body.name,
         action: apiParams.request_body.action,
         model: initialData?.formData?.section

@@ -607,8 +607,8 @@ const Projects = ({
 }: ProjectsProps) => {
 
 
-  let sap_id = localStorage.getItem('sapId');
-  let zone = localStorage.getItem('zone');
+  const sap_id = localStorage.getItem('sapId');
+  const zone = localStorage.getItem('zone');
   if(sap_id && zone) {
     locationFilter = {
       zone: zone,

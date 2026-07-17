@@ -125,8 +125,8 @@ const handleDownloadExcel = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    let file_path = response.data?.file_path;
-    let file_name = file_path.split("/").pop();
+    const file_path = response.data?.file_path;
+    const file_name = file_path.split("/").pop();
 
     saveAs(file_path, file_name);
     toast.success("Excel file downloaded successfully");

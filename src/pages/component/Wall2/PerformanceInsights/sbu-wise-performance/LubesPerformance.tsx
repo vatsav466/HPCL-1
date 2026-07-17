@@ -353,8 +353,8 @@ const LubesPerformance: React.FC = () => {
     T: true,
     C: true
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] =
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] =
     useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = [
@@ -456,7 +456,7 @@ const LubesPerformance: React.FC = () => {
   useEffect(() => { getProductDetails() }, [])
 
   const getProductDetails = async () => {
-    let payload = [
+    const payload = [
       {
         key: "Zone_Name",
         value: "-",

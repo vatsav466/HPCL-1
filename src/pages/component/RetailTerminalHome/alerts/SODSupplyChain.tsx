@@ -443,7 +443,7 @@ export function SODSupplyChainComponent() {
     console.log("selectedDryout", selectedDryout);
     // Ensure we pass the event directly, even if it's an empty array
     SODHandleChange(event, name);
-    let allData = getAllStoredData();
+    const allData = getAllStoredData();
     allData.selectedDryout = selectedDryout;
     // Debounce the fetch call
     const timeoutId = setTimeout(() => {
@@ -585,8 +585,8 @@ export function SODSupplyChainComponent() {
   ]);
 
   const RetailHandleChange = async (event: any, name: string) => {
-    let title = name;
-    let value = event;
+    const title = name;
+    const value = event;
 
     SODHandleChange(event, name);
 
@@ -631,8 +631,8 @@ export function SODSupplyChainComponent() {
 
   const getDryoutCount = async () => {
     try {
-      let params = {};
-      let response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
+      const params = {};
+      const response = await apiClient.post('/api/indentdryout/get_dry_out_count', params);
       if (response.data?.status === true) {
         setFixedDryoutCount(transformData(response.data?.data));
       }
@@ -895,7 +895,7 @@ export function SODSupplyChainComponent() {
   const handleDryoutROChange = async (event, type) => {
     setDryoutRO(event);
     if (event) {
-      let params = {
+      const params = {
         filters: [
           { key: 'interlock_name', cond: '=', value: ['Dry Out Each Indent Wise MainFlow'] },
           { key: 'dry_out_in_days', cond: '=', value: ["1"] },

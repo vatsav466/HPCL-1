@@ -1158,7 +1158,7 @@ export function TicketFormCore({
   useEffect(() => {
     if (initialData && !parentTicketId && dialogFetchedPlants.length > 0) {
       if (hasSeededInitialLocationRef.current) return;
-      let newLocationsToAdd: string[] = [];
+      const newLocationsToAdd: string[] = [];
       const hasInitialLocationData =
         Boolean(initialData.location_id) || Boolean(initialData.location_name);
 

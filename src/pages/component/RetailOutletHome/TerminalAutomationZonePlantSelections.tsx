@@ -338,7 +338,7 @@ const TerminalAutomationZonePlantSelections: React.FC<LocationFilterProps> = ({
       // Also cache all plants if available
       if (allZonesResponse?.data?.status === true && allZonesResponse.data.data?.sap_id) {
         console.log("Caching all plants data");
-        let allPlants = [...allZonesResponse.data.data.sap_id];
+        const allPlants = [...allZonesResponse.data.data.sap_id];
         
         // Sort plants alphabetically
         const sortedPlants = [...allPlants].sort((a, b) => 

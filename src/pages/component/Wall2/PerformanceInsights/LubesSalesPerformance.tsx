@@ -382,8 +382,8 @@ const LubesSalesPerformance: React.FC = () => {
     H: true,
     T: false,
   });
-  let perspectiveFilters = convertToFilters(activeStates);
-  let [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
+  const perspectiveFilters = convertToFilters(activeStates);
+  const [appliedFilters, setAppliedFilters] = useState<FilterOption[]>(perspectiveFilters);
   // Order of filters for hierarchy
   const filterOrder = ['SBU_Name', 'Zone_Name', 'Region_Name', 'SalesArea_Name', 'ProductName'];
 
@@ -509,7 +509,7 @@ const LubesSalesPerformance: React.FC = () => {
     setDistinctFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -553,7 +553,7 @@ const LubesSalesPerformance: React.FC = () => {
     setFilters(newFilters);
 
     // Create new applied filters array
-    let newAppliedFilters: FilterOption[] = [];
+    const newAppliedFilters: FilterOption[] = [];
 
     // Keep only the filters that are before the current selection
     filterOrder.forEach((filterKey, index) => {
@@ -1029,7 +1029,7 @@ const LubesSalesPerformance: React.FC = () => {
     const distinctValues = distinctFilterChange('SBU_Name', value);
     
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters,
         {
@@ -1044,7 +1044,7 @@ const LubesSalesPerformance: React.FC = () => {
     setSelectedSBU(value);
     setCrossFilters([]);
     // Set only SBU filter
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([
       ...perspectiveFilters,
       ...defaultFilter
@@ -1069,7 +1069,7 @@ const LubesSalesPerformance: React.FC = () => {
     const defaultFilter = handleFilterChange('Zone_Name', value);
     const distinctValues = distinctFilterChange('Zone_Name', value);
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1079,7 +1079,7 @@ const LubesSalesPerformance: React.FC = () => {
     setSelectedZone(value);
     setCrossFilters([]);
     // Set SBU and Zone filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([
       ...perspectiveFilters,
       ...defaultFilter
@@ -1105,7 +1105,7 @@ const LubesSalesPerformance: React.FC = () => {
     const defaultFilter = handleFilterChange('Region_Name', value);
     const distinctValues = distinctFilterChange('Region_Name', value); 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1114,7 +1114,7 @@ const LubesSalesPerformance: React.FC = () => {
     }
     setSelectedRegion(value);
     // Set SBU, Zone, and Region filters
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([
       ...perspectiveFilters,
       ...defaultFilter
@@ -1139,7 +1139,7 @@ const LubesSalesPerformance: React.FC = () => {
     const defaultFilter = handleFilterChange('SalesArea_Name', value);
     const distinctValues = distinctFilterChange('SalesArea_Name', value); 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1147,7 +1147,7 @@ const LubesSalesPerformance: React.FC = () => {
       return;
     }
     setSelectedSalesArea(value);
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([
       ...perspectiveFilters,
       ...defaultFilter
@@ -1172,7 +1172,7 @@ const LubesSalesPerformance: React.FC = () => {
     const defaultFilter = handleFilterChange('ProductName', value);
     const distinctValues = distinctFilterChange('ProductName', value); 
     if (value === "_empty") {
-      let perspectiveFilters = convertToFilters(activeStates);
+      const perspectiveFilters = convertToFilters(activeStates);
       setAppliedFilters([
         ...perspectiveFilters
       ]);
@@ -1180,7 +1180,7 @@ const LubesSalesPerformance: React.FC = () => {
       return;
     }
     setSelectedProductName(value);
-    let perspectiveFilters = convertToFilters(activeStates);
+    const perspectiveFilters = convertToFilters(activeStates);
     setAppliedFilters([
       ...perspectiveFilters,
       ...defaultFilter

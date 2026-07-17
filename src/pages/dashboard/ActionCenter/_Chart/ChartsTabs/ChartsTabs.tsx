@@ -30,7 +30,7 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
   selectedTheme,
   onClearChartPreview, // Add this line
 }) => {
-  let [activeChartType, setActiveChartType] = useState<string>("");
+  const [activeChartType, setActiveChartType] = useState<string>("");
   const [chartTypes, setChartTypes] = useState<ChartType[]>([]);
   const [chartForms, setChartForms] = useState<{ [key: string]: ChartForm }>(
     {}
@@ -41,10 +41,10 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
     [key: string]: any;
   }>({});
   const [uniqueValues, setUniqueValues] = useState<any>({});
-  let [defaultRowLimit, setDefaultRowLimit] = useState(10);
-  let [chartMetric, setChartMetric] = useState<Metric | null>(null);
+  const [defaultRowLimit, setDefaultRowLimit] = useState(10);
+  const [chartMetric, setChartMetric] = useState<Metric | null>(null);
   const [chartMetrics, setChartMetrics] = useState<ChartMetric[]>([]);
-  let [filters, setFilters] = useState<Filter[]>([]);
+  const [filters, setFilters] = useState<Filter[]>([]);
   const [chartDataModel, setChartDataModel] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -53,7 +53,7 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
   const [legendType, setLegendType] = useState("scroll");
   const [showDataZoom, setShowDataZoom] = useState(false);
   const [showLabelLines, setShowLabelLines] = useState(false);
-  let [defaultTimeGrain, setDefaultTimeGrain] = useState("Month");
+  const [defaultTimeGrain, setDefaultTimeGrain] = useState("Month");
 
   const [timeGrain, setTimeGrain] = useState<string>(defaultTimeGrain);
   const [rowLimit, setRowLimit] = useState<number>(defaultRowLimit);
@@ -61,7 +61,7 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
   const location = useLocation();
   const { state } = location;
   const [chartData, setChartData] = useState(null);
-  let [xAxisData, setXAxisData] = useState<any>(null);
+  const [xAxisData, setXAxisData] = useState<any>(null);
   const chartDetails: any = useSelector((state: RootState) => state.chart);
   let colType: any = {};
   // const defaultTimeFilter = 'No filter';
@@ -256,7 +256,7 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
     setChartForms(forms);
   };
   const fetchTableData = async () => {
-    let params = {
+    const params = {
       database: "hpcl_ceg",
       schema: "public",
       table: dataset,
@@ -476,7 +476,7 @@ const ChartTabs: React.FC<ChartTabsProps> = ({
       return;
     }
   
-  let savedData: any = {
+  const savedData: any = {
     id: data.id,
     type: data.type,
     column: data.column,
